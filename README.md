@@ -1,0 +1,4 @@
+Kimrc
+=====
+
+My vim setting
