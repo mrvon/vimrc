@@ -70,6 +70,7 @@ Plugin 'mrvon/ag.vim'
 
 " my color
 Plugin 'mrvon/vim-kolor'
+Plugin 'mrvon/kde-art-color'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
