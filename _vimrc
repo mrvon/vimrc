@@ -182,8 +182,10 @@ let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 
 let g:lua_check_syntax                                      =0
 let g:lua_complete_omni                                     =1
-let g:loaded_luainspect                                     =1
+"let g:loaded_luainspect                                    =1
 let g:lua_inspect_warnings                                  =0
+let g:lua_inspect_events                                    =''
+noremap <F5>                                               :LuaInspectToggle<CR>
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
 let g:session_autoload                                      ='yes'
@@ -307,14 +309,14 @@ augroup binary_edit_group
 augroup END
 
 "previous tab page
-map <silent> <F7>                                           :tabp<cr>
+noremap <silent> <F7>                                       :tabp<cr>
 "next tab page
-map <silent> <F8>                                           :tabn<cr>
+noremap <silent> <F8>                                       :tabn<cr>
 
 "previous matched line
-map <silent> <F10>                                          :cprevious<cr>
+noremap <silent> <F10>                                      :cprevious<cr>
 "next matched line
-map <silent> <F11>                                          :cnext<cr>
+noremap <silent> <F11>                                      :cnext<cr>
 
 " no swap file
 set                                                         noswapfile
