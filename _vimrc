@@ -324,7 +324,14 @@ inoremap <localleader>fn                                    <C-R>=expand("%:t")<
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
 " quick search using ag
-nnoremap <leader>vv                                         :Ag<CR>
+" search current word ignore-case
+nnoremap <leader>vv                                         :Agi<CR>    
+nnoremap <leader>vf                                         :Agf<CR>
+" Ag is search case-sentisive
+" Agi is search ignore-case
+" Agf is search filename ignore-case
+" AgFile is search filename case-sentisive
+
 
 if has("win32")
     autocmd GUIEnter *                                      simalt ~x
