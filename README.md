@@ -1,4 +1,5 @@
 Kimrc
-=====
+Author: Dennis.Von
 
-My vim setting
+
+
