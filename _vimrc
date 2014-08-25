@@ -182,7 +182,7 @@ let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 
 let g:lua_check_syntax                                      =0
 let g:lua_complete_omni                                     =1
-let g:loaded_luainspect                                    =1
+let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
 noremap <F5>                                               :LuaInspectToggle<CR>
