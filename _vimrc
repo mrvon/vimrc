@@ -68,6 +68,9 @@ Plugin 'terryma/vim-multiple-cursors'
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
 
+" Indent guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " my color
 Plugin 'mrvon/vim-kolor'
 Plugin 'mrvon/kde-art-color'
@@ -200,6 +203,8 @@ let g:kolor_italic                                          =1                  
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
+"----------------------------------------- Indent guides -------------------------
+"
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
