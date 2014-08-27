@@ -203,10 +203,10 @@ let g:kolor_alternative_matchparen                          =0                  
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
-noremap  <Up>                                               <nop>
-noremap  <Down>                                             <nop>
-noremap  <Left>                                             <nop>
-noremap  <Right>                                            <nop>
+noremap  <Up>                                               <c-w>k
+noremap  <Down>                                             <c-w>j
+noremap  <Left>                                             <c-w>h
+noremap  <Right>                                            <c-w>l
 
 " Upper this word
 inoremap <leader>u                                          <esc>wbveU          
