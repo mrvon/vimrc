@@ -158,15 +158,15 @@ set textwidth                                               =1000
 "-------------------------------Airline---------------------------------------------------------
 let g:airline_theme                                         ='kolor'
 "-------------------------------YouCompleteMe---------------------------------------------------------
-"let g:ycm_global_ycm_extra_conf                             ='~/.ycm_extra_conf.py'
-"let g:ycm_collect_identifiers_from_tags_files               =1
-"let g:ycm_seed_identifiers_with_syntax                      =1
-"let g:ycm_confirm_extra_conf                                =0
-"let g:ycm_key_list_select_completion                        =['DOWN']
-"let g:ycm_key_list_previous_completion                      =['UP']
-"let g:ycm_autoclose_preview_window_after_insertion          =1
+"let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
+"let g:ycm_collect_identifiers_from_tags_files              =1
+"let g:ycm_seed_identifiers_with_syntax                     =1
+"let g:ycm_confirm_extra_conf                               =0
+"let g:ycm_key_list_select_completion                       =['DOWN']
+"let g:ycm_key_list_previous_completion                     =['UP']
+"let g:ycm_autoclose_preview_window_after_insertion         =1
 
-"nnoremap <leader>jd                                         :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "-------------------------------Alterative Header or Source---------------------------------------------------------
 nnoremap <leader>a                                          :A<cr>
 "-------------------------------NERDTree and NERDTreeTab---------------------------------------------------------
@@ -194,10 +194,10 @@ let g:session_directory                                     =$MYVIMFILE . '/sess
 let g:session_autoload                                      ='yes'
 let g:session_autosave                                      ='yes'
 "----------------------------------------- EasyGrep -------------------------
-"let g:EasyGrepMode                                          =1
-"let g:EasyGrepRecursive                                     =1
-"let g:EasyGrepCommand                                       =1
-"let g:EasyGrepSearchCurrentBufferDir                        =1
+"let g:EasyGrepMode                                         =0
+"let g:EasyGrepRecursive                                    =1
+"let g:EasyGrepCommand                                      =1
+"let g:EasyGrepSearchCurrentBufferDir                       =1
 "----------------------------------------- Kolor -------------------------
 let g:kolor_italic                                          =1                  " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
