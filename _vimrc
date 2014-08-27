@@ -1,6 +1,7 @@
  "------------------------------- Team KDE -------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
+"echo "Hello World"
 
 
 let $VIMRUNTIME                                             ='E:/vim/vim74'
@@ -350,4 +351,5 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
+
 
