@@ -185,7 +185,7 @@ let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
-noremap <F5>                                               :LuaInspectToggle<CR>
+noremap <F5>                                                :LuaInspectToggle<CR>
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
 let g:session_autoload                                      ='yes'
