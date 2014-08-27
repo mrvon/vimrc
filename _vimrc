@@ -204,7 +204,7 @@ let g:kolor_bold                                            =0                  
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
 "----------------------------------------- Indent guides -------------------------
-"
+let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
