@@ -365,6 +365,7 @@ function!                                                   __VisualSelection(di
 
     let @/ = l:pattern
     let @" = l:saved_reg
+
 endfunction
 
 
@@ -379,8 +380,8 @@ nnoremap <leader>vf                                         :Agf<CR>
 " AgFile is search filename case-sentisive
 
 " search in visual mode
-vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>
-vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>
+vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>:set hlsearch<CR>
+vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>:set hlsearch<CR>
 vnoremap <leader>vv                                         :call __VisualSelection('ag-ignore-case')<CR>
 vnoremap <leader>vw                                         :call __VisualSelection('ag-ignore-case-word')<CR>
 vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
