@@ -334,7 +334,7 @@ inoremap <localleader>fn                                    <C-R>=expand("%:t")<
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
 
-function! CmdLine(str)
+function! __ExecuteCommand(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
@@ -352,11 +352,11 @@ function!                                                   __VisualSelection(di
     elseif a:direction == 'forward'
         execute "normal /" . l:pattern . "^M"
     elseif a:direction == 'ag-ignore-case' 
-        execute CmdLine("Agi " . "\"" . l:pattern . "\"" . "<CR>")
+        execute __ExecuteCommand("Agi " . "\"" . l:pattern . "\"" . "<CR>")
     elseif a:direction == 'ag-ignore-case-word' 
-        execute CmdLine("Agw " . "\"" . l:pattern . "\"" . "<CR>")
+        execute __ExecuteCommand("Agw " . "\"" . l:pattern . "\"" . "<CR>")
     elseif a:direction == 'ag-ignore-case-file' 
-        execute CmdLine("Agf " . "\"" . l:pattern . "\"" . "<CR>")
+        execute __ExecuteCommand("Agf " . "\"" . l:pattern . "\"" . "<CR>")
     endif
 
     let @/ = l:pattern
