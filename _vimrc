@@ -337,6 +337,7 @@ inoremap <localleader>fn                                    <C-R>=expand("%:t")<
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
 
+"------------------------------------------------------------------
 function! __ExecuteCommand(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
