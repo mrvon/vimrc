@@ -122,7 +122,7 @@ set co                                                      =200
 "-------------------------------set row-------------------------------
 set lines                                                   =100
 
-"-------------------------------tab key -------------------------------
+"-------------------------------tab key-------------------------------
 set shiftwidth                                              =4 
 set tabstop                                                 =4
 set expandtab
@@ -131,11 +131,11 @@ set backspace                                               =indent,eol,start
 set history                                                 =50
 set printoptions                                            =paper:a4
 
-" ruler and statusline
+"-------------------------------ruler and statusline-------------------------------
 set noruler
 set laststatus                                              =2
 
-"------------------------------- nolazyredraw -------------------------------
+"-------------------------------nolazyredraw-------------------------------
 set nolazyredraw
 
 "-------------------------------display line number-------------------------------
@@ -150,6 +150,9 @@ set incsearch
 
 "-------------------------------no wrap long line-------------------------------
 set nowrap
+
+"-------------------------------no wrap scan-------------------------------
+set nowrapscan
 
 "-------------------------------do not auto break a line-------------------------------
 set textwidth                                               =1000
