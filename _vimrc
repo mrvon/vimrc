@@ -333,6 +333,37 @@ set                                                         noswapfile
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
+
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction 
+
+function!                                                   __VisualSelection(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'backward'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'forward'
+        execute "normal /" . l:pattern . "^M"
+    elseif a:direction == 'ag-ignore-case' 
+        execute CmdLine("Agi " . "\"" . l:pattern . "\"" . "<CR>")
+    elseif a:direction == 'ag-ignore-case-word' 
+        execute CmdLine("Agw " . "\"" . l:pattern . "\"" . "<CR>")
+    elseif a:direction == 'ag-ignore-case-file' 
+        execute CmdLine("Agf " . "\"" . l:pattern . "\"" . "<CR>")
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+
+
 " quick search using ag
 " search current word ignore-case
 nnoremap <leader>vv                                         :Agi<CR>    
@@ -343,6 +374,12 @@ nnoremap <leader>vf                                         :Agf<CR>
 " Agf is search filename ignore-case
 " AgFile is search filename case-sentisive
 
+" search in visual mode
+vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>
+vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>
+vnoremap <leader>vv                                         :call __VisualSelection('ag-ignore-case')<CR>
+vnoremap <leader>vw                                         :call __VisualSelection('ag-ignore-case-word')<CR>
+vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
 
 if has("win32")
     autocmd GUIEnter *                                      simalt ~x
