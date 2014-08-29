@@ -388,9 +388,11 @@ vnoremap <leader>vw                                         :call __VisualSelect
 vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
 
 " easy copy to system-clipboard
-noremap <leader>sy                                          "+y
+vnoremap <leader>sy                                          "+y
+nnoremap <leader>sy                                          "+y
 " easy paste from system-clipboard
-noremap <leader>sp                                          "+p
+vnoremap <leader>sp                                          "+p
+nnoremap <leader>sp                                          "+p
 
 if has("win32")
     autocmd GUIEnter *                                      simalt ~x
