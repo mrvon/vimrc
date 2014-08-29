@@ -387,8 +387,9 @@ vnoremap <leader>vv                                         :call __VisualSelect
 vnoremap <leader>vw                                         :call __VisualSelection('ag-ignore-case-word')<CR>
 vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
 
-" easy copy to system-clip-board
+" easy copy to system-clipboard
 noremap <leader>sy                                          "+y
+" easy paste from system-clipboard
 noremap <leader>sp                                          "+p
 
 if has("win32")
