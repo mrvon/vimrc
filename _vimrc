@@ -1,6 +1,7 @@
  "------------------------------- Team KDE -------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
+"echo "Author Mrvon"
 
 
 let $VIMRUNTIME                                             ='E:/vim/vim74'
@@ -49,10 +50,10 @@ Plugin 'scrooloose/nerdcommenter'
 " Plugin 'xolox/vim-session'
 
 " UltiSnips
-Plugin 'vim-scripts/UltiSnips'
+"Plugin 'vim-scripts/UltiSnips'
 
 " UltiSnips Snippets are separated from the engine
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
