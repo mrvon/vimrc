@@ -108,7 +108,6 @@ set helplang                                                =cn
 source                                                      $VIMRUNTIME/delmenu.vim
 source                                                      $VIMRUNTIME/menu.vim
 language messages                                           zh_cn.utf-8
-set                                                         nobomb
 
 "-------------------------------GUI Options-------------------------------
 set guioptions                                              -=l
@@ -187,7 +186,7 @@ let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 " This sets the default value for all buffers.
 "let g:lua_compiler_name                                     =$MYLUA . "/luac.exe"
 
-let g:lua_check_syntax                                      =0
+let g:lua_check_syntax                                      =1
 let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
@@ -235,7 +234,6 @@ nnoremap <leader>sv                                         :source $MYVIMRC<cr>
 
 " easy way to type my email and copyright information
 iabbrev  @@                                                 mrvon@qq.com
-iabbrev  ccopy                                              mrvon
 
 " use a \" or \' to surround this word
 nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
@@ -318,6 +316,12 @@ augroup binary_edit_group
     autocmd BufWritePre     *.bin endif
     autocmd BufWritePost    *.bin if    &bin    | %!xxd
     autocmd BufWritePost    *.bin set   nomod   | endif
+augroup END
+
+" save file with nobomb
+augroup save_with_nobomb
+    autocmd!
+    autocmd BufWritePre     *.lua,*.txt set nobomb
 augroup END
 
 "previous tab page
