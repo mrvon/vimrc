@@ -404,6 +404,11 @@ else
     " do nothing
 endif
 
+function! GitPushVimrc()
+    exec "git add " . $MYVIMRC
+    exec "git commit -m \"Auto commit by vim, modified my vimrc\""
+    exec "git push"
+endfunction
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work. 
 " Open Syntax HighLight
