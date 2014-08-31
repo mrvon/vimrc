@@ -154,9 +154,9 @@ set nowrap
 "-------------------------------no wrap scan-------------------------------
 set nowrapscan
 
-"------------------------------- ignore case and smart case -------------------------------
+"-------------------------------ignore case and smart case-------------------------------
 set ignorecase
-set smartcase
+set nosmartcase
 
 "-------------------------------do not auto break a line-------------------------------
 set textwidth                                               =1000
