@@ -91,8 +91,7 @@ filetype plugin indent on       " required
 
 "-------------------------------Something Always need-------------------------------
 colorscheme                                                 kolor
-"set guifont                                                =Yahei_Consolas_Hybrid:h10:cGB2312
-set guifont                                                 =Consolas:h10
+set guifont                                                 =Consolas:h11
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
@@ -134,6 +133,16 @@ set printoptions                                            =paper:a4
 set noruler
 set laststatus                                              =2
 
+" Test 
+"set magic
+set scrolloff                                               =3
+
+
+"-------------------------------share clipboard with Windows-------------------------------
+set clipboard                                               +=unnamed
+set linespace                                               =0
+set cursorline
+
 "-------------------------------nolazyredraw-------------------------------
 set nolazyredraw
 
@@ -147,11 +156,11 @@ set showmatch
 set hlsearch
 set incsearch
 
-"-------------------------------no wrap long line-------------------------------
+"-------------------------------wrap long line-------------------------------
 set nowrap
 
-"-------------------------------no wrap scan-------------------------------
-set nowrapscan
+"-------------------------------wrap scan-------------------------------
+set wrapscan
 
 "-------------------------------ignore case and smart case-------------------------------
 set ignorecase
@@ -180,6 +189,7 @@ nnoremap <leader>n                                          :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
+let NERDTreeWinSize                                         =34										
 "----------------------------------------- Emmet(Zencoding) -------------------------
 "----------------------------------------- UltiSnips -------------------------
 let g:UltiSnipsExpandTrigger                                ="<tab>"
@@ -395,11 +405,11 @@ vnoremap <leader>vw                                         :call __VisualSelect
 vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
 
 " easy copy to system-clipboard
-vnoremap <leader>sy                                          "+y
-nnoremap <leader>sy                                          "+y
+"vnoremap <leader>sy                                        "+y
+"nnoremap <leader>sy                                        "+y
 " easy paste from system-clipboard
-vnoremap <leader>sp                                          "+p
-nnoremap <leader>sp                                          "+p
+"vnoremap <leader>sp                                        "+p
+"nnoremap <leader>sp                                        "+p
 
 function! GitPushVimrc()
     exec "git add " . $MYVIMRC
@@ -434,4 +444,5 @@ else
 endif
 syntax                                                      on
 
-
+set                                                         autoindent
+set                                                         smartindent
