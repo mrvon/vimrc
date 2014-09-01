@@ -1,7 +1,6 @@
  "------------------------------- Team KDE -------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
-"echo "Author Mrvon"
 
 
 let $VIMRUNTIME                                             ='E:/vim/vim74'
