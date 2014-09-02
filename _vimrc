@@ -3,9 +3,11 @@
 "echo "Welcome join in Team KDE"
 
 
-let $VIMRUNTIME                                             ='E:/vim/vim74'
-let $MYVIMRC                                                ='E:/vim/_vimrc'
-let $MYVIMFILE                                              ='E:/vim/vimfiles'
+let $MYVIMPATH                                              ='E:/vim/'
+let $MYVIMRUNTIME                                           =$MYVIMPATH.'vim74'
+let $MYVIMRC                                                =$MYVIMPATH.'_vimrc'
+let $MYVIMFILE                                              =$MYVIMPATH.'vimfiles'
+let $MYLUAEXPORTFUNCTIONPATH                                =$MYVIMPATH.'lua_export'
 let $MYLUA                                                  ='D:/projects/libs/3rd/bin/lua514'
 
 "Must be have lua.exe and luac.exe in your PATH
@@ -106,8 +108,8 @@ endif
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,chinese,default,latin1
 set langmenu                                                =zh_cn.utf-8
 set helplang                                                =cn
-source                                                      $VIMRUNTIME/delmenu.vim
-source                                                      $VIMRUNTIME/menu.vim
+source                                                      $MYVIMRUNTIME/delmenu.vim
+source                                                      $MYVIMRUNTIME/menu.vim
 language messages                                           zh_cn.utf-8
 
 "-------------------------------GUI Options-------------------------------
@@ -238,10 +240,15 @@ let g:ctrlp_by_filename                                     =1
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
-noremap  <Up>                                               <c-w>k
-noremap  <Down>                                             <c-w>j
-noremap  <Left>                                             <c-w>h
-noremap  <Right>                                            <c-w>l
+nnoremap <Up>                                               <nop>
+nnoremap <Down>                                             <nop>
+nnoremap <Left>                                             <nop>
+nnoremap <Right>                                            <nop>
+"----------------------------------------- Moving between windows -------------------------
+nnoremap <c-k>                                              <c-w>k
+nnoremap <c-j>                                              <c-w>j
+nnoremap <c-h>                                              <c-w>h
+nnoremap <c-l>                                              <c-w>l
 
 " Upper this word
 inoremap <leader>u                                          <esc>wbveU          
@@ -430,6 +437,15 @@ vnoremap <leader>vf                                         :call __VisualSelect
 "vnoremap <leader>sp                                        "+p
 "nnoremap <leader>sp                                        "+p
 
+
+"-------------------------------------------------------------------------------------------------------------
+" Lua Function List
+autocmd FileType txt,lua call AddExportFunctionForLua()
+function! AddExportFunctionForLua()
+    set dictionary-=$MYLUAEXPORTFUNCTIONPATH/cpp_export.txt dictionary+=$MYLUAEXPORTFUNCTIONPATH/cpp_export.txt
+    set complete-=k complete+=k
+endfunction
+
 "-------------------------------------------------------------------------------------------------------------
 "Close All Buffers But This One
 com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
@@ -491,6 +507,5 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
-
 set                                                         autoindent
 set                                                         smartindent
