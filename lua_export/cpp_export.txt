@@ -1,0 +1,3 @@
+WorldPacket::rewind=>(void) | void
+WorldPacket::seek=>(int position) | void
+WorldPacket::valid=>(void) | bool
