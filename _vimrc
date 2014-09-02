@@ -75,6 +75,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mrvon/vim-kolor'
 Plugin 'mrvon/kde-art-color'
 
+" Ctrlp
+Plugin 'kien/ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -173,12 +176,14 @@ set textwidth                                               =1000
 "-------------------------------Airline---------------------------------------------------------
 let g:airline_theme                                         ='kolor'
 let g:airline#extensions#tabline#enabled                    =1
-let g:airline#extensions#tabline#show_buffers               =1
 let g:airline#extensions#tabline#left_sep                   ='<'  
 let g:airline#extensions#tabline#right_sep                  ='>'
+let g:airline#extensions#tabline#show_buffers               =1
+let g:airline#extensions#tabline#tab_nr_type                =1 
 let g:airline#extensions#tabline#show_tab_nr                =1
-"let g:airline#extensions#tabline#formatter                  ='default'
-"let g:airline#extensions#tabline#buffer_nr_format           =''
+let g:airline#extensions#tabline#formatter                  ='default'
+let g:airline#extensions#tabline#buffer_nr_show             =1
+let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "-------------------------------YouCompleteMe---------------------------------------------------------
 "let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files              =1
@@ -211,7 +216,6 @@ let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
-noremap <F5>                                                :LuaInspectToggle<CR>
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
 let g:session_autoload                                      ='yes'
@@ -228,6 +232,9 @@ let g:kolor_underlined                                      =0                  
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
 "----------------------------------------- Indent guides -------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
+"----------------------------------------- CtrlP -------------------------
+noremap <c-p>                                               :CtrlP<cr>
+let g:ctrlp_by_filename                                     =1
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
@@ -345,9 +352,14 @@ augroup save_with_nobomb
 augroup END
 
 "previous tab page
-noremap <silent> <F7>                                       :tabp<cr>
+"noremap <silent> <F7>                                       :tabp<cr>
 "next tab page
-noremap <silent> <F8>                                       :tabn<cr>
+"noremap <silent> <F8>                                       :tabn<cr>
+
+"previous buffer
+noremap <silent> <F7>                                       :bprevious<cr>
+"next buffer
+noremap <silent> <F8>                                       :bnext<cr>
 
 "previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
@@ -362,7 +374,7 @@ inoremap <localleader>fn                                    <C-R>=expand("%:t")<
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
 
-"------------------------------------------------------------------
+"-------------------------------------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
@@ -417,6 +429,34 @@ vnoremap <leader>vf                                         :call __VisualSelect
 " easy paste from system-clipboard
 "vnoremap <leader>sp                                        "+p
 "nnoremap <leader>sp                                        "+p
+
+"-------------------------------------------------------------------------------------------------------------
+"Close All Buffers But This One
+com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
+function!                                                   __BufferDeleteOnly(bang) 
+    let bd_cmd = "bdelete". a:bang 
+    let buffer_number = bufnr("") 
+    
+    if buffer_number > 1 
+        call __ExecCheckBdErrs("1,".(buffer_number - 1). bd_cmd)
+    endif 
+    if buffer_number < bufnr("$") 
+        call __ExecCheckBdErrs((buffer_number+1).",".bufnr("$"). bd_cmd)
+    endif 
+endfunc 
+
+function!                                                   __ExecCheckBdErrs(bdrangecmd) 
+    try 
+        exec a:bdrangecmd 
+    catch /:E51[567]:/ 
+        " no buffers unloaded/deleted/wiped out: ignore 
+    catch 
+        echohl ErrorMsg 
+        echomsg matchstr(v:exception, ':\zsE.*') 
+        echohl none 
+    endtry 
+endfunc 
+
 
 function! GitPushVimrc()
     exec "git add " . $MYVIMRC
