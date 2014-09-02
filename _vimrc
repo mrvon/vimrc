@@ -233,7 +233,7 @@ let g:kolor_alternative_matchparen                          =0                  
 "----------------------------------------- Indent guides -------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- CtrlP -------------------------
-noremap <c-p>                                               :CtrlP<cr>
+"noremap <c-p>                                               :CtrlP<cr>
 let g:ctrlp_by_filename                                     =1
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
@@ -477,6 +477,7 @@ if has("win32")
         autocmd!
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
+        autocmd VimEnter * set vb t_vb=
     augroup END
 else
     " do nothing
