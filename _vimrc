@@ -172,6 +172,13 @@ set textwidth                                               =1000
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
 let g:airline_theme                                         ='kolor'
+let g:airline#extensions#tabline#enabled                    =1
+let g:airline#extensions#tabline#show_buffers               =1
+let g:airline#extensions#tabline#left_sep                   ='<'  
+let g:airline#extensions#tabline#right_sep                  ='>'
+let g:airline#extensions#tabline#show_tab_nr                =1
+"let g:airline#extensions#tabline#formatter                  ='default'
+"let g:airline#extensions#tabline#buffer_nr_format           =''
 "-------------------------------YouCompleteMe---------------------------------------------------------
 "let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files              =1
@@ -189,7 +196,7 @@ nnoremap <leader>n                                          :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
-let NERDTreeWinSize                                         =34										
+let NERDTreeWinSize                                         =25
 "----------------------------------------- Emmet(Zencoding) -------------------------
 "----------------------------------------- UltiSnips -------------------------
 let g:UltiSnipsExpandTrigger                                ="<tab>"
