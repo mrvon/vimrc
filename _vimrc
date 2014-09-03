@@ -337,9 +337,6 @@ nnoremap <leader>W                                          :match none<cr>
 " Closing last search highlight 
 nnoremap <leader>h                                          :nohlsearch<cr>
 
-" Grep
-nnoremap <leader>g                                          :execute 'vimgrep ' . shellescape(expand("<cWORD>")) . ' *'<cr>
-
 " Using exists syntax file
 augroup align_filetype_group
     autocmd!
@@ -479,13 +476,6 @@ function!                                                   __ExecCheckBdErrs(bd
         echohl none 
     endtry 
 endfunc 
-
-
-function! GitPushVimrc()
-    exec "git add " . $MYVIMRC
-    exec "git commit -m \"Auto commit by vim, modified my vimrc\""
-    exec "git push"
-endfunction
 
 nnoremap <leader>mw                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
 nnoremap <leader>mW                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
