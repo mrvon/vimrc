@@ -1,6 +1,7 @@
  "------------------------------- Team KDE -------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
+"echo "Author Mrvon"
 
 
 let $MYVIMPATH                                              ='E:/vim/'
@@ -15,7 +16,7 @@ let $MYLUA                                                  ='D:/projects/libs/3
 let mapleader                                               ="\\"
 let maplocalleader                                          ="-"
 
-"------------------------------- Mrvon 's Vimrc -------------------------------
+"------------------------------- Version -------------------------------
 version 7.4
 
 "-------------------------------Vundle - Plugin Package Manager-------------------------------
@@ -41,7 +42,7 @@ Plugin 'scrooloose/nerdtree'
 " NERDComment
 Plugin 'scrooloose/nerdcommenter'
 
-" a.vim
+" C/CPP alternative between header and source
 " Plugin 'vim-scripts/a.vim'
 
 " Youcompleteme
