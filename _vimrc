@@ -66,7 +66,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
 
 " Multiple-Cursors
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
@@ -152,8 +152,8 @@ set clipboard                                               +=unnamed
 set linespace                                               =0
 set cursorline
 
-"-------------------------------nolazyredraw-------------------------------
-set nolazyredraw
+"-------------------------------lazyredraw-------------------------------
+set lazyredraw
 
 "-------------------------------display line number-------------------------------
 set number
@@ -491,6 +491,8 @@ if has("win32")
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * set vb t_vb=
+        autocmd VimEnter * set maxmem=1
+        autocmd VimEnter * set maxmemtot=10
     augroup END
 else
     " do nothing
