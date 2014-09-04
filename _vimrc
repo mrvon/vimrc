@@ -250,10 +250,10 @@ let g:ctrlp_by_filename                                     =1
 "----------------------------------------- Forbidden Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
-nnoremap <Up>                                               <nop>
-nnoremap <Down>                                             <nop>
-nnoremap <Left>                                             <nop>
-nnoremap <Right>                                            <nop>
+nnoremap <Up>                                               <c-w>+
+nnoremap <Down>                                             <c-w>-
+nnoremap <Left>                                             <c-w><
+nnoremap <Right>                                            <c-w>>
 "----------------------------------------- Moving between windows -------------------------
 nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
