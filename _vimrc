@@ -66,7 +66,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
 
 " Multiple-Cursors
-"Plugin 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
@@ -142,10 +142,13 @@ set printoptions                                            =paper:a4
 set noruler
 set laststatus                                              =2
 
-" Test 
 "set magic
 set scrolloff                                               =3
 
+" memory limit problem
+set maxmem                                                  =10
+set maxmempattern                                           =10
+set maxmemtot                                               =100
 
 "-------------------------------share clipboard with Windows-------------------------------
 set clipboard                                               +=unnamed
@@ -491,8 +494,6 @@ if has("win32")
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * set vb t_vb=
-        autocmd VimEnter * set maxmem=1
-        autocmd VimEnter * set maxmemtot=10
     augroup END
 else
     " do nothing
@@ -508,3 +509,6 @@ endif
 syntax                                                      on
 set                                                         autoindent
 set                                                         smartindent
+
+" For test
+"autocmd! BufReadPre	* set bufhidden=wipe
