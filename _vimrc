@@ -484,7 +484,7 @@ nnoremap <leader>mw                                         :call libcallnr("vim
 nnoremap <leader>mW                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
 nnoremap <leader>yt                                         :call libcallnr("vimtweak.dll", "EnableTopMost", 1)<CR>
 nnoremap <leader>yT                                         :call libcallnr("vimtweak.dll", "EnableTopMost", 0)<CR>
-nnoremap <leader>aw                                         :call libcallnr("vimtweak.dll", "SetAlpha", 180)<CR>
+nnoremap <leader>aw                                         :call libcallnr("vimtweak.dll", "SetAlpha", 220)<CR>
 nnoremap <leader>aW                                         :call libcallnr("vimtweak.dll", "SetAlpha", 255)<CR>
 
 if has("win32")
