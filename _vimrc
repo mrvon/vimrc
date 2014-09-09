@@ -159,7 +159,7 @@ set noruler
 set laststatus                                              =2
 
 "set magic
-set scrolloff                                               =3
+set scrolloff                                               =5
 
 " memory limit problem
 set maxmem                                                  =10
@@ -195,13 +195,16 @@ set ignorecase
 set nosmartcase
 
 "-------------------------------do not auto break a line-------------------------------
-set textwidth                                               =1000
+set textwidth                                               =0
 
 "-------------------------------command wild menu-------------------------------
 set wildmenu
 
 "-------------------------------gf search path-------------------------------
 set path                                                    =.,..,,
+
+"-------------------------------do not use undofile-------------------------------
+set noundofile
 
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
@@ -334,20 +337,20 @@ nnoremap L                                                  $
 " find In       Last        ( or [
 " find Around   Next        ( or [
 " find Around   Last        ( or [
-"onoremap i(                                                 :<c-u>normal! f(vi(<cr>
-"onoremap a(                                                 :<c-u>normal! f(va(<cr>
-"onoremap i[                                                 :<c-u>normal! f[vi[<cr>
-"onoremap a[                                                 :<c-u>normal! f[va[<cr>
-"onoremap il(                                                :<c-u>normal! F(vi(<cr>
-"onoremap al(                                                :<c-u>normal! F(va(<cr>
-"onoremap il[                                                :<c-u>normal! F[vi[<cr>
-"onoremap al[                                                :<c-u>normal! F[va[<cr>
+onoremap i(                                                 :<c-u>normal! f(vi(<cr>
+onoremap a(                                                 :<c-u>normal! f(va(<cr>
+onoremap i[                                                 :<c-u>normal! f[vi[<cr>
+onoremap a[                                                 :<c-u>normal! f[va[<cr>
+onoremap il(                                                :<c-u>normal! F(vi(<cr>
+onoremap al(                                                :<c-u>normal! F(va(<cr>
+onoremap il[                                                :<c-u>normal! F[vi[<cr>
+onoremap al[                                                :<c-u>normal! F[va[<cr>
 
 
 " Vimscript file settings --------------------------
 augroup filetype_vim
     autocmd!
-    autocmd                                                 FileType vim set foldmethod=marker
+    autocmd                                                 FileType vim setlocal foldmethod=marker
 augroup END
 
 " Match
