@@ -148,7 +148,8 @@ set shiftwidth                                              =4
 set tabstop                                                 =4
 set expandtab
 set backspace                                               =indent,eol,start
-
+set                                                         autoindent
+set                                                         smartindent
 set history                                                 =50
 set printoptions                                            =paper:a4
 
@@ -345,7 +346,7 @@ nnoremap L                                                  $
 " Vimscript file settings --------------------------
 augroup filetype_vim
     autocmd!
-    autocmd                                                 FileType vim setlocal foldmethod=marker
+    autocmd                                                 FileType vim set foldmethod=marker
 augroup END
 
 " Match
@@ -524,8 +525,6 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
-set                                                         autoindent
-set                                                         smartindent
 
 " For test
 "autocmd! BufReadPre	* set bufhidden=wipe
