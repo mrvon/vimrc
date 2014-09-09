@@ -1,9 +1,23 @@
- "------------------------------- Team KDE -------------------------------
+"------------------------------- Team KDE -------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
 "echo "Author Mrvon"
 
 
+"------------------------------- Team KDE -------------------------------
+let g:is_windows                                            = 0
+let g:is_mac                                                = 0
+let g:is_linux                                              = 0
+if(has("win32") || has("win64"))
+    let g:is_windows                                        = 1
+elseif has('macunix')
+    let g:is_mac                                            = 1
+else
+    let g:is_linux                                          = 1
+endif
+
+
+"------------------------------- Path -------------------------------
 let $MYVIMPATH                                              ='E:/vim/'
 let $MYVIMRUNTIME                                           =$MYVIMPATH.'vim74'
 let $MYVIMRC                                                =$MYVIMPATH.'_vimrc'
@@ -210,7 +224,7 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 
 "nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "-------------------------------Alterative Header or Source---------------------------------------------------------
-nnoremap <leader>a                                          :A<cr>
+"nnoremap <leader>a                                          :A<cr>
 "-------------------------------NERDTree and NERDTreeTab---------------------------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
