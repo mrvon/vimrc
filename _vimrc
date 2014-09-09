@@ -146,10 +146,11 @@ set lines                                                   =100
 "-------------------------------tab key-------------------------------
 set shiftwidth                                              =4 
 set tabstop                                                 =4
+set softtabstop                                             =0
 set expandtab
 set backspace                                               =indent,eol,start
-set                                                         autoindent
-set                                                         smartindent
+set autoindent
+set smartindent
 set history                                                 =50
 set printoptions                                            =paper:a4
 
