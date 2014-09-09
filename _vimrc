@@ -227,7 +227,7 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "nnoremap <leader>a                                          :A<cr>
 "-------------------------------NERDTree and NERDTreeTab---------------------------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree
+autocmd vimenter *                                          NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
@@ -277,9 +277,10 @@ nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
 nnoremap <c-l>                                              <c-w>l
 
-" Upper this word
-inoremap <leader>u                                          <esc>wbveU          
-nnoremap <leader>u                                          wbveU
+" upper this word
+" I like use gU or gu
+"inoremap <leader>u                                          <esc>wbveU          
+"nnoremap <leader>u                                          wbveU
 
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYVIMRC<cr>
@@ -360,8 +361,7 @@ nnoremap <leader>h                                          :nohlsearch<cr>
 " Using exists syntax file
 augroup align_filetype_group
     autocmd!
-    autocmd                                                 BufRead,BufNewFile *.ejs set filetype=html
-    autocmd                                                 BufRead,BufNewFile *.txt set filetype=lua
+    autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
 augroup END
 
 " edit binary using xxd-format!
@@ -379,7 +379,7 @@ augroup END
 " save file with nobomb
 augroup save_with_nobomb
     autocmd!
-    autocmd BufWritePre     *.lua,*.txt set nobomb
+    autocmd                                                 BufWritePre *.lua,*.txt setlocal nobomb
 augroup END
 
 "previous tab page
@@ -510,7 +510,7 @@ if has("win32")
         autocmd!
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
-        autocmd VimEnter * set vb t_vb=
+        autocmd VimEnter * setlocal vb t_vb=
     augroup END
 else
     " do nothing
