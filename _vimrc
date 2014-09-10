@@ -303,6 +303,12 @@ nnoremap <leader>sv                                         :source $MYVIMRC<cr>
 " easy way to type my email and copyright information
 iabbrev  @@                                                 mrvon@qq.com
 
+" some abbrev
+cabbrev  W                                                  w
+cabbrev  Q                                                  q
+cabbrev  WQ                                                 wq
+cabbrev  Wq                                                 wq
+
 " use a \" or \' to surround this word
 nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>'                                          viw<esc>a'<esc>hbi'<esc>lel
