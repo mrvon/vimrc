@@ -74,6 +74,9 @@ Plugin 'scrooloose/nerdcommenter'
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
 
+" Vim-Surround
+"Plugin 'tpope/vim-surround'
+
 " Vim-Lua
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'xolox/vim-misc'
@@ -236,6 +239,12 @@ autocmd vimenter *                                          NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
+"----------------------------------------- DelimitMate -------------------------
+"augroup DelimitMate
+    "autocmd!
+    "autocmd FileType lua,txt let b:delimitMate_matchpairs   ="(:),[:],{:}"
+    "autocmd FileType lua,txt let b:delimitMate_quotes       = "\" '"
+"augroup END
 "----------------------------------------- Emmet(Zencoding) -------------------------
 "----------------------------------------- UltiSnips -------------------------
 let g:UltiSnipsExpandTrigger                                ="<tab>"
