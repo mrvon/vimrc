@@ -4,16 +4,16 @@
 "echo "Author Mrvon"
 
 
-"------------------------------- Team KDE -------------------------------
-let g:is_windows                                            = 0
-let g:is_mac                                                = 0
-let g:is_linux                                              = 0
+"------------------------------- Operating System -------------------------------
+let g:is_windows                                            =0
+let g:is_mac                                                =0
+let g:is_linux                                              =0
 if(has("win32") || has("win64"))
-    let g:is_windows                                        = 1
+    let g:is_windows                                        =1
 elseif has('macunix')
-    let g:is_mac                                            = 1
+    let g:is_mac                                            =1
 else
-    let g:is_linux                                          = 1
+    let g:is_linux                                          =1
 endif
 
 
@@ -107,8 +107,6 @@ Plugin 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
 filetype plugin indent on       " required
-"set cindent
-"set autoindent
 " Brief help
 " :PluginList               - list configured plugins
 " :PluginInstall(!)         - install (update) plugins
@@ -153,6 +151,7 @@ set lines                                                   =100
 set shiftwidth                                              =4 
 set tabstop                                                 =4
 set softtabstop                                             =0
+set shiftround
 set expandtab
 set backspace                                               =indent,eol,start
 set autoindent
@@ -187,18 +186,23 @@ set number
 set showmatch
 
 "-------------------------------highlight search-------------------------------
+" hightlights search results
 set hlsearch
+" shows search matches as you type
 set incsearch
 
 "-------------------------------wrap long line-------------------------------
 set nowrap
+"set linebreak
 
 "-------------------------------wrap scan-------------------------------
 set wrapscan
 
 "-------------------------------ignore case and smart case-------------------------------
+" if all lowercase, ignore case
 set ignorecase
-set nosmartcase
+" if caps, watch case
+set smartcase
 
 "-------------------------------do not auto break a line-------------------------------
 set textwidth                                               =0
@@ -211,6 +215,9 @@ set path                                                    =.,..,,
 
 "-------------------------------do not use undofile-------------------------------
 set noundofile
+
+"-------------------------------allow to bg unsaved buffer-------------------------------
+set hidden
 
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
@@ -302,6 +309,10 @@ nnoremap <c-l>                                              <c-w>l
 "inoremap <leader>u                                          <esc>wbveU          
 "nnoremap <leader>u                                          wbveU
 
+" edit the alternate file. 
+" mostly the alternate file is the previously edited file.
+nnoremap <leader><leader>                                   <c-^>
+
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYVIMRC<cr>
 
@@ -335,13 +346,14 @@ vnoremap <leader>'                                          <esc>`<i'<esc>`>a'<e
 nnoremap <leader>{                                          O{<esc>jo}<esc>
 
 
+" Y is a strong y, D is a strong d on Vim default setting
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
 nnoremap L                                                  $
 " I prefect use visual mode to join.
 nnoremap J                                                  <nop>
 " this map seem do not work
-" nnoremap K                                                  <nop> 
+" nnoremap K                                                <nop> 
 
 
 " comment a line
