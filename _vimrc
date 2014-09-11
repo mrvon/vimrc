@@ -101,6 +101,8 @@ Plugin 'kien/ctrlp.vim'
 " Waitting Test
 "Plugin 'AutoComplPop' 
 
+Plugin 'majutsushi/tagbar'
+
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -278,6 +280,8 @@ let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- CtrlP -------------------------
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:20'
+"----------------------------------------- TagBar -------------------------
+nnoremap <silent> <F5>                                      :TagbarToggle<cr>
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
