@@ -98,10 +98,11 @@ Plugin 'mrvon/kde-art-color'
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
 
+" Tag Bar
+Plugin 'majutsushi/tagbar'
+
 " Waitting Test
 "Plugin 'AutoComplPop' 
-
-Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -281,7 +282,7 @@ let g:indent_guides_enable_on_vim_startup                   =1
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:20'
 "----------------------------------------- TagBar -------------------------
-nnoremap <silent> <F5>                                      :TagbarToggle<cr>
+nnoremap <silent> <F9>                                      :TagbarToggle<cr>
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
@@ -423,6 +424,9 @@ noremap <silent> <F8>                                       :bnext<cr>
 noremap <silent> <F10>                                      :cprevious<cr>
 "next matched line
 noremap <silent> <F11>                                      :cnext<cr>
+
+"execute lua file
+noremap <silent> <F5>                                       :!lua %<cr>
 
 " no swap file
 set                                                         noswapfile
