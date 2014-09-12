@@ -22,9 +22,7 @@ let $MYVIMPATH                                              ='E:/vim/'
 let $MYVIMRUNTIME                                           =$MYVIMPATH.'vim74'
 let $MYVIMRC                                                =$MYVIMPATH.'_vimrc'
 let $MYVIMFILE                                              =$MYVIMPATH.'vimfiles'
-let $MYLUAEXPORTFUNCTIONPATH                                =$MYVIMPATH.'lua_export'
-let $MYLUA                                                  ='D:/projects/libs/3rd/bin/lua514'
-
+let $MYLUADICT                                              =$MYVIMPATH.'lua_export'
 "Must be have lua.exe and luac.exe in your PATH
 
 let mapleader                                               ="\\"
@@ -102,7 +100,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 
 " Waitting Test
-"Plugin 'AutoComplPop' 
+Plugin 'Shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -239,7 +237,6 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "let g:ycm_key_list_select_completion                       =['DOWN']
 "let g:ycm_key_list_previous_completion                     =['UP']
 "let g:ycm_autoclose_preview_window_after_insertion         =1
-
 "nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "-------------------------------Alterative Header or Source---------------------------------------------------------
 "nnoremap <leader>a                                          :A<cr>
@@ -263,7 +260,6 @@ let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 "----------------------------------------- VIM Lua -------------------------
 " This sets the default value for all buffers.
 "let g:lua_compiler_name                                     =$MYLUA . "/luac.exe"
-
 let g:lua_check_syntax                                      =1
 let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
@@ -290,6 +286,48 @@ let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:20'
 "----------------------------------------- TagBar -------------------------
 nnoremap <silent> <F9>                                      :TagbarToggle<cr>
+"----------------------------------------- NeoComplete -------------------------
+" Disable compeltefunc conflicts warnning
+let neocomplete#force_overwrite_completefunc                =1
+" Disable AutoComplPop.
+let g:acp_enableAtStartup                                   =0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup                         =1
+" Use smartcase.
+let g:neocomplete#enable_smart_case                         =1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length         =3
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries           ={
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'lua' : $MYLUADICT.'/cpp_export.txt',
+    \ }
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns                      ={}
+endif
+let g:neocomplete#keyword_patterns['default']               ='\h\w*'
+" Plugin key-mappings.
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS>  neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
+" Close popup by <Space>.
+inoremap <expr><Space> pumvisible() ? neocomplete#close_popup()."\<Space>" : "\<Space>"
+" Enable omni completion.
+autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
+autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
+autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
+autocmd FileType python         setlocal omnifunc           =pythoncomplete#Complete
+autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns ={}
+endif
+let g:neocomplete#sources#omni#input_patterns.lua   ='\w\+[.:]\|require\s*(\?["'']\w*'
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
@@ -323,7 +361,7 @@ nnoremap <leader>ec                                         :vsplit $MYVIMFILE/b
 nnoremap <localleader>replacetab                            :%ret! 4
 
 " re-load my vimrc
-nnoremap <leader>sv                                         :source $MYVIMRC<cr> :simalt ~x<cr>
+nnoremap <leader>sv                                         :source $MYVIMRC<cr>:simalt ~x<cr>
 
 " easy way to type my email and copyright information
 iabbrev  @@                                                 mrvon@qq.com
@@ -507,11 +545,11 @@ vnoremap <leader>vf                                         :call __VisualSelect
 
 "-------------------------------------------------------------------------------------------------------------
 " Lua Function List
-autocmd FileType txt,lua call AddExportFunctionForLua()
-function! AddExportFunctionForLua()
-    set dictionary-=$MYLUAEXPORTFUNCTIONPATH/cpp_export.txt dictionary+=$MYLUAEXPORTFUNCTIONPATH/cpp_export.txt
-    set complete-=k complete+=k
-endfunction
+"autocmd FileType txt,lua call AddExportFunctionForLua()
+"function! AddExportFunctionForLua()
+    "set dictionary-=$MYLUA/cpp_export.txt dictionary+=$MYLUA/cpp_export.txt
+    "set complete-=k complete+=k
+"endfunction
 
 "-------------------------------------------------------------------------------------------------------------
 "Close All Buffers But This One
