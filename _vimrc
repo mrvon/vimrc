@@ -89,7 +89,7 @@ Plugin 'mrvon/ag.vim'
 " Indent guides
 Plugin 'nathanaelkane/vim-indent-guides'
 
-" my color
+" My color
 Plugin 'mrvon/vim-kolor'
 Plugin 'mrvon/kde-art-color'
 
@@ -266,6 +266,7 @@ let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
 let g:lua_internal                                          =1
+let g:lua_define_completion_mappings                        =1
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
 let g:session_autoload                                      ='yes'
