@@ -325,9 +325,9 @@ autocmd FileType python         setlocal omnifunc           =pythoncomplete#Comp
 autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns ={}
+  let g:neocomplete#sources#omni#input_patterns             ={}
 endif
-let g:neocomplete#sources#omni#input_patterns.lua   ='\w\+[.:]\|require\s*(\?["'']\w*'
+let g:neocomplete#sources#omni#input_patterns.lua           ='\w\+[.:]\|require\s*(\?["'']\w*'
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
