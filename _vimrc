@@ -54,6 +54,9 @@ Plugin 'scrooloose/nerdtree'
 " NERDComment
 Plugin 'scrooloose/nerdcommenter'
 
+" Neocomplete
+Plugin 'Shougo/neocomplete.vim'
+
 " C/CPP alternative between header and source
 " Plugin 'vim-scripts/a.vim'
 
@@ -99,8 +102,6 @@ Plugin 'kien/ctrlp.vim'
 " Tag Bar
 Plugin 'majutsushi/tagbar'
 
-" Waitting Test
-"Plugin 'Shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -175,7 +176,7 @@ set linespace                                               =0
 set cursorline
 
 "-------------------------------lazyredraw-------------------------------
-set lazyredraw
+set nolazyredraw
 
 "-------------------------------display line number-------------------------------
 set number
@@ -265,7 +266,6 @@ let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
-let g:lua_internal                                          =1
 let g:lua_define_completion_mappings                        =1
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
@@ -289,8 +289,52 @@ let g:ctrlp_match_window                                    ='bottom,order:btt,m
 "----------------------------------------- TagBar -------------------------
 nnoremap <silent> <F9>                                      :TagbarToggle<cr>
 "----------------------------------------- NeoComplete -------------------------
+" Disable compeltefunc conflicts warnning
+let neocomplete#force_overwrite_completefunc                =1
+" Disable AutoComplPop.
+let g:acp_enableAtStartup                                   =0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup                         =1
+" Use smartcase.
+let g:neocomplete#enable_smart_case                         =1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length         =3
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries           ={
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'lua' : $MYLUADICT.'/cpp_export.txt',
+    \ }
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns                      ={}
+endif
+let g:neocomplete#keyword_patterns['default']               ='\h\w*'
+" Close popup by <Space>.
+inoremap <expr><Space> pumvisible() ? neocomplete#close_popup()."\<Space>" : "\<Space>"
+" Enable omni completion.
+autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
+autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
+autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
+autocmd FileType python         setlocal omnifunc           =pythoncomplete#Complete
+autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns             ={}
+endif
+let g:neocomplete#sources#omni#input_patterns.lua           ='\w\+[.:]\|require\s*(\?["'']\w*'
+
+if !exists('g:neocomplete#sources#omni#functions')
+    let g:neocomplete#sources#omni#functions                ={}
+endif
+let g:neocomplete#sources#omni#functions.lua                ='xolox#lua#omnifunc'
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns             ={}
+endif
+let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
 "----------------------------------------- Mrvon Special Key -------------------------
-inoremap jk                                                 <esc>
+inoremap jk                                                 <esc>==
 inoremap <esc>                                              <nop>
 "----------------------------------------- Resize windows -------------------------
 nnoremap <Up>                                               <c-w>+
