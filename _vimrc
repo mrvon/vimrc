@@ -334,7 +334,7 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
 "----------------------------------------- Mrvon Special Key -------------------------
-inoremap jk                                                 <esc>==
+inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
 "----------------------------------------- Resize windows -------------------------
 nnoremap <Up>                                               <c-w>+
