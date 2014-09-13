@@ -285,7 +285,7 @@ let g:kolor_alternative_matchparen                          =0                  
 let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- CtrlP -------------------------
 let g:ctrlp_by_filename                                     =1
-let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
 "----------------------------------------- TagBar -------------------------
 nnoremap <silent> <F9>                                      :TagbarToggle<cr>
 "----------------------------------------- NeoComplete -------------------------
@@ -515,6 +515,7 @@ vnoremap <leader>vf                                         :call __VisualSelect
 "-------------------------------------------------------------------------------------------------------------
 "Close All Buffers But This One
 com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
+com! -bar -bang BdReload                                    call __BufferReload(<q-bang>) 
 function!                                                   __BufferDeleteOnly(bang) 
     let bd_cmd = "bdelete". a:bang 
     let buffer_number = bufnr("") 
@@ -525,7 +526,16 @@ function!                                                   __BufferDeleteOnly(b
     if buffer_number < bufnr("$") 
         call __ExecCheckBdErrs((buffer_number+1).",".bufnr("$"). bd_cmd)
     endif 
-endfunc 
+endfunction
+
+function!                                                   __BufferReload(bang)
+    let cur_filename = expand("%")
+    let bd_cmd = "bd "
+    call __ExecCheckBdErrs(bd_cmd)
+
+    let edit_cmd = "edit "
+    call __ExecCheckBdErrs(edit_cmd. cur_filename)
+endfunction
 
 function!                                                   __ExecCheckBdErrs(bdrangecmd) 
     try 
@@ -537,7 +547,7 @@ function!                                                   __ExecCheckBdErrs(bd
         echomsg matchstr(v:exception, ':\zsE.*') 
         echohl none 
     endtry 
-endfunc 
+endfunction
 
 nnoremap <leader>mw                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
 nnoremap <leader>mW                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
