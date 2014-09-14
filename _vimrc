@@ -298,6 +298,7 @@ let g:acp_enableAtStartup                                   =0
 " Use neocomplete.
 let g:neocomplete#enable_at_startup                         =1
 " Use smartcase.
+let g:neocomplete#enable_ignore_case                        =1
 let g:neocomplete#enable_smart_case                         =1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length         =3
@@ -305,7 +306,7 @@ let g:neocomplete#sources#syntax#min_keyword_length         =3
 " For Test
 let g:neocomplete#enable_auto_select                        =0
 let g:neocomplete#enable_auto_delimiter                     =1
-let g:neocomplete#enable_refresh_always                     =1
+let g:neocomplete#enable_refresh_always                     =0
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries           ={
@@ -341,6 +342,17 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
+
+" for smart tab completion.
+inoremap <expr><tab>  pumvisible() ? "\<c-n>" :
+            \ <sid>check_back_space() ? "\<tab>" :
+            \ neocomplete#start_manual_complete()
+function! s:check_back_space()
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+" make cache 
+nnoremap <F3>                                               :NeoCompleteBufferMakeCache<cr>
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
@@ -401,8 +413,8 @@ nnoremap <leader>{                                          O{<esc>jo}<esc>
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
 nnoremap L                                                  $
-" I prefect use visual mode to join.
 nnoremap J                                                  <nop>
+vnoremap J                                                  <nop>
 " this map seem do not work
 " nnoremap K                                                <nop> 
 
