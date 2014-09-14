@@ -102,6 +102,7 @@ Plugin 'kien/ctrlp.vim'
 " Tag Bar
 Plugin 'majutsushi/tagbar'
 
+"Plugin 'IndentAnything'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -117,7 +118,8 @@ filetype plugin indent on       " required
 
 "-------------------------------Something Always need-------------------------------
 colorscheme                                                 kolor
-set guifont                                                 =Consolas:h11
+"set guifont                                                 =Consolas:h11
+set guifont                                                 =Monaco:h11
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
@@ -266,7 +268,7 @@ let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
-let g:lua_define_completion_mappings                        =1
+let g:lua_define_completion_mappings                        =0
 "----------------------------------------- VIM-session -------------------------
 let g:session_directory                                     =$MYVIMFILE . '/sessions'
 let g:session_autoload                                      ='yes'
@@ -299,6 +301,12 @@ let g:neocomplete#enable_at_startup                         =1
 let g:neocomplete#enable_smart_case                         =1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length         =3
+
+" For Test
+let g:neocomplete#enable_auto_select                        =1
+let g:neocomplete#enable_auto_delimiter                     =1
+let g:neocomplete#enable_refresh_always                     =1
+
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries           ={
     \ 'default' : '',
