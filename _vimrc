@@ -303,7 +303,7 @@ let g:neocomplete#enable_smart_case                         =1
 let g:neocomplete#sources#syntax#min_keyword_length         =3
 
 " For Test
-let g:neocomplete#enable_auto_select                        =1
+let g:neocomplete#enable_auto_select                        =0
 let g:neocomplete#enable_auto_delimiter                     =1
 let g:neocomplete#enable_refresh_always                     =1
 
