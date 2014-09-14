@@ -344,13 +344,13 @@ endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
 
 " for smart tab completion.
-inoremap <expr><tab>  pumvisible() ? "\<c-n>" :
-            \ <sid>check_back_space() ? "\<tab>" :
-            \ neocomplete#start_manual_complete()
-function! s:check_back_space()
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+"inoremap <expr><tab>  pumvisible() ? "\<c-n>" :
+            "\ <sid>check_back_space() ? "\<tab>" :
+            "\ neocomplete#start_manual_complete()
+"function! s:check_back_space()
+    "let col = col('.') - 1
+    "return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction
 " make cache 
 nnoremap <F3>                                               :NeoCompleteBufferMakeCache<cr>
 "----------------------------------------- Mrvon Special Key -------------------------
