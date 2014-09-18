@@ -123,11 +123,7 @@ set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
-if has("win32")
-    set fileencoding                                        =chinese
-else
-    set fileencoding                                        =utf-8
-endif
+set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,chinese,default,latin1
 set langmenu                                                =zh_cn.utf-8
 set helplang                                                =cn
@@ -342,15 +338,6 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
-
-" for smart tab completion.
-"inoremap <expr><tab>  pumvisible() ? "\<c-n>" :
-            "\ <sid>check_back_space() ? "\<tab>" :
-            "\ neocomplete#start_manual_complete()
-"function! s:check_back_space()
-    "let col = col('.') - 1
-    "return !col || getline('.')[col - 1]  =~ '\s'
-"endfunction
 " make cache 
 nnoremap <F3>                                               :NeoCompleteBufferMakeCache<cr>
 "----------------------------------------- Mrvon Special Key -------------------------
