@@ -277,7 +277,7 @@ let g:session_autosave                                      ='yes'
 "let g:EasyGrepCommand                                      =1
 "let g:EasyGrepSearchCurrentBufferDir                       =1
 "----------------------------------------- Kolor -------------------------
-let g:kolor_italic                                          =1                  " Enable italic. Default: 1
+let g:kolor_italic                                          =0                  " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
@@ -343,20 +343,14 @@ let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\
 "----------------------------------------- EasyMotion -------------------------
 " Disable default mappings
 let g:EasyMotion_do_mapping                                 =0 
-"map <localleader> <Plug>(easymotion-prefix)
+"map <localleader>                                           <Plug>(easymotion-prefix)
 " Bi-directional find motion
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s                                                      <Plug>(easymotion-s)
-" or
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
 nmap s                                                      <Plug>(easymotion-s2)
+nmap <LocalLeader>s                                         <Plug>(easymotion-sn)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase                                  =1
-" JK motions: Line motions
-nmap <localleader>j                                         <Plug>(easymotion-j)
-nmap <localleader>k                                         <Plug>(easymotion-k)
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
