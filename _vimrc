@@ -26,7 +26,7 @@ let $MYLUADICT                                              =$MYVIMPATH.'lua_exp
 "Must be have lua.exe and luac.exe in your PATH
 
 let mapleader                                               ="\\"
-let maplocalleader                                          ="-"
+let maplocalleader                                          =","
 
 "------------------------------- Version -------------------------------
 version 7.4
@@ -104,7 +104,7 @@ Plugin 'majutsushi/tagbar'
 
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
-"Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -340,8 +340,23 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
-" make cache 
-nnoremap <F3>                                               :NeoCompleteBufferMakeCache<cr>
+"----------------------------------------- EasyMotion -------------------------
+" Disable default mappings
+let g:EasyMotion_do_mapping                                 =0 
+"map <localleader> <Plug>(easymotion-prefix)
+" Bi-directional find motion
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s                                                      <Plug>(easymotion-s)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s                                                      <Plug>(easymotion-s2)
+" Turn on case sensitive feature
+let g:EasyMotion_smartcase                                  =1
+" JK motions: Line motions
+nmap <localleader>j                                         <Plug>(easymotion-j)
+nmap <localleader>k                                         <Plug>(easymotion-k)
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
