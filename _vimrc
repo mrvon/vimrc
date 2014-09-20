@@ -84,7 +84,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
 
 " Multiple-Cursors
-Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'terryma/vim-multiple-cursors'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
