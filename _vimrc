@@ -54,8 +54,10 @@ Plugin 'scrooloose/nerdtree'
 " NERDComment
 Plugin 'scrooloose/nerdcommenter'
 
-" Neocomplete
+" Neocomplete/Neosnippet
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 
 " C/CPP alternative between header and source
 " Plugin 'vim-scripts/a.vim'
@@ -121,7 +123,7 @@ filetype plugin indent on       " required
 "-------------------------------Something Always need-------------------------------
 colorscheme                                                 kolor
 "set guifont                                                 =Consolas:h11
-set guifont                                                 =Monaco:h10
+set guifont                                                 =Monaco:h11
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
@@ -340,6 +342,22 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
+"----------------------------------------- Neosnippet -------------------------
+" Plugin key-mappings.
+imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
+smap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>                                                  <Plug>(neosnippet_expand_target)
+" SuperTab like snippets behavior.
+"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"\ "\<Plug>(neosnippet_expand_or_jump)"
+"\: pumvisible() ? "\<C-n>" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"\ "\<Plug>(neosnippet_expand_or_jump)"
+"\: "\<TAB>"
+" For snippet_complete marker.
+"if has('conceal')
+    "set conceallevel=2 concealcursor=i
+"endif
 "----------------------------------------- EasyMotion -------------------------
 " Disable default mappings
 let g:EasyMotion_do_mapping                                 =0 
