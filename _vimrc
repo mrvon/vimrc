@@ -343,7 +343,6 @@ let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\
 "----------------------------------------- EasyMotion -------------------------
 " Disable default mappings
 let g:EasyMotion_do_mapping                                 =0 
-"map <localleader>                                           <Plug>(easymotion-prefix)
 " Bi-directional find motion
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
