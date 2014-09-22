@@ -123,7 +123,7 @@ filetype plugin indent on       " required
 "-------------------------------Something Always need-------------------------------
 colorscheme                                                 kolor
 "set guifont                                                 =Consolas:h11
-set guifont                                                 =Monaco:h11
+set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
