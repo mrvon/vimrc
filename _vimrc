@@ -104,10 +104,15 @@ Plugin 'kien/ctrlp.vim'
 " Tag Bar
 Plugin 'majutsushi/tagbar'
 
+" Extend Match %
+Plugin 'matchit.zip'
+
+" Easy Motion
+Plugin 'Lokaltog/vim-easymotion'
+
+" Test
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'matchit.zip'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
