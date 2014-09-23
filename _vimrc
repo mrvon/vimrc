@@ -107,6 +107,7 @@ Plugin 'majutsushi/tagbar'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'matchit.zip'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -349,12 +350,12 @@ imap <C-k>                                                  <Plug>(neosnippet_ex
 smap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>                                                  <Plug>(neosnippet_expand_target)
 " SuperTab like snippets behavior.
-"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)"
-"\: pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)"
-"\: "\<TAB>"
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
 " For snippet_complete marker.
 "if has('conceal')
     "set conceallevel=2 concealcursor=i
@@ -369,6 +370,8 @@ nmap t                                                      <Plug>(easymotion-s2
 nmap <LocalLeader>t                                         <Plug>(easymotion-sn)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase                                  =1
+"----------------------------------------- Matchit -------------------------
+" Empty
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
