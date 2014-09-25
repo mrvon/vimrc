@@ -1,6 +1,5 @@
 ## Team KDE Vimrc ##
-### Author: Dennis.Von
-### Happy Hacking Vim
+Happy Hacking Vim
 
 ### Compile By Yourself
 ```sh
