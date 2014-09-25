@@ -114,6 +114,7 @@ Plugin 'Lokaltog/vim-easymotion'
 " Test
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
