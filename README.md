@@ -1,4 +1,4 @@
-## Team KDE Vimrc ##
+## Team KDE Vimrc 
 Happy Hacking Vim
 
 ### Compile gVim By Yourself (Windows)
@@ -10,7 +10,6 @@ mingw32-make.exe -f Make_ming.mak clean
 ```
 
 ### PATCH Website
-Patch file website
 ```sh
 ftp://ftp.vim.org/pub/vim/patches/7.4/README
 ```
