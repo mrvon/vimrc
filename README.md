@@ -1,7 +1,7 @@
 ## Team KDE Vimrc ##
 Happy Hacking Vim
 
-### Compile By Yourself
+### Compile gVim By Yourself (Windows)
 ```sh
 mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""
 ```
@@ -10,10 +10,17 @@ mingw32-make.exe -f Make_ming.mak clean
 ```
 
 ### PATCH Website
-[PATCH](ftp://ftp.vim.org/pub/vim/patches/7.4/README)
+Patch file website
+```sh
+ftp://ftp.vim.org/pub/vim/patches/7.4/README
+```sh
 
 ### Some Useful Website
-[vimawesome](http://vimawesome.com/)
+vimawesome
+```sh
+http://vimawesome.com/
+```sh
+
 [vimgolf](http://vimgolf.com/)
 [bestofvim](http://bestofvim.com/)
 [reddit](http://www.reddit.com/r/vim/)
