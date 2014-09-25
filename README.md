@@ -13,15 +13,26 @@ mingw32-make.exe -f Make_ming.mak clean
 Patch file website
 ```sh
 ftp://ftp.vim.org/pub/vim/patches/7.4/README
-```sh
+```
 
 ### Some Useful Website
 vimawesome
 ```sh
 http://vimawesome.com/
+```
+vimgolf
 ```sh
-
-[vimgolf](http://vimgolf.com/)
-[bestofvim](http://bestofvim.com/)
-[reddit](http://www.reddit.com/r/vim/)
-[nabble](http://vim.1045645.n5.nabble.com/)
+http://vimgolf.com/
+```
+bestofvim
+```sh
+http://bestofvim.com/
+```
+reddit
+```sh
+http://www.reddit.com/r/vim/
+```
+nabble
+```sh
+http://vim.1045645.n5.nabble.com/
+```
