@@ -111,10 +111,15 @@ Plugin 'matchit.zip'
 " Easy Motion
 Plugin 'Lokaltog/vim-easymotion'
 
+" Tabular for align
+Plugin 'godlygeek/tabular'
+
+" Vim Markdown
+Plugin 'plasticboy/vim-markdown'
+
 " Test
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
-Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -379,6 +384,8 @@ nmap <LocalLeader>t                                         <Plug>(easymotion-sn
 let g:EasyMotion_smartcase                                  =1
 "----------------------------------------- Matchit -------------------------
 " Empty
+"----------------------------------------- Vim-Markdown -------------------------
+let g:vim_markdown_folding_disabled                         =1
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
