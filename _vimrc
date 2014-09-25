@@ -97,7 +97,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " My color
 Plugin 'mrvon/vim-kolor'
-Plugin 'mrvon/kde-art-color'
+Plugin 'altercation/vim-colors-solarized'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
@@ -134,7 +134,8 @@ filetype plugin indent on       " required
 " Put your non-Plugin stuff after this line
 
 "-------------------------------Something Always need-------------------------------
-colorscheme                                                 kolor
+"colorscheme                                                 kolor
+colorscheme                                                 solarized
 "set guifont                                                 =Consolas:h11
 set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
