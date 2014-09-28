@@ -134,8 +134,8 @@ filetype plugin indent on       " required
 " Put your non-Plugin stuff after this line
 
 "-------------------------------Something Always need-------------------------------
-"colorscheme                                                 kolor
-colorscheme                                                 solarized
+colorscheme                                                 kolor
+"colorscheme                                                 solarized
 "set guifont                                                 =Consolas:h11
 set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
