@@ -380,7 +380,7 @@ let g:EasyMotion_do_mapping                                 =0
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
 nmap t                                                      <Plug>(easymotion-s2)
-nmap <LocalLeader>t                                         <Plug>(easymotion-sn)
+"nmap <LocalLeader>t                                         <Plug>(easymotion-sn)
 " Turn on case sensitive feature
 let g:EasyMotion_smartcase                                  =1
 "----------------------------------------- Matchit -------------------------
