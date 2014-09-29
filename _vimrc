@@ -658,7 +658,7 @@ if has("win32")
     "autocmd GUIEnter *                                      simalt ~x
     augroup on_gui_enter 
         autocmd!
-        autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
+        autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 245)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * setlocal vb t_vb=
     augroup END
