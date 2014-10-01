@@ -317,9 +317,11 @@ nnoremap <leader>{                                          O{<esc>jo}<esc>
 
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
-"nnoremap J                                                  <nop>
-"nnoremap K                                                  <nop>
 nnoremap L                                                  $
+" I prefect use visual mode to join.
+nnoremap J                                                  <nop>
+" this map seem do not work
+" nnoremap K                                                  <nop> 
 
 
 " comment a line
