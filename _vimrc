@@ -66,15 +66,6 @@ Plugin 'Shougo/vimproc.vim'
 " Youcompleteme
 "Plugin 'Valloric/YouCompleteMe'
 
-" Session
-" Plugin 'xolox/vim-session'
-
-" UltiSnips
-"Plugin 'vim-scripts/UltiSnips'
-
-" UltiSnips Snippets are separated from the engine
-"Plugin 'honza/vim-snippets'
-
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
 
@@ -85,9 +76,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
-
-" Multiple-Cursors
-"Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'xolox/vim-session'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
@@ -120,6 +109,9 @@ Plugin 'plasticboy/vim-markdown'
 " Test
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
+"Plugin 'vim-scripts/UltiSnips'
+"Plugin 'honza/vim-snippets'
+"Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
