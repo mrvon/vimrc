@@ -35,3 +35,6 @@ nabble
 ```sh
 http://vim.1045645.n5.nabble.com/
 ```
+
+### When I write C and C++ program
+I rather use VsVim than Vim
