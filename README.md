@@ -1,5 +1,5 @@
-## Team KDE Vimrc 
-Happy Hacking Vim
+## Happy Hacking Vim
+Mrvon 's setting
 
 ### Compile gVim By Yourself (Windows)
 ```sh
