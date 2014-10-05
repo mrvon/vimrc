@@ -1,8 +1,8 @@
 "------------------------------- Team KDE -------------------------------
+"echo "This Setting for vsvim"
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
 "echo "Author Mrvon"
-
 
 "------------------------------- Operating System -------------------------------
 let g:is_windows                                            =0
