@@ -3,7 +3,6 @@
 "echo "Welcome join in Team KDE"
 "echo "Author Mrvon"
 
-
 "------------------------------- Operating System -------------------------------
 let g:is_windows                                            =0
 let g:is_mac                                                =0
@@ -460,14 +459,14 @@ vnoremap J                                                  <nop>
 " find In       Last        ( or [
 " find Around   Next        ( or [
 " find Around   Last        ( or [
-onoremap i(                                                 :<c-u>normal! f(vi(<cr>
-onoremap a(                                                 :<c-u>normal! f(va(<cr>
-onoremap i[                                                 :<c-u>normal! f[vi[<cr>
-onoremap a[                                                 :<c-u>normal! f[va[<cr>
-onoremap il(                                                :<c-u>normal! F(vi(<cr>
-onoremap al(                                                :<c-u>normal! F(va(<cr>
-onoremap il[                                                :<c-u>normal! F[vi[<cr>
-onoremap al[                                                :<c-u>normal! F[va[<cr>
+"onoremap i(                                                 :<c-u>normal! f(vi(<cr>
+"onoremap a(                                                 :<c-u>normal! f(va(<cr>
+"onoremap i[                                                 :<c-u>normal! f[vi[<cr>
+"onoremap a[                                                 :<c-u>normal! f[va[<cr>
+"onoremap il(                                                :<c-u>normal! F(vi(<cr>
+"onoremap al(                                                :<c-u>normal! F(va(<cr>
+"onoremap il[                                                :<c-u>normal! F[vi[<cr>
+"onoremap al[                                                :<c-u>normal! F[va[<cr>
 
 
 " Vimscript file settings --------------------------
