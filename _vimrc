@@ -226,6 +226,9 @@ set noundofile
 "-------------------------------allow to bg unsaved buffer-------------------------------
 set hidden
 
+"-------------------------------auto read when other program have modified file-------------------------------
+set autoread
+
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
 let g:airline_theme                                         ='kolor'
