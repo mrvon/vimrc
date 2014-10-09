@@ -127,8 +127,8 @@ filetype plugin indent on       " required
 
 "-------------------------------Something Always need-------------------------------
 colorscheme                                                 Tomorrow
+colorscheme                                                 solarized
 "colorscheme                                                 kolor
-"colorscheme                                                 solarized
 "set guifont                                                 =Consolas:h11
 set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
