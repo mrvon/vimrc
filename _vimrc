@@ -86,6 +86,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 " My color
 Plugin 'mrvon/vim-kolor'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
@@ -125,7 +126,8 @@ filetype plugin indent on       " required
 " Put your non-Plugin stuff after this line
 
 "-------------------------------Something Always need-------------------------------
-colorscheme                                                 kolor
+colorscheme                                                 Tomorrow
+"colorscheme                                                 kolor
 "colorscheme                                                 solarized
 "set guifont                                                 =Consolas:h11
 set guifont                                                 =Monaco:h10
@@ -651,7 +653,7 @@ if has("win32")
     "autocmd GUIEnter *                                      simalt ~x
     augroup on_gui_enter 
         autocmd!
-        autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 245)
+        autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * setlocal vb t_vb=
     augroup END
