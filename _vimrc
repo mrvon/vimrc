@@ -97,9 +97,6 @@ Plugin 'majutsushi/tagbar'
 " Extend Match %
 Plugin 'matchit.zip'
 
-" Easy Motion
-Plugin 'Lokaltog/vim-easymotion'
-
 " Tabular for align
 Plugin 'godlygeek/tabular'
 
@@ -112,6 +109,7 @@ Plugin 'plasticboy/vim-markdown'
 "Plugin 'vim-scripts/UltiSnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
+"Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -374,13 +372,13 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "endif
 "----------------------------------------- EasyMotion -------------------------
 " Disable default mappings
-let g:EasyMotion_do_mapping                                 =0 
+"let g:EasyMotion_do_mapping                                 =0 
 " Bi-directional find motion
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
-nmap t                                                      <Plug>(easymotion-s2)
+"nmap t                                                      <Plug>(easymotion-s2)
 " Turn on case sensitive feature
-let g:EasyMotion_smartcase                                  =1
+"let g:EasyMotion_smartcase                                  =1
 "----------------------------------------- Matchit -------------------------
 " Empty
 "----------------------------------------- Vim-Markdown -------------------------
