@@ -231,6 +231,9 @@ set hidden
 "-------------------------------auto read when other program have modified file-------------------------------
 set autoread
 
+"-------------------------------number format-------------------------------
+set nrformats                                               =hex
+
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
 let g:airline_theme                                         ='kolor'
