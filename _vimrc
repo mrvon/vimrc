@@ -100,7 +100,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Alternative between header and source for c and c++
-"Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/a.vim'
 
 " Test
 "Plugin 'Valloric/YouCompleteMe'
@@ -354,18 +354,13 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_overwrite_completefunc = 1
-let g:neocomplete#force_omni_input_patterns.c =
+let g:neocomplete#force_omni_input_patterns.c               =
             \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp =
+let g:neocomplete#force_omni_input_patterns.cpp             =
             \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.objc =
+let g:neocomplete#force_omni_input_patterns.objc            =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
-let g:neocomplete#force_omni_input_patterns.objcpp =
+let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
 "----------------------------------------- Neosnippet -------------------------
 " Plugin key-mappings.
