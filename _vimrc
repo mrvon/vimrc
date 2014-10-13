@@ -332,7 +332,7 @@ if !exists('g:neocomplete#keyword_patterns')
 endif
 let g:neocomplete#keyword_patterns['default']               ='\h\w*'
 " Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? neocomplete#close_popup()."\<Space>" : "\<Space>"
+"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup()."\<Space>" : "\<Space>"
 " Enable omni completion.
 autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
