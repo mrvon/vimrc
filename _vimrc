@@ -103,6 +103,8 @@ Plugin 'godlygeek/tabular'
 " Vim Markdown
 Plugin 'plasticboy/vim-markdown'
 
+Plugin 'Rip-Rip/clang_complete'
+
 " Test
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
@@ -354,6 +356,19 @@ if !exists('g:neocomplete#force_omni_input_patterns')
     let g:neocomplete#force_omni_input_patterns             ={}
 endif
 let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#force_omni_input_patterns.c =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp =
+            \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+let g:neocomplete#force_omni_input_patterns.objc =
+            \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
+let g:neocomplete#force_omni_input_patterns.objcpp =
+            \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
 "----------------------------------------- Neosnippet -------------------------
 " Plugin key-mappings.
 imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
@@ -383,6 +398,16 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " Empty
 "----------------------------------------- Vim-Markdown -------------------------
 let g:vim_markdown_folding_disabled                         =1
+"----------------------------------------- Clang Complete -------------------------
+let g:clang_complete_auto                                   =0
+let g:clang_complete_copen                                  =1
+let g:clang_auto_select                                     =0
+" :h clang_complete-auto_user_options
+" Using libclang requires a Vim built with +python
+let g:clang_use_library                                     =1
+" Mit der Option "gcc" kriege ich Fehler.
+" Remove "gcc" option as it causes errors.
+let g:clang_auto_user_options                               ='path, .clang_complete'
 "----------------------------------------- Mrvon Special Key -------------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
