@@ -59,12 +59,6 @@ Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc.vim'
 
-" C/CPP alternative between header and source
-" Plugin 'vim-scripts/a.vim'
-
-" Youcompleteme
-"Plugin 'Valloric/YouCompleteMe'
-
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
 
@@ -75,7 +69,6 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
-" Plugin 'xolox/vim-session'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
@@ -103,9 +96,14 @@ Plugin 'godlygeek/tabular'
 " Vim Markdown
 Plugin 'plasticboy/vim-markdown'
 
+" Clang Complete
 Plugin 'Rip-Rip/clang_complete'
 
+" Alternative between header and source for c and c++
+"Plugin 'vim-scripts/a.vim'
+
 " Test
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'vim-scripts/UltiSnips'
