@@ -100,7 +100,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Alternative between header and source for c and c++
-Plugin 'vim-scripts/a.vim'
+"Plugin 'vim-scripts/a.vim'
 
 " Test
 "Plugin 'Valloric/YouCompleteMe'
