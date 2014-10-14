@@ -1,5 +1,5 @@
 ## Happy Hacking Vim
-Mrvon 's setting
+Mrvon 's setting (all x64 in Microsoft Windows)
 
 ### Compile gVim By Yourself (Windows)
 ```sh
