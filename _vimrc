@@ -540,9 +540,9 @@ augroup END
 "noremap <silent> <F8>                                       :tabn<cr>
 
 "previous buffer
-noremap <silent> <F7>                                       :bprevious<cr>
+"noremap <silent> <F7>                                       :bprevious<cr>
 "next buffer
-noremap <silent> <F8>                                       :bnext<cr>
+"noremap <silent> <F8>                                       :bnext<cr>
 
 "previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
