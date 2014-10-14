@@ -300,7 +300,6 @@ let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- CtrlP -------------------------
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
-nnoremap <silent> <cr>                                      :CtrlPBuffer<cr>
 "----------------------------------------- TagBar -------------------------
 nnoremap <silent> <F9>                                      :TagbarToggle<cr>
 "----------------------------------------- NeoComplete -------------------------
@@ -540,9 +539,9 @@ augroup END
 "noremap <silent> <F8>                                       :tabn<cr>
 
 "previous buffer
-"noremap <silent> <F7>                                       :bprevious<cr>
+noremap <silent> <F7>                                       :bprevious<cr>
 "next buffer
-"noremap <silent> <F8>                                       :bnext<cr>
+noremap <silent> <F8>                                       :bnext<cr>
 
 "previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
