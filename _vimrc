@@ -163,7 +163,7 @@ set expandtab
 set backspace                                               =indent,eol,start
 set autoindent
 set smartindent
-set history                                                 =50
+set history                                                 =200
 set printoptions                                            =paper:a4
 
 "-------------------------------ruler and statusline-------------------------------
