@@ -125,9 +125,13 @@ filetype plugin indent on       " required
 " Put your non-Plugin stuff after this line
 
 "-------------------------------My Color My Taste-------------------------------
+" Adjust My color scheme by system time
+if strftime("%H") >= 9 && strftime("%H") <= 17
 colorscheme                                                 Tomorrow
 colorscheme                                                 solarized
-"colorscheme                                                 kolor
+else
+colorscheme                                                 kolor
+endif
 "set guifont                                                 =Consolas:h11
 set guifont                                                 =Monaco:h10
 "-------------------------------Encoding-------------------------------
