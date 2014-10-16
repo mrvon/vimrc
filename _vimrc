@@ -538,15 +538,15 @@ augroup save_with_nobomb
     autocmd                                                 BufWritePre *.lua,*.txt setlocal nobomb
 augroup END
 
-"previous tab page
+" Quickly Traverse Tab
 "noremap <silent> <F7>                                       :tabp<cr>
-"next tab page
 "noremap <silent> <F8>                                       :tabn<cr>
 
-"previous buffer
-noremap <silent> <F7>                                       :bprevious<cr>
-"next buffer
-noremap <silent> <F8>                                       :bnext<cr>
+" Quickly Traverse Buffer
+noremap <silent> [b                                         :bprevious<cr>
+noremap <silent> ]b                                         :bnext<cr>
+noremap <silent> [B                                         :bfirst<cr>
+noremap <silent> ]B                                         :blast<cr>
 
 "previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
