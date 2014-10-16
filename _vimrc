@@ -62,8 +62,8 @@ Plugin 'Shougo/vimproc.vim'
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
 
-" Vim-Surround
-"Plugin 'tpope/vim-surround'
+" Vim-unimpaired
+Plugin 'tpope/vim-unimpaired'
 
 " Vim-Lua
 Plugin 'xolox/vim-lua-ftplugin'
@@ -106,6 +106,7 @@ Plugin 'Rip-Rip/clang_complete'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-surround'
 "Plugin 'vim-scripts/UltiSnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
@@ -542,11 +543,11 @@ augroup END
 "noremap <silent> <F7>                                       :tabp<cr>
 "noremap <silent> <F8>                                       :tabn<cr>
 
-" Quickly Traverse Buffer
-noremap <silent> [b                                         :bprevious<cr>
-noremap <silent> ]b                                         :bnext<cr>
-noremap <silent> [B                                         :bfirst<cr>
-noremap <silent> ]B                                         :blast<cr>
+" Quickly Traverse Buffer (tpope/vim-unimpaired already implement it)
+"noremap <silent> [b                                         :bprevious<cr>
+"noremap <silent> ]b                                         :bnext<cr>
+"noremap <silent> [B                                         :bfirst<cr>
+"noremap <silent> ]B                                         :blast<cr>
 
 "previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
