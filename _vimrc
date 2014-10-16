@@ -539,7 +539,7 @@ augroup save_with_nobomb
     autocmd                                                 BufWritePre *.lua,*.txt setlocal nobomb
 augroup END
 
-" Quickly Traverse Tab
+" Quickly Traverse Tab (I prefer buffer to tab)
 "noremap <silent> <F7>                                       :tabp<cr>
 "noremap <silent> <F8>                                       :tabn<cr>
 
