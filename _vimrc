@@ -123,7 +123,7 @@ filetype plugin indent on       " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"-------------------------------Something Always need-------------------------------
+"-------------------------------My Color My Taste-------------------------------
 colorscheme                                                 Tomorrow
 colorscheme                                                 solarized
 "colorscheme                                                 kolor
@@ -163,17 +163,20 @@ set expandtab
 set backspace                                               =indent,eol,start
 set autoindent
 set smartindent
-set history                                                 =200
 set printoptions                                            =paper:a4
+
+"-------------------------------max history item-------------------------------
+set history                                                 =200
 
 "-------------------------------ruler and statusline-------------------------------
 set noruler
 set laststatus                                              =2
-
-"set magic
 set scrolloff                                               =5
 
-" memory limit problem
+"-------------------------------magic-------------------------------
+set magic
+
+"-------------------------------memory limit problem-------------------------------
 set maxmem                                                  =10
 set maxmempattern                                           =10
 set maxmemtot                                               =100
@@ -298,6 +301,8 @@ let g:kolor_alternative_matchparen                          =0                  
 "----------------------------------------- Indent guides -------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
 "----------------------------------------- CtrlP -------------------------
+"Ctrl-P             Search file in project
+"Ctrl-P Ctrl-F      View all buffer
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
 "----------------------------------------- TagBar -------------------------
