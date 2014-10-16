@@ -410,10 +410,10 @@ let g:clang_auto_user_options                               ='path, .clang_compl
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
 "----------------------------------------- Resize windows -------------------------
-nnoremap <Up>                                               <c-w>+
-nnoremap <Down>                                             <c-w>-
-nnoremap <Left>                                             <c-w><
-nnoremap <Right>                                            <c-w>>
+nnoremap <Up>                                               <c-w>3+
+nnoremap <Down>                                             <c-w>3-
+nnoremap <Left>                                             <c-w>3<
+nnoremap <Right>                                            <c-w>3>
 "----------------------------------------- Moving between windows -------------------------
 nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
