@@ -38,3 +38,6 @@ http://vim.1045645.n5.nabble.com/
 
 ### When I write C and C++ program
 I rather use VsVim than Vim
+
+### Change gVim be you git default editor
+git config --global core.editor gvim
