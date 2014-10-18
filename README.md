@@ -2,13 +2,13 @@
 Mrvon 's setting (all x64 in Microsoft Windows)
 
 ### Compile gVim By Yourself (Windows)
+Following command must be run on the console open by mingw-w64.bat (sh/cmd/powershell may be cause error)
 ```sh
 mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""
 ```
 ```sh
 mingw32-make.exe -f Make_ming.mak clean
 ```
-
 ### PATCH Website
 ```sh
 ftp://ftp.vim.org/pub/vim/patches/7.4/README
