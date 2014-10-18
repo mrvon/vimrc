@@ -1,5 +1,5 @@
 ## Happy Hacking Vim
-Mrvon 's setting (all x64 in Microsoft Windows)
+Mrvon 's setting (all file(binary/library) is x64 version in Microsoft Windows)
 
 ### Compile gVim By Yourself (Windows)
 Following command must be run on the console open by mingw-w64.bat (sh/cmd/powershell may be cause error)
