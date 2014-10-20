@@ -126,7 +126,7 @@ filetype plugin indent on       " required
 
 "-------------------------------My Color My Taste-------------------------------
 " Adjust My color scheme by system time
-if strftime("%H") >= 9 && strftime("%H") <= 17
+if strftime("%H") >= 9 && strftime("%H") <= 10
 colorscheme                                                 Tomorrow
 colorscheme                                                 solarized
 else
