@@ -101,6 +101,8 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 Plugin 'klen/python-mode'
+" It seems lastest version have problem, please use following version
+"git reset --hard b92c9828e21458347c1b37685ba0d16423652ef2
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
