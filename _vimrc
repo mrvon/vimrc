@@ -102,6 +102,9 @@ Plugin 'Rip-Rip/clang_complete'
 " Python mode
 Plugin 'klen/python-mode'
 
+" Stronger Signature
+"Plugin 'kshenoy/vim-signature'
+
 " Alternative between header and source for c and c++
 "Plugin 'vim-scripts/a.vim'
 
