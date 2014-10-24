@@ -103,7 +103,7 @@ Plugin 'Rip-Rip/clang_complete'
 Plugin 'klen/python-mode'
 
 " Stronger Signature
-"Plugin 'kshenoy/vim-signature'
+Plugin 'kshenoy/vim-signature'
 
 " Alternative between header and source for c and c++
 "Plugin 'vim-scripts/a.vim'
