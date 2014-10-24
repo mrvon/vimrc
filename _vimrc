@@ -58,6 +58,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Shougo/vimproc.vim'
 
 " C/CPP alternative between header and source
 " Plugin 'vim-scripts/a.vim'
