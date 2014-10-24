@@ -99,6 +99,9 @@ Plugin 'plasticboy/vim-markdown'
 " Clang Complete
 Plugin 'Rip-Rip/clang_complete'
 
+" Python mode
+Plugin 'klen/python-mode'
+
 " Alternative between header and source for c and c++
 "Plugin 'vim-scripts/a.vim'
 
