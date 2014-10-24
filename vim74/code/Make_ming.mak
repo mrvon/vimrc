@@ -125,7 +125,7 @@ endif
 
 # uncomment 'LUA' if you want a Lua-enabled version
 #LUA=/usr/local
-LUA=c:/lua5_1_4_Win64_bin
+LUA=c:/Lua514
 ifdef LUA
 ifndef DYNAMIC_LUA
 DYNAMIC_LUA=yes
