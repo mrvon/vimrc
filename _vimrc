@@ -17,13 +17,20 @@ endif
 
 
 "-------------------------------Path-------------------------------
-let $MYVIMPATH                                              ='E:/vim/'
-let $MYVIMRUNTIME                                           =$MYVIMPATH.'vim74'
-let $MYVIMRC                                                =$MYVIMPATH.'_vimrc'
-let $MYVIMFILE                                              =$MYVIMPATH.'vimfiles'
+if g:is_windows
+    let $MYVIMPATH                                          ='E:/vim/'
+    let $MYVIMRUNTIME                                       =$MYVIMPATH.'vim74'
+    let $MYVIMRC                                            =$MYVIMPATH.'_vimrc'
+    let $MYVIMFILE                                          =$MYVIMPATH.'vimfiles'
+elseif g:is_mac
+    let $MYVIMPATH                                          ='~/'
+    let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
+    let $MYVIMFILE                                          =$MYVIMPATH.'.vim'
+endif
 let $MYLUADICT                                              =$MYVIMPATH.'lua_export'
 "Must be have lua.exe and luac.exe in your PATH
 
+"-------------------------------Leader Key-------------------------------
 let mapleader                                               ="\\"
 let maplocalleader                                          =","
 
@@ -138,8 +145,12 @@ colorscheme                                                 solarized
 else
 colorscheme                                                 kolor
 endif
-"set guifont                                                 =Consolas:h11
-set guifont                                                 =Monaco:h10
+
+if g:is_windows
+    set guifont                                             =Monaco:h10
+elseif g:is_mac
+    set guifont                                             =Monaco:h11
+endif
 "-------------------------------Encoding-------------------------------
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
@@ -147,8 +158,8 @@ set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =zh_cn.utf-8
 set helplang                                                =cn
-source                                                      $MYVIMRUNTIME/delmenu.vim
-source                                                      $MYVIMRUNTIME/menu.vim
+"source                                                      $MYVIMRUNTIME/delmenu.vim
+"source                                                      $MYVIMRUNTIME/menu.vim
 language messages                                           zh_cn.utf-8
 "Small Tip - Open file with specific encoding :e ++enc=cp936
 
@@ -161,9 +172,13 @@ set guioptions                                              -=m
 set guioptions                                              -=T
 
 "-------------------------------Set Column-------------------------------
-set co                                                      =200
+set columns                                                 =100
 "-------------------------------Set Row-------------------------------
-set lines                                                   =100
+if g:is_windows
+    set lines                                               =100
+elseif g:is_mac
+    set lines                                               =30
+endif
 
 "-------------------------------Tab Key-------------------------------
 set shiftwidth                                              =4 
@@ -249,6 +264,8 @@ set autoread
 
 "-------------------------------Number Format-------------------------------
 set nrformats                                               =hex
+"-------------------------------No Fold Enable-------------------------------
+set nofoldenable
 
 "-------------------------------Mrvon 's favorite plugin----------------------------------------
 "-------------------------------Airline---------------------------------------------------------
@@ -283,7 +300,9 @@ let NERDTreeWinSize                                         =25
 let NERDSpaceDelims                                         =1
 "-------------------------------Python Mode---------------------------------------------------------
 "Disable error message on windows, it's a bug
-let g:pymode_rope                                           =0
+if g:is_windows
+    let g:pymode_rope                                       =0
+endif
 "-----------------------------------------DelimitMate-------------------------
 "augroup DelimitMate
     "autocmd!
@@ -679,23 +698,20 @@ function!                                                   __ExecCheckBdErrs(bd
     endtry 
 endfunction
 
-nnoremap <leader>mw                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
-nnoremap <leader>mW                                         :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
-nnoremap <leader>yt                                         :call libcallnr("vimtweak.dll", "EnableTopMost", 1)<CR>
-nnoremap <leader>yT                                         :call libcallnr("vimtweak.dll", "EnableTopMost", 0)<CR>
-nnoremap <leader>aw                                         :call libcallnr("vimtweak.dll", "SetAlpha", 235)<CR>
-nnoremap <leader>aW                                         :call libcallnr("vimtweak.dll", "SetAlpha", 255)<CR>
+if g:is_windows
+    nnoremap <leader>mw                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
+    nnoremap <leader>mW                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
+    nnoremap <leader>yt                                    :call libcallnr("vimtweak.dll", "EnableTopMost", 1)<CR>
+    nnoremap <leader>yT                                    :call libcallnr("vimtweak.dll", "EnableTopMost", 0)<CR>
+    nnoremap <leader>aw                                    :call libcallnr("vimtweak.dll", "SetAlpha", 235)<CR>
+    nnoremap <leader>aW                                    :call libcallnr("vimtweak.dll", "SetAlpha", 255)<CR>
 
-if has("win32")
-    "autocmd GUIEnter *                                      simalt ~x
     augroup on_gui_enter 
         autocmd!
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * setlocal vb t_vb=
     augroup END
-else
-    " do nothing
 endif
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work. 
@@ -706,6 +722,3 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
-
-" For test
-"autocmd! BufReadPre	* set bufhidden=wipe
