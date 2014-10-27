@@ -101,8 +101,6 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 Plugin 'klen/python-mode'
-" It seems lastest version have problem, please use following version
-"git reset --hard b92c9828e21458347c1b37685ba0d16423652ef2
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -414,6 +412,8 @@ let g:clang_use_library                                     =1
 " Mit der Option "gcc" kriege ich Fehler.
 " Remove "gcc" option as it causes errors.
 let g:clang_auto_user_options                               ='path, .clang_complete'
+"-----------------------------------------Python Mode-------------------------
+let g:pymode_python                                         ='python3'
 "-----------------------------------------Mrvon Special Key-------------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
