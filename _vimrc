@@ -273,14 +273,17 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "-------------------------------Alterative Header or Source---------------------------------------------------------
 "nnoremap <leader>a                                          :A<cr>
-"-------------------------------NERDTree ---------------------------------------------------------
+"-------------------------------NERDTree---------------------------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 autocmd vimenter *                                          NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
-"-------------------------------NERDCommenter ---------------------------------------------------------
+"-------------------------------NERDCommenter---------------------------------------------------------
 let NERDSpaceDelims                                         =1
+"-------------------------------Python Mode---------------------------------------------------------
+"Disable error message on windows, it's a bug
+let g:pymode_rope                                           =0
 "-----------------------------------------DelimitMate-------------------------
 "augroup DelimitMate
     "autocmd!
