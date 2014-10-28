@@ -1,4 +1,4 @@
-"-------------------------------Team KDE-------------------------------
+"-------------------------------Team KDE---------------------------------------
 "echo ">^.^<"
 "echo "Welcome join in Team KDE"
 "echo "Author Mrvon"
@@ -15,8 +15,7 @@ else
     let g:is_linux                                          =1
 endif
 
-
-"-------------------------------Path-------------------------------
+"-------------------------------Path-------------------------------------------
 if g:is_windows
     let $MYVIMPATH                                          ='E:/vim/'
     let $MYVIMRUNTIME                                       =$MYVIMPATH.'vim74'
@@ -30,14 +29,14 @@ endif
 let $MYLUADICT                                              =$MYVIMPATH.'lua_export'
 "Must be have lua.exe and luac.exe in your PATH
 
-"-------------------------------Leader Key-------------------------------
+"-------------------------------Leader Key-------------------------------------
 let mapleader                                               ="\\"
 let maplocalleader                                          =","
 
-"-------------------------------Version-------------------------------
+"-------------------------------Version----------------------------------------
 version 7.4
 
-"-------------------------------Vundle - Plugin Package Manager-------------------------------
+"-------------------------------Vundle - Plugin Package Manager----------------
 set nocompatible                " required
 filetype off                    " required
 
@@ -51,7 +50,7 @@ call vundle#begin(path)
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" vim-airline
+" Vim-Airline
 Plugin 'bling/vim-airline'
 
 " NERDTree
@@ -115,7 +114,7 @@ Plugin 'kshenoy/vim-signature'
 " Alternative between header and source for c and c++
 "Plugin 'vim-scripts/a.vim'
 
-" Test
+" Waitting Test
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
@@ -137,7 +136,7 @@ filetype plugin indent on       " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"-------------------------------My Color My Taste-------------------------------
+"-------------------------------My Color My Taste------------------------------
 " Adjust My color scheme by system time
 if strftime("%H") >= 9 && strftime("%H") <= 10
 colorscheme                                                 Tomorrow
@@ -151,7 +150,8 @@ if g:is_windows
 elseif g:is_mac
     set guifont                                             =Monaco:h11
 endif
-"-------------------------------Encoding-------------------------------
+"-------------------------------Encoding---------------------------------------
+" Always use utf-8 
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
 set fileencoding                                            =utf-8
@@ -163,9 +163,10 @@ if g:is_windows
     source                                                  $MYVIMRUNTIME/menu.vim
 endif
 language messages                                           zh_cn.utf-8
-"Small Tip - Open file with specific encoding :e ++enc=cp936
+" Small Tip - Open file with specific encoding :e ++enc=cp936
 
-"-------------------------------GUI Options-------------------------------
+"-------------------------------GUI Options------------------------------------
+" Simple Menu 
 set guioptions                                              -=l
 set guioptions                                              -=L
 set guioptions                                              -=r
@@ -173,16 +174,16 @@ set guioptions                                              -=R
 set guioptions                                              -=m
 set guioptions                                              -=T
 
-"-------------------------------Set Column-------------------------------
+"-------------------------------Set Column-------------------------------------
 set columns                                                 =100
-"-------------------------------Set Row-------------------------------
+"-------------------------------Set Row----------------------------------------
 if g:is_windows
     set lines                                               =100
 elseif g:is_mac
     set lines                                               =30
 endif
 
-"-------------------------------Tab Key-------------------------------
+"-------------------------------Tab Key----------------------------------------
 set shiftwidth                                              =4 
 set tabstop                                                 =4
 set softtabstop                                             =0
@@ -196,35 +197,35 @@ set printoptions                                            =paper:a4
 "-------------------------------Max History Item-------------------------------
 set history                                                 =200
 
-"-------------------------------Ruler And Statusline-------------------------------
+"-------------------------------Ruler And Statusline---------------------------
 set noruler
 set laststatus                                              =2
 set scrolloff                                               =5
 
-"-------------------------------Magic-------------------------------
+"-------------------------------Magic------------------------------------------
 set magic
 
-"-------------------------------Memory Limit Problem-------------------------------
+"-------------------------------Memory Limit Problem---------------------------
 set maxmem                                                  =10
 set maxmempattern                                           =10
 set maxmemtot                                               =100
 
-"-------------------------------Share Clipboard With Windows-------------------------------
+"-------------------------------Share Clipboard With Windows-------------------
 set clipboard                                               +=unnamed
 
-"-------------------------------Line Space-------------------------------
+"-------------------------------Line Space-------------------------------------
 set linespace                                               =0
 
-"-------------------------------Highlight Line Under The Cursor-------------------------------
+"-------------------------------Highlight Line Under The Cursor----------------
 set cursorline
 
-"-------------------------------Lazy Redraw-------------------------------
+"-------------------------------Lazy Redraw------------------------------------
 set nolazyredraw
 
-"-------------------------------Display Line Number-------------------------------
+"-------------------------------Display Line Number----------------------------
 set number
 
-"-------------------------------Show Matching Bracets-------------------------------
+"-------------------------------Show Matching Bracets--------------------------
 set showmatch
 
 "-------------------------------Highlight Search-------------------------------
@@ -233,44 +234,54 @@ set hlsearch
 " shows search matches as you type
 set incsearch
 
-"-------------------------------Wrap Long Line-------------------------------
+"-------------------------------Wrap Long Line---------------------------------
 set nowrap
 "set linebreak
 
-"-------------------------------Wrap Scan-------------------------------
+"-------------------------------Wrap Scan--------------------------------------
 set wrapscan
 
-"-------------------------------Ignore Case And Smart Case-------------------------------
+"-------------------------------Ignore Case And Smart Case---------------------
 " if all lowercase, ignore case
 set ignorecase
 " if caps, watch case
 set smartcase
 
-"-------------------------------Do Not Auto Break A Line-------------------------------
-set textwidth                                               =0
+"-------------------------------Auto Break A Line------------------------------
+" Always notice you do not write a long line
+set textwidth                                               =80
 
-"-------------------------------Command Wild Menu-------------------------------
+"-------------------------------Command Wild Menu------------------------------
+" You can use Ctrl-d to show wild list
 set wildmenu
 
-"-------------------------------gf Search Path-------------------------------
+"-------------------------------gf Search Path---------------------------------
+" Search path for gf command
 set path                                                    =.,..,,
 
-"-------------------------------Do Not Use Undofile-------------------------------
+"-------------------------------Do Not Use Undofile----------------------------
 set noundofile
 
-"-------------------------------Allow To bg Unsaved Buffer-------------------------------
+"-------------------------------Allow To bg Unsaved Buffer---------------------
+" I prefer use Ctrl-p Ctrl-f to list all buffer
 set hidden
 
-"-------------------------------Auto Read When Other Program Have Modified File-------------------------------
+"-------------------------------Auto Read -------------------------------------
+" Auto read when other program have modified the same file
 set autoread
 
-"-------------------------------Number Format-------------------------------
+"-------------------------------Number Format----------------------------------
 set nrformats                                               =hex
-"-------------------------------No Fold Enable-------------------------------
+
+"-------------------------------Disable Fold-----------------------------------
+" I don't like vim style fold
 set nofoldenable
 
-"-------------------------------Mrvon 's favorite plugin----------------------------------------
-"-------------------------------Airline---------------------------------------------------------
+"-------------------------------Disable Swap file------------------------------
+set noswapfile
+
+"-------------------------------Mrvon 's favorite plugin-----------------------
+"-------------------------------Airline----------------------------------------
 let g:airline_theme                                         ='kolor'
 let g:airline#extensions#tabline#enabled                    =1
 let g:airline#extensions#tabline#left_sep                   ='<'  
@@ -281,7 +292,7 @@ let g:airline#extensions#tabline#show_tab_nr                =1
 let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
-"-------------------------------YouCompleteMe---------------------------------------------------------
+"-------------------------------YouCompleteMe----------------------------------
 "let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files              =1
 "let g:ycm_seed_identifiers_with_syntax                     =1
@@ -290,33 +301,33 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "let g:ycm_key_list_previous_completion                     =['UP']
 "let g:ycm_autoclose_preview_window_after_insertion         =1
 "nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"-------------------------------Alterative Header or Source---------------------------------------------------------
+"-------------------------------Alterative Header or Source--------------------
 "nnoremap <leader>a                                          :A<cr>
-"-------------------------------NERDTree---------------------------------------------------------
+"-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 autocmd vimenter *                                          NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
-"-------------------------------NERDCommenter---------------------------------------------------------
+"-------------------------------NERDCommenter----------------------------------
 let NERDSpaceDelims                                         =1
-"-------------------------------Python Mode---------------------------------------------------------
+"-------------------------------Python Mode------------------------------------
 "Disable error message on windows, it's a bug
 if g:is_windows
     let g:pymode_rope                                       =0
 endif
-"-----------------------------------------DelimitMate-------------------------
+"-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
     "autocmd!
     "autocmd FileType lua,txt let b:delimitMate_matchpairs   ="(:),[:],{:}"
     "autocmd FileType lua,txt let b:delimitMate_quotes       = "\" '"
 "augroup END
-"-----------------------------------------Emmet(Zencoding) -------------------------
-"-----------------------------------------UltiSnips-------------------------
+"-----------------------------------------Emmet(Zencoding) --------------------
+"-----------------------------------------UltiSnips----------------------------
 let g:UltiSnipsExpandTrigger                                ="<tab>"
 let g:UltiSnipsJumpForwardTrigger                           ="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
-"-----------------------------------------VIM Lua-------------------------
+"-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
 "let g:lua_compiler_name                                     =$MYLUA . "/luac.exe"
 let g:lua_check_syntax                                      =1
@@ -325,21 +336,21 @@ let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
 let g:lua_define_completion_mappings                        =0
-"-----------------------------------------Kolor-------------------------
+"-----------------------------------------Kolor--------------------------------
 let g:kolor_italic                                          =0                  " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
-"-----------------------------------------Indent guides-------------------------
-let g:indent_guides_enable_on_vim_startup                  =1
-"-----------------------------------------CtrlP-------------------------
+"-----------------------------------------Indent guides------------------------
+let g:indent_guides_enable_on_vim_startup                   =1
+"-----------------------------------------CtrlP--------------------------------
 "Ctrl-P             Search file in project
 "Ctrl-P Ctrl-F      View all buffer
-let g:ctrlp_by_filename                                    =1
-let g:ctrlp_match_window                                   ='bottom,order:btt,min:1,max:10,results:15'
-"-----------------------------------------TagBar-------------------------
-nnoremap <silent> <F9>                                     :TagbarToggle<cr>
-"-----------------------------------------NeoComplete-------------------------
+let g:ctrlp_by_filename                                     =1
+let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
+"-----------------------------------------TagBar-------------------------------
+nnoremap <silent> <F9>                                      :TagbarToggle<cr>
+"-----------------------------------------NeoComplete--------------------------
 " Disable compeltefunc conflicts warnning
 let neocomplete#force_overwrite_completefunc                =1
 " Disable AutoComplPop.
@@ -399,7 +410,7 @@ let g:neocomplete#force_omni_input_patterns.objc            =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
 let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
-"-----------------------------------------Neosnippet-------------------------
+"-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
 imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
 smap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
@@ -415,7 +426,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "if has('conceal')
     "set conceallevel=2 concealcursor=i
 "endif
-"-----------------------------------------EasyMotion-------------------------
+"-----------------------------------------EasyMotion---------------------------
 " Disable default mappings
 "let g:EasyMotion_do_mapping                                 =0 
 " Bi-directional find motion
@@ -424,11 +435,11 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "nmap t                                                      <Plug>(easymotion-s2)
 " Turn on case sensitive feature
 "let g:EasyMotion_smartcase                                  =1
-"-----------------------------------------Matchit-------------------------
+"-----------------------------------------Matchit------------------------------
 " Empty
 "-----------------------------------------Vim-Markdown-------------------------
 let g:vim_markdown_folding_disabled                         =1
-"-----------------------------------------Clang Complete-------------------------
+"-----------------------------------------Clang Complete-----------------------
 let g:clang_complete_auto                                   =0
 let g:clang_complete_copen                                  =1
 let g:clang_auto_select                                     =0
@@ -438,17 +449,17 @@ let g:clang_use_library                                     =1
 " Mit der Option "gcc" kriege ich Fehler.
 " Remove "gcc" option as it causes errors.
 let g:clang_auto_user_options                               ='path, .clang_complete'
-"-----------------------------------------Python Mode-------------------------
+"-----------------------------------------Python Mode--------------------------
 let g:pymode_python                                         ='python3'
-"-----------------------------------------Mrvon Special Key-------------------------
+"-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
-"-----------------------------------------Resize windows-------------------------
+"-----------------------------------------Resize windows-----------------------
 nnoremap <Up>                                              <c-w>3+
 nnoremap <Down>                                            <c-w>3-
 nnoremap <Left>                                            <c-w>3<
 nnoremap <Right>                                           <c-w>3>
-"-----------------------------------------Moving between windows-------------------------
+"-----------------------------------------Moving between windows---------------
 nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
@@ -505,7 +516,6 @@ vnoremap J                                                  <nop>
 " this map seem do not work
 " nnoremap K                                                <nop> 
 
-
 " comment a line
 "augroup  comment_group
 "    autocmd!
@@ -513,9 +523,6 @@ vnoremap J                                                  <nop>
 "    autocmd                                                 FileType lua nnoremap <buffer> <localleader>c I--<esc>
 "    autocmd                                                 FileType vim nnoremap <buffer> <localleader>c I"<esc>
 "augroup  END
-
-" mrvon style breaking line, make a beautiful code style
-" iabbrev <localleader>c                                      /*----------------------------------------------------------------------------------------------------------------------*/
 
 " movement mappings ----------------- 
 " find In       Next        ( or [
@@ -532,7 +539,7 @@ vnoremap J                                                  <nop>
 "onoremap al[                                                :<c-u>normal! F[va[<cr>
 
 
-" Vimscript file settings --------------------------
+" Vimscript file settings
 augroup filetype_vim
     autocmd!
     autocmd                                                 FileType vim setlocal foldmethod=marker
@@ -557,13 +564,13 @@ augroup END
 " edit binary using xxd-format!
 augroup binary_edit_group 
     autocmd!
-    autocmd BufReadPre      *.bin let   &bin=1
-    autocmd BufReadPost     *.bin if    &bin    | %!xxd
-    autocmd BufReadPost     *.bin set   ft=xxd  | endif
-    autocmd BufWritePre     *.bin if    &bin    | %!xxd -r
-    autocmd BufWritePre     *.bin endif
-    autocmd BufWritePost    *.bin if    &bin    | %!xxd
-    autocmd BufWritePost    *.bin set   nomod   | endif
+    autocmd                                                 BufReadPre      *.bin let   &bin=1
+    autocmd                                                 BufReadPost     *.bin if    &bin    | %!xxd
+    autocmd                                                 BufReadPost     *.bin set   ft=xxd  | endif
+    autocmd                                                 BufWritePre     *.bin if    &bin    | %!xxd -r
+    autocmd                                                 BufWritePre     *.bin endif
+    autocmd                                                 BufWritePost    *.bin if    &bin    | %!xxd
+    autocmd                                                 BufWritePost    *.bin set   nomod   | endif
 augroup END
 
 " save file with nobomb
@@ -589,9 +596,6 @@ noremap <silent> <F11>                                      :cnext<cr>
 
 "execute lua file
 noremap <silent> <F5>                                       :!lua %<cr>
-
-" no swap file
-set                                                         noswapfile
 
 " insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
@@ -630,7 +634,7 @@ function!                                                   __VisualSelection(di
 endfunction
 
 
-" quick search using ag
+" quick search using Ag
 " search current word ignore-case
 nnoremap <leader>vv                                         :Agi<CR>    
 nnoremap <leader>vw                                         :Agw<CR>    
