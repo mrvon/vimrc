@@ -14,6 +14,7 @@ Because In Mac OS X, vim config path is: ~/.vim and ~/.vimrc
 
 Checkout Mrvon's Vimrc
 > cd ~
+
 > git clone https://github.com/mrvon/Vimrc
  
 
