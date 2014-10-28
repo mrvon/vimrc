@@ -11,10 +11,14 @@ Install the_silver_searcher(ag)
 > brew install the_silver_searcher
 
 Because In Mac OS X, vim config path is: ~/.vim and ~/.vimrc
+
 Checkout Mrvon's Vimrc
 > cd ~
 > git clone https://github.com/mrvon/Vimrc
+ 
+
 Link to it
+
 > ln Vimrc/_vimrc .vimrc
 
 ### Install On Windows 7 x64 ###
