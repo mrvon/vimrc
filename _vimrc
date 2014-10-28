@@ -158,8 +158,10 @@ set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =zh_cn.utf-8
 set helplang                                                =cn
-"source                                                      $MYVIMRUNTIME/delmenu.vim
-"source                                                      $MYVIMRUNTIME/menu.vim
+if g:is_windows
+    source                                                  $MYVIMRUNTIME/delmenu.vim
+    source                                                  $MYVIMRUNTIME/menu.vim
+endif
 language messages                                           zh_cn.utf-8
 "Small Tip - Open file with specific encoding :e ++enc=cp936
 
