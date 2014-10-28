@@ -1,5 +1,5 @@
 # Happy Hacking Vim #
-This is Mrvon 's vim setting 
+This is Mrvon 's Vim setting 
 
 ----------
 
@@ -10,6 +10,13 @@ Install MacVim (with python support and lua support)
 Install the_silver_searcher(ag)
 > brew install the_silver_searcher
 
+Because In Mac OS X, vim config path is: ~/.vim and ~/.vimrc
+Checkout Mrvon's Vimrc
+> cd ~
+> git clone https://github.com/mrvon/Vimrc
+Link to it
+> ln Vimrc/_vimrc .vimrc
+
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
 
@@ -17,7 +24,7 @@ Download a executable installer from vim offical website
 > http://www.vim.org/ 
 
 
-### Compile gVim By Yourself (Windows) ###
+### Compile GVim By Yourself (Windows) ###
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
 ```sh
@@ -31,30 +38,30 @@ mingw32-make.exe -f Make_ming.mak clean
 
 ### Some Useful Website ###
 vimawesome
-```sh
-http://vimawesome.com/
-```
+
+	http://vimawesome.com/
+
 vimgolf
-```sh
-http://vimgolf.com/
-```
+
+	http://vimgolf.com/
+
 bestofvim
-```sh
-http://bestofvim.com/
-```
+
+	http://bestofvim.com/
+
 reddit
-```sh
-http://www.reddit.com/r/vim/
-```
+
+	http://www.reddit.com/r/vim/
+
 nabble
-```sh
-http://vim.1045645.n5.nabble.com/
-```
+
+	http://vim.1045645.n5.nabble.com/
+
 
 ### HOW I use Vim
 I use Vim write python and lua program. When I write C and C++ program I rather
 use Visual Studio + VAX plugin instead of Vim.
 
 
-### Change gVim be you git default editor
+### Change GVim be you git default editor
 git config --global core.editor gvim
