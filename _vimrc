@@ -106,7 +106,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -410,6 +410,9 @@ let g:neocomplete#force_omni_input_patterns.objc            =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
 let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
+" Disable complete for python and ruby
+let g:neocomplete#sources#omni#input_patterns.python        =''
+let g:neocomplete#sources#omni#input_patterns.ruby          =''
 "-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
 imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
