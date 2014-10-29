@@ -312,11 +312,6 @@ let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
 "-------------------------------NERDCommenter----------------------------------
 let NERDSpaceDelims                                         =1
-"-------------------------------Python Mode------------------------------------
-"Disable error message on windows, it's a bug
-if g:is_windows
-    let g:pymode_rope                                       =0
-endif
 "-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
     "autocmd!
@@ -454,6 +449,10 @@ let g:clang_use_library                                     =1
 " Remove "gcc" option as it causes errors.
 let g:clang_auto_user_options                               ='path, .clang_complete'
 "-----------------------------------------Python Mode--------------------------
+"Disable error message on windows, it's a bug
+if g:is_windows
+    let g:pymode_rope                                       =0
+endif
 let g:pymode_python                                         ='python3'
 "-----------------------------------------Python Jedi --------------------------
 let g:jedi#force_py_version                                 =3
