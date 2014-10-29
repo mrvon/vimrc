@@ -107,6 +107,7 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -454,6 +455,9 @@ let g:clang_use_library                                     =1
 let g:clang_auto_user_options                               ='path, .clang_complete'
 "-----------------------------------------Python Mode--------------------------
 let g:pymode_python                                         ='python3'
+"-----------------------------------------Python Jedi --------------------------
+let g:jedi#force_py_version                                 =3
+let g:jedi#use_tabs_not_buffers                             =0
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
