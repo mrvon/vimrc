@@ -602,15 +602,22 @@ augroup END
 "noremap <silent> [B                                         :bfirst<cr>
 "noremap <silent> ]B                                         :blast<cr>
 
-"previous matched line
+" Previous matched line
 noremap <silent> <F10>                                      :cprevious<cr>
-"next matched line
+" Next matched line
 noremap <silent> <F11>                                      :cnext<cr>
 
-"execute lua file
-" noremap <silent> <F5>                                       :!lua %<cr>
+" Execute Script
+function! __ExecuteScript()
+    if neocomplete#get_context_filetype() == "python"
+        :read! python %
+    elseif neocomplete#get_context_filetype() == "lua"
+        :read! lua %
+    endif
+endfunction 
+nnoremap <silent> <leader>r                                 :call __ExecuteScript()<CR>
 
-" insert current file name
+" Insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
