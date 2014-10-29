@@ -457,6 +457,13 @@ let g:pymode_python                                         ='python3'
 "-----------------------------------------Python Jedi --------------------------
 let g:jedi#force_py_version                                 =3
 let g:jedi#use_tabs_not_buffers                             =0
+let g:jedi#goto_assignments_command                         ="<leader>g"
+let g:jedi#goto_definitions_command                         ="<leader>d"
+let g:jedi#documentation_command                            ="K"
+let g:jedi#usages_command                                   ="<leader>n"
+let g:jedi#completions_command                              =""
+let g:jedi#rename_command                                   =""
+let g:jedi#show_call_signatures                             ="1"
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
@@ -601,7 +608,7 @@ noremap <silent> <F10>                                      :cprevious<cr>
 noremap <silent> <F11>                                      :cnext<cr>
 
 "execute lua file
-noremap <silent> <F5>                                       :!lua %<cr>
+" noremap <silent> <F5>                                       :!lua %<cr>
 
 " insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
