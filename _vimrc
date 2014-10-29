@@ -106,8 +106,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
-" Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+" Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -407,7 +407,7 @@ let g:neocomplete#force_omni_input_patterns.objc            =
 let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
 " Disable complete for python and ruby
-let g:neocomplete#sources#omni#input_patterns.python        =''
+" let g:neocomplete#sources#omni#input_patterns.python        =''
 let g:neocomplete#sources#omni#input_patterns.ruby          =''
 "-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
@@ -457,6 +457,7 @@ let g:pymode_python                                         ='python3'
 "-----------------------------------------Python Jedi --------------------------
 let g:jedi#force_py_version                                 =3
 let g:jedi#use_tabs_not_buffers                             =0
+let g:jedi#popup_select_first                               =0
 let g:jedi#goto_assignments_command                         ="<leader>g"
 let g:jedi#goto_definitions_command                         ="<leader>d"
 let g:jedi#documentation_command                            ="K"
@@ -615,7 +616,7 @@ function! __ExecuteScript()
         :read! lua %
     endif
 endfunction 
-nnoremap <silent> <leader>r                                 :call __ExecuteScript()<CR>
+" nnoremap <silent> <leader>r                                 :call __ExecuteScript()<CR>
 
 " Insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
