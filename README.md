@@ -14,7 +14,7 @@ Because In Mac OS X, vim config path is: ~/.vim and ~/.vimrc
 
 Checkout Mrvon's Vimrc
 > cd ~
-
+>
 > git clone https://github.com/mrvon/Vimrc
  
 
@@ -25,10 +25,20 @@ Link to it
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
 
-Download a executable installer from vim offical website
+Download a gvim 7.4 executable installer from vim offical website and Install it
 > http://www.vim.org/ 
 
+Checkout Mrvon's Vimrc
+> git clone https://github.com/mrvon/Vimrc
 
+Using Vimrc folder to cover install folder
+
+* *Install Python 2 (must be 2.7 x64 version)*
+* *Install Python 3 (must be 3.2 x64 version)*
+* *Install Lua 	 (must be 5.1 x64 version)*
+
+Allthing done
+ 
 ### Compile GVim By Yourself (Windows) ###
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
@@ -69,4 +79,4 @@ use Visual Studio + VAX plugin instead of Vim.
 
 
 ### Change GVim be you git default editor
-git config --global core.editor gvim
+    git config --global core.editor gvim
