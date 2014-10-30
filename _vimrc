@@ -248,9 +248,12 @@ set ignorecase
 " if caps, watch case
 set smartcase
 
-"-------------------------------Auto Break A Line------------------------------
+"-------------------------------Long line--------------------------------------
 " Always notice you do not write a long line
+" Auto break a line
 set textwidth                                               =80
+" Show the long line range
+set colorcolumn                                             =+1
 
 "-------------------------------Command Wild Menu------------------------------
 " You can use Ctrl-d to show wild list
