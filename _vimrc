@@ -139,11 +139,10 @@ filetype plugin indent on       " required
 
 "-------------------------------My Color My Taste------------------------------
 " Adjust My color scheme by system time
-if strftime("%H") >= 9 && strftime("%H") <= 10
-colorscheme                                                 Tomorrow
-colorscheme                                                 solarized
-else
+if strftime("%H") >= 9 && strftime("%H") <= 12
 colorscheme                                                 kolor
+else
+colorscheme                                                 Tomorrow-Night-Eighties
 endif
 
 if g:is_windows
