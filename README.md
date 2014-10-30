@@ -16,8 +16,8 @@ This is Mrvon 's Vim setting
 	>
 	> git clone https://github.com/mrvon/Vimrc
 
-4. Link to it (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
-	> ln Vimrc/_vimrc .vimrc
+4. Use Symbol link (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
+	> ln -s Vimrc/_vimrc .vimrc
 
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
