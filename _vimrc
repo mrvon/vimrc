@@ -107,8 +107,10 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " I love python-mode, I also love jedi
-Plugin 'klen/python-mode'
+" Let python-mode following jedi,
+" Otherwise jedi will overwrite python-mode 's key-mappings
 Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
