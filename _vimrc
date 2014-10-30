@@ -106,8 +106,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
+" I love python-mode, I also love jedi
 Plugin 'klen/python-mode'
-" Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -386,7 +387,7 @@ let g:neocomplete#keyword_patterns['default']               ='\h\w*'
 autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
 autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
-autocmd FileType python         setlocal omnifunc           =pythoncomplete#Complete
+autocmd FileType python         setlocal omnifunc           =jedi#completions
 autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -413,6 +414,8 @@ let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
 " Disable complete for python and ruby
 " let g:neocomplete#sources#omni#input_patterns.python        =''
+let g:neocomplete#force_omni_input_patterns.python =
+            \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 let g:neocomplete#sources#omni#input_patterns.ruby          =''
 "-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
@@ -460,16 +463,18 @@ if g:is_windows
 endif
 let g:pymode_python                                         ='python3'
 "-----------------------------------------Python Jedi --------------------------
-let g:jedi#force_py_version                                 =3
-let g:jedi#use_tabs_not_buffers                             =0
-let g:jedi#popup_select_first                               =0
-let g:jedi#goto_assignments_command                         ="<leader>g"
-let g:jedi#goto_definitions_command                         ="<leader>d"
-let g:jedi#documentation_command                            ="K"
-let g:jedi#usages_command                                   ="<leader>n"
-let g:jedi#completions_command                              =""
-let g:jedi#rename_command                                   =""
-let g:jedi#show_call_signatures                             ="1"
+let g:jedi#completions_enabled                              =0
+let g:jedi#auto_vim_configuration                           =0
+" let g:jedi#force_py_version                                 =3
+" let g:jedi#use_tabs_not_buffers                             =0
+" let g:jedi#popup_select_first                               =0
+" let g:jedi#goto_assignments_command                         ="<leader>g"
+" let g:jedi#goto_definitions_command                         ="<leader>d"
+" let g:jedi#documentation_command                            ="K"
+" let g:jedi#usages_command                                   ="<leader>n"
+" let g:jedi#completions_command                              =""
+" let g:jedi#rename_command                                   =""
+" let g:jedi#show_call_signatures                             ="1"
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
