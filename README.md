@@ -48,11 +48,11 @@ This is Mrvon 's Vim setting
     ftp://ftp.vim.org/pub/vim/patches/7.4/README
 
 ### Some Useful Website ###
-[vimawesome](http://vimawesome.com/)
-[vimgolf](http://vimgolf.com/)
-[bestofvim](http://bestofvim.com/)
-[reddit](http://www.reddit.com/r/vim/)
-[nabble](http://vim.1045645.n5.nabble.com/)
++ [vimawesome](http://vimawesome.com/)
++ [vimgolf](http://vimgolf.com/)
++ [bestofvim](http://bestofvim.com/)
++ [reddit](http://www.reddit.com/r/vim/)
++ [nabble](http://vim.1045645.n5.nabble.com/)
 
 ### HOW I use Vim
 > I use Vim write python and lua program.<br>
