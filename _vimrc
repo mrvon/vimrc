@@ -467,16 +467,16 @@ let g:pymode_python                                         ='python3'
 "-----------------------------------------Python Jedi --------------------------
 let g:jedi#completions_enabled                              =0
 let g:jedi#auto_vim_configuration                           =0
-" let g:jedi#force_py_version                                 =3
-" let g:jedi#use_tabs_not_buffers                             =0
-" let g:jedi#popup_select_first                               =0
-" let g:jedi#goto_assignments_command                         ="<leader>g"
-" let g:jedi#goto_definitions_command                         ="<leader>d"
-" let g:jedi#documentation_command                            ="K"
-" let g:jedi#usages_command                                   ="<leader>n"
-" let g:jedi#completions_command                              =""
-" let g:jedi#rename_command                                   =""
-" let g:jedi#show_call_signatures                             ="1"
+let g:jedi#force_py_version                                 =3
+let g:jedi#use_tabs_not_buffers                             =0
+let g:jedi#popup_select_first                               =0
+let g:jedi#goto_assignments_command                         ="<leader>g"
+let g:jedi#goto_definitions_command                         ="<leader>d"
+let g:jedi#documentation_command                            ="K"
+let g:jedi#usages_command                                   =""
+let g:jedi#completions_command                              =""
+let g:jedi#rename_command                                   =""
+let g:jedi#show_call_signatures                             ="1"
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
