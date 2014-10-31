@@ -365,7 +365,6 @@ let g:neocomplete#enable_smart_case                         =1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length         =3
 
-" For Test
 let g:neocomplete#enable_auto_select                        =0
 let g:neocomplete#enable_auto_delimiter                     =1
 let g:neocomplete#enable_refresh_always                     =0
@@ -458,9 +457,7 @@ let g:clang_use_library                                     =1
 let g:clang_auto_user_options                               ='path, .clang_complete'
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
-if g:is_windows
-    let g:pymode_rope                                       =0
-endif
+let g:pymode_rope                                           =0
 let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
