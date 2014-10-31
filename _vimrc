@@ -107,10 +107,8 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " I love python-mode, I also love jedi
-" Let python-mode following jedi,
-" Otherwise jedi will overwrite python-mode 's key-mappings
-Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -464,6 +462,8 @@ if g:is_windows
     let g:pymode_rope                                       =0
 endif
 let g:pymode_python                                         ='python3'
+let g:pymode_run                                            =1
+let g:pymode_run_bind                                       ='<leader>r'
 "-----------------------------------------Python Jedi --------------------------
 let g:jedi#completions_enabled                              =0
 let g:jedi#auto_vim_configuration                           =0
