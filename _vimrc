@@ -107,7 +107,7 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " I love python-mode, I also love jedi
-" Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
