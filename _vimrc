@@ -706,11 +706,14 @@ function!                                                   __BufferDeleteOnly(b
     let buffer_number = bufnr("") 
     
     if buffer_number > 1 
-        call __ExecCheckBdErrs("1,".(buffer_number - 1). bd_cmd)
+        call __ExecCheckBdErrs("1," . (buffer_number - 1). bd_cmd)
     endif 
     if buffer_number < bufnr("$") 
-        call __ExecCheckBdErrs((buffer_number+1).",".bufnr("$"). bd_cmd)
+        call __ExecCheckBdErrs((buffer_number + 1) . "," . bufnr("$") . bd_cmd)
     endif 
+
+    "Open NerdTree again
+    :NERDTree
 endfunction
 
 function!                                                   __BufferReload(bang)
@@ -719,7 +722,7 @@ function!                                                   __BufferReload(bang)
     call __ExecCheckBdErrs(bd_cmd)
 
     let edit_cmd = "edit "
-    call __ExecCheckBdErrs(edit_cmd. cur_filename)
+    call __ExecCheckBdErrs(edit_cmd . cur_filename)
 endfunction
 
 function!                                                   __ExecCheckBdErrs(bdrangecmd) 
