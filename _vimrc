@@ -107,7 +107,7 @@ Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " I love python-mode, I also love jedi
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 
 " Stronger Signature
@@ -473,7 +473,8 @@ let g:jedi#documentation_command                            ="K"
 let g:jedi#usages_command                                   =""
 let g:jedi#completions_command                              =""
 let g:jedi#rename_command                                   =""
-let g:jedi#show_call_signatures                             ="1"
+" It's too slow! so I close this function
+let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                <esc>
 inoremap <esc>                                             <nop>
