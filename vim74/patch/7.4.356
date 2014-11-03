@@ -1,0 +1,38 @@
+To: vim_dev@googlegroups.com
+Subject: Patch 7.4.356
+Fcc: outbox
+From: Bram Moolenaar <Bram@moolenaar.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+------------
+
+Patch 7.4.356
+Problem:    Mercurial does not ignore memfile_test. (Daniel Hahler)
+Solution:   Add memfile_test to ignored files, remove trailing spaces.
+Files:	    .hgignore
+
+
+Note: This patch was made empty, because .hgignore is not part of the
+distributed files.
+
+
+*** ../vim-7.4.355/src/version.c	2014-07-03 22:57:51.299862927 +0200
+--- src/version.c	2014-07-09 13:41:39.855060005 +0200
+***************
+*** 736,737 ****
+--- 736,739 ----
+  {   /* Add new patch number below this line */
++ /**/
++     356,
+  /**/
+
+-- 
+In Africa some of the native tribes have a custom of beating the ground
+with clubs and uttering spine chilling cries.  Anthropologists call
+this a form of primitive self-expression.  In America we call it golf.
+
+ /// Bram Moolenaar -- Bram@Moolenaar.net -- http://www.Moolenaar.net   \\\
+///        sponsor Vim, vote for features -- http://www.Vim.org/sponsor/ \\\
+\\\  an exciting new programming language -- http://www.Zimbu.org        ///
+ \\\            help me help AIDS victims -- http://ICCF-Holland.org    ///
