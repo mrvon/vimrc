@@ -7,12 +7,16 @@
 let g:is_windows                                            =0
 let g:is_mac                                                =0
 let g:is_linux                                              =0
+let g:is_gui                                                =0
 if(has("win32") || has("win64"))
     let g:is_windows                                        =1
-elseif has('macunix')
+elseif has('mac')
     let g:is_mac                                            =1
 else
     let g:is_linux                                          =1
+endif
+if(has("gui"))
+    let g:is_gui                                            =1
 endif
 
 "-------------------------------Path-------------------------------------------
@@ -171,21 +175,20 @@ language messages                                           zh_cn.utf-8
 
 "-------------------------------GUI Options------------------------------------
 " Simple Menu 
+if g:is_gui
 set guioptions                                              -=l
 set guioptions                                              -=L
 set guioptions                                              -=r
 set guioptions                                              -=R
 set guioptions                                              -=m
 set guioptions                                              -=T
+endif
 
 "-------------------------------Set Column-------------------------------------
 set columns                                                 =100
 "-------------------------------Set Row----------------------------------------
-if g:is_windows
-    set lines                                               =100
-elseif g:is_mac
-    set lines                                               =30
-endif
+set lines                                               =100
+set lines                                               =30
 
 "-------------------------------Tab Key----------------------------------------
 set shiftwidth                                              =4 
