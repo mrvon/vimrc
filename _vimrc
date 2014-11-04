@@ -187,8 +187,8 @@ endif
 "-------------------------------Set Column-------------------------------------
 set columns                                                 =100
 "-------------------------------Set Row----------------------------------------
-set lines                                               =100
-set lines                                               =30
+set lines                                                   =100
+set lines                                                   =30
 
 "-------------------------------Tab Key----------------------------------------
 set shiftwidth                                              =4 
@@ -741,7 +741,7 @@ function!                                                   __ExecCheckBdErrs(bd
     endtry 
 endfunction
 
-if g:is_windows
+if g:is_windows && g:is_gui
     nnoremap <leader>mw                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
     nnoremap <leader>mW                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
     nnoremap <leader>yt                                    :call libcallnr("vimtweak.dll", "EnableTopMost", 1)<CR>
