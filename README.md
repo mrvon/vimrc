@@ -7,6 +7,7 @@ This is Mrvon 's Vim setting
 
 1. Install MacVim (with python support and lua support)
 	> brew install macvim --with-cscope --with-lua --with-python --with-python3 --> > HEAD
+	> brew install vim --with-cscope --with-lua --with-python --with-python3 --> > HEAD
 
 2. Install the_silver_searcher(ag)
 	> brew install the_silver_searcher
