@@ -150,7 +150,8 @@ colorscheme                                                 Tomorrow
 colorscheme                                                 solarized
 " colorscheme                                                 Tomorrow-Night-Eighties
 else
-colorscheme                                                 Tomorrow-Night-Eighties
+colorscheme                                                 Tomorrow		
+colorscheme                                                 solarized
 endif
 
 if g:is_windows
