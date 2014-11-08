@@ -117,14 +117,14 @@ Plugin 'davidhalter/jedi-vim'
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
 
-" Alternative between header and source for c and c++
-"Plugin 'vim-scripts/a.vim'
+" Quickly surround
+Plugin 'tpope/vim-surround'
 
 " Waitting Test
+"Plugin 'vim-scripts/a.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-surround'
 "Plugin 'vim-scripts/UltiSnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
@@ -523,15 +523,15 @@ cabbrev  WQ                                                 wq
 cabbrev  Wq                                                 wq
 
 " use a \" or \' to surround this word
-nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
-nnoremap <leader>'                                          viw<esc>a'<esc>hbi'<esc>lel
+" nnoremap <leader>"                                          viw<esc>a"<esc>hbi"<esc>lel
+" nnoremap <leader>'                                          viw<esc>a'<esc>hbi'<esc>lel
 
 " use a \" or \' to surround text which we selected visually
-vnoremap <leader>"                                          <esc>`<i"<esc>`>a"<esc>
-vnoremap <leader>'                                          <esc>`<i'<esc>`>a'<esc>
+" vnoremap <leader>"                                          <esc>`<i"<esc>`>a"<esc>
+" vnoremap <leader>'                                          <esc>`<i'<esc>`>a'<esc>
 
 " use a pair of "{}" to surround this line
-nnoremap <leader>{                                          O{<esc>jo}<esc>
+" nnoremap <leader>{                                          O{<esc>jo}<esc>
 
 
 " Y is a strong y, D is a strong d on Vim default setting
