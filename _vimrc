@@ -144,8 +144,9 @@ filetype plugin indent on       " required
 
 "-------------------------------My Color My Taste------------------------------
 " Adjust My color scheme by system time
-if strftime("%H") >= 9 && strftime("%H") <= 12
-set background                                              =dark
+" if strftime("%H") >= 9 && strftime("%H") <= 12
+if g:is_windows
+set background                                              =light
 colorscheme                                                 solarized
 " colorscheme                                                 kolor
 " colorscheme                                                 Tomorrow
@@ -497,9 +498,9 @@ nnoremap <c-l>                                              <c-w>l
 
 " Quickly Auto Indent When leave insert mode
 function! QuicklyAutoIndent()
-    let l:cursor_position = getcurpos()
+    let l:cursor_position = getpos(".")
     normal! ==
-    call setpos('.', l:cursor_position)
+    call setpos(".", l:cursor_position)
 endfunction
 augroup quickly_indent
     autocmd!
