@@ -349,6 +349,7 @@ let g:kolor_underlined                                      =0                  
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
 "-----------------------------------------Indent guides------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
+let g:indent_guides_default_mapping                         =0
 "-----------------------------------------CtrlP--------------------------------
 "Ctrl-P             Search file in project
 "Ctrl-P Ctrl-F      View all buffer
@@ -492,6 +493,9 @@ nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
 nnoremap <c-l>                                              <c-w>l
+
+" Quickly Indent
+nnoremap <c-i>                                              ==
 
 " upper this word
 " I like use gU or gu
