@@ -482,21 +482,29 @@ let g:jedi#rename_command                                   =""
 " It's too slow! so I close this function
 let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Mrvon Special Key--------------------
-inoremap jk                                                <esc>
-inoremap <esc>                                             <nop>
+inoremap jk                                                 <esc>
+inoremap <esc>                                              <nop>
 "-----------------------------------------Resize windows-----------------------
-nnoremap <Up>                                              <c-w>3+
-nnoremap <Down>                                            <c-w>3-
-nnoremap <Left>                                            <c-w>3<
-nnoremap <Right>                                           <c-w>3>
+nnoremap <Up>                                               <c-w>3+
+nnoremap <Down>                                             <c-w>3-
+nnoremap <Left>                                             <c-w>3<
+nnoremap <Right>                                            <c-w>3>
 "-----------------------------------------Moving between windows---------------
 nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
 nnoremap <c-l>                                              <c-w>l
 
-" Quickly Indent
-nnoremap <c-i>                                              ==
+" Quickly Auto Indent When leave insert mode
+function! QuicklyAutoIndent()
+    let l:cursor_position = getcurpos()
+    normal! ==
+    call setpos('.', l:cursor_position)
+endfunction
+augroup quickly_indent
+    autocmd!
+    autocmd InsertLeave *                                   :call QuicklyAutoIndent()
+augroup END
 
 " upper this word
 " I like use gU or gu
