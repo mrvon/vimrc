@@ -145,12 +145,13 @@ filetype plugin indent on       " required
 "-------------------------------My Color My Taste------------------------------
 " Adjust My color scheme by system time
 if strftime("%H") >= 9 && strftime("%H") <= 12
-" colorscheme                                                 kolor
-colorscheme                                                 Tomorrow		
+set background                                              =dark
 colorscheme                                                 solarized
+" colorscheme                                                 kolor
+" colorscheme                                                 Tomorrow
 " colorscheme                                                 Tomorrow-Night-Eighties
 else
-colorscheme                                                 Tomorrow		
+set background                                              =dark
 colorscheme                                                 solarized
 endif
 
@@ -516,7 +517,11 @@ nnoremap <leader>ec                                         :vsplit $MYVIMFILE/b
 nnoremap <localleader>replacetab                            :%ret! 4
 
 " re-load my vimrc
-nnoremap <leader>sv                                         :source $MYVIMRC<cr>:simalt ~x<cr>
+if g:is_windows && g:is_gui
+    nnoremap <leader>sv                                         :source $MYVIMRC<cr>:simalt ~x<cr>
+else
+    nnoremap <leader>sv                                         :source $MYVIMRC<cr>
+endif
 
 " easy way to type my email and copyright information
 iabbrev  @@                                                 mrvon@qq.com
