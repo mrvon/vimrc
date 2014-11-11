@@ -1,7 +1,8 @@
-"-------------------------------Team KDE---------------------------------------
+"-------------------------------About Author-----------------------------------
 "echo ">^.^<"
-"echo "Welcome join in Team KDE"
 "echo "Author Mrvon"
+"echo "Email: mrvon@qq.com"
+"echo "If you don't know the option mean, try Shift-K"
 
 "-------------------------------Operating System-------------------------------
 let g:is_windows                                            =0
@@ -172,10 +173,10 @@ if g:is_windows
     source                                                  $MYVIMRUNTIME/menu.vim
 endif
 language messages                                           zh_cn.utf-8
-" Small Tip - Open file with specific encoding :e ++enc=cp936
+" A Small Tip - Open file with specific encoding :e ++enc=cp936
 
 "-------------------------------GUI Options------------------------------------
-" Simple Menu 
+" Keep your menu more simple
 if g:is_gui
 set guioptions                                              -=l
 set guioptions                                              -=L
@@ -188,7 +189,6 @@ endif
 "-------------------------------Set Column-------------------------------------
 set columns                                                 =100
 "-------------------------------Set Row----------------------------------------
-set lines                                                   =100
 set lines                                                   =30
 
 "-------------------------------Tab Key----------------------------------------

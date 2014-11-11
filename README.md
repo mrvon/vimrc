@@ -1,5 +1,5 @@
 # Happy Hacking Vim #
-This is Mrvon 's Vim setting 
+This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 
 ----------
 
