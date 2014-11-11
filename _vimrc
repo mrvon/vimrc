@@ -146,12 +146,9 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-set background                                              =dark
-colorscheme                                                 solarized
-let g:is_use_solarized                                      =1
 " colorscheme                                                 kolor
 " colorscheme                                                 Tomorrow
-" colorscheme                                                 Tomorrow-Night-Eighties
+colorscheme                                                 Tomorrow-Night-Eighties
 else
 set background                                              =dark
 colorscheme                                                 solarized
@@ -785,7 +782,3 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
-
-if g:is_use_solarized
-highlight SignColumn                                        guifg=#93a1a1 guibg=#073642 gui=none
-endif
