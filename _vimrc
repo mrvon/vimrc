@@ -528,9 +528,9 @@ nnoremap <localleader>replacetab                            :%ret! 4
 
 " re-load my vimrc
 if g:is_windows && g:is_gui
-    nnoremap <leader>sv                                         :source $MYVIMRC<cr>:simalt ~x<cr>
+    nnoremap <leader>sv                                     :source $MYVIMRC<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
 else
-    nnoremap <leader>sv                                         :source $MYVIMRC<cr>
+    nnoremap <leader>sv                                     :source $MYVIMRC<cr>
 endif
 
 " easy way to type my email and copyright information
