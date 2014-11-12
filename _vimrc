@@ -124,6 +124,9 @@ Plugin 'tpope/vim-surround'
 " Better python syntax
 Plugin 'hdima/python-syntax'
 
+" Better cpp syntax
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
 " Waitting Test
 "Plugin 'vim-scripts/a.vim'
 "Plugin 'Valloric/YouCompleteMe'
