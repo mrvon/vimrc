@@ -121,6 +121,9 @@ Plugin 'kshenoy/vim-signature'
 " Quickly surround
 Plugin 'tpope/vim-surround'
 
+" Better python syntax
+Plugin 'hdima/python-syntax'
+
 " Waitting Test
 "Plugin 'vim-scripts/a.vim'
 "Plugin 'Valloric/YouCompleteMe'
@@ -466,7 +469,7 @@ let g:pymode_rope                                           =0
 let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
-"-----------------------------------------Python Jedi --------------------------
+"-----------------------------------------Python Jedi -------------------------
 let g:jedi#completions_enabled                              =0
 let g:jedi#auto_vim_configuration                           =0
 let g:jedi#force_py_version                                 =3
@@ -480,6 +483,8 @@ let g:jedi#completions_command                              =""
 let g:jedi#rename_command                                   =""
 " It's too slow! so I close this function
 let g:jedi#show_call_signatures                             ="0"
+"-----------------------------------------Python Syntax------------------------
+let python_highlight_all                                    =1
 "-----------------------------------------Mrvon Special Key--------------------
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
