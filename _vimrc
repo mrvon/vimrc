@@ -61,7 +61,7 @@ Plugin 'bling/vim-airline'
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
-" NERDComment
+" NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
 
 " Neocomplete/Neosnippet
@@ -327,7 +327,10 @@ let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
 "-------------------------------NERDCommenter----------------------------------
+let NERDCreateDefaultMappings                               =0
 let NERDSpaceDelims                                         =1
+map <leader>cc                                              <plug>NERDCommenterAlignLeft
+map <leader>cu                                              <plug>NERDCommenterUncomment
 "-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
     "autocmd!
