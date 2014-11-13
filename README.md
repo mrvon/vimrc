@@ -42,9 +42,11 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
 
-> mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""
-
-> mingw32-make.exe -f Make_ming.mak clean
++ Build
+	> mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no 
+	> USERNAME="MrVon" USERDOMAIN=""
++ Clean
+	> mingw32-make.exe -f Make_ming.mak clean
 
 ### Download patch file ###
 * Read following document about how to patch
