@@ -7,20 +7,21 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 
 1. Install MacVim (with python support and lua support)
 
-	> brew install macvim --with-cscope --with-lua --with-python --with-python3
+    `$ brew install macvim --with-cscope --with-lua --with-python3`
 
-	> brew install vim --with-cscope --with-lua --with-python --with-python3
+    `$ brew install vim --with-cscope --with-lua --with-python3`
 
 2. Install the_silver_searcher(ag)
-	> brew install the_silver_searcher
+	`$ brew install the_silver_searcher`
 
 3. Checkout Mrvon's Vimrc
-	> cd ~
-	>
-	> git clone https://github.com/mrvon/Vimrc
+    `$ cd ~`
+
+    `$ git clone https://github.com/mrvon/Vimrc`
 
 4. Use Symbol link (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
-	> ln -s Vimrc/_vimrc .vimrc
+
+    `$ln -s Vimrc/_vimrc .vimrc`
 
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
@@ -29,7 +30,8 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 	> http://www.vim.org/ 
 
 2. Checkout Mrvon's Vimrc
-	> git clone https://github.com/mrvon/Vimrc
+
+    `$ git clone https://github.com/mrvon/Vimrc`
 
 3. Using Vimrc folder to cover install folder
 	+ *Install Python 2 (must be 2.7 x64 version)*
@@ -76,4 +78,4 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 > use Visual Studio + VAX plugin instead of Vim.
 
 ### Change GVim be you git default editor
-    git config --global core.editor gvim
+    `$git config --global core.editor gvim`
