@@ -510,7 +510,7 @@ function! QuicklyAutoIndent()
 endfunction
 augroup quickly_indent
     autocmd!
-    autocmd InsertLeave *                                   :call QuicklyAutoIndent()
+    autocmd InsertLeave txt,lua                             :call QuicklyAutoIndent()
 augroup END
 
 " upper this word
