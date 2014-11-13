@@ -33,7 +33,7 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 
 3. Using Vimrc folder to cover install folder
 	+ *Install Python 2 (must be 2.7 x64 version)*
-	+ *Install Python 3 (must be 3.2 x64 version)*
+	+ *Install Python 3 (must be 3.3 x64 version)*
 	+ *Install Lua 	 (must be 5.1 x64 version)*
 
 4. All done
@@ -41,12 +41,11 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 ### Compile GVim By Yourself (Windows) ###
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
-	```sh
-	mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""
-	```
-	```sh
-	mingw32-make.exe -f Make_ming.mak clean
-	```
+
+> mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""
+
+> mingw32-make.exe -f Make_ming.mak clean
+
 ### Download patch file ###
 * Read following document about how to patch
 
