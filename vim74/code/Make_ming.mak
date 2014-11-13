@@ -223,15 +223,15 @@ endif
 
 #PYTHON3: See comment for Python 2 above
 
-PYTHON3=c:/python32
-#PYTHON3="python32.dll"
+PYTHON3=c:/python33
+#PYTHON3="python33.dll"
 ifdef PYTHON3
 ifndef DYNAMIC_PYTHON3
 DYNAMIC_PYTHON3=yes
 endif
 
 ifndef PYTHON3_VER
-PYTHON3_VER=32
+PYTHON3_VER=33
 endif
 
 ifeq (no,$(DYNAMIC_PYTHON3))
