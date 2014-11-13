@@ -79,4 +79,4 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 
 ### Change GVim be you git default editor
 
-    `$git config --global core.editor gvim`
+    `$ git config --global core.editor gvim`
