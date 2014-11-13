@@ -45,6 +45,7 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 + Build
 	> mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no 
 	> USERNAME="MrVon" USERDOMAIN=""
+
 + Clean
 	> mingw32-make.exe -f Make_ming.mak clean
 
