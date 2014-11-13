@@ -78,4 +78,5 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 > use Visual Studio + VAX plugin instead of Vim.
 
 ### Change GVim be you git default editor
+
     `$git config --global core.editor gvim`
