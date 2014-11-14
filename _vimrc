@@ -364,6 +364,7 @@ let g:indent_guides_default_mapping                         =0
 "Ctrl-P Ctrl-F      View all buffer
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
+let g:ctrlp_clear_cache_on_exit                             =1
 "-----------------------------------------TagBar-------------------------------
 nnoremap <silent> <F9>                                      :TagbarToggle<cr>
 "-----------------------------------------NeoComplete--------------------------
