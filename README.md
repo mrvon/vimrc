@@ -45,15 +45,15 @@ This is Mrvon 's Vim setting
 	mingw32-make.exe -f Make_ming.mak clean
 	```
 ### Download patch file ###
-Read following document about how to patch
+1. Read following document about how to patch
 
 	ftp://ftp.vim.org/pub/vim/patches/7.4/README
 
-Use following python script to download patch file
+2. Use following python script to download patch file
 
 [download_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/download_patchfile.py)
 
-Use following python script to apply patch file
+3. Use following python script to apply patch file
 
 [apply_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/apply_patchfile.py)
 
