@@ -69,7 +69,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
+" Plugin 'Shougo/vimshell.vim'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
