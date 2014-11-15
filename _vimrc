@@ -157,8 +157,9 @@ if g:is_windows
 " colorscheme                                                 Tomorrow
 colorscheme                                                 Tomorrow-Night-Eighties
 else
-set background                                              =dark
-colorscheme                                                 solarized
+" set background                                              =dark
+" colorscheme                                                 solarized
+colorscheme                                                 Tomorrow-Night-Eighties
 endif
 
 if g:is_windows
