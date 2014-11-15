@@ -69,6 +69,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
@@ -602,8 +603,8 @@ augroup filetype_vim
 augroup END
 
 " Match
-nnoremap <leader>w                                          :match Error /\v +$/<cr>
-nnoremap <leader>W                                          :match none<cr>
+" nnoremap <leader>w                                          :match Error /\v +$/<cr>
+" nnoremap <leader>W                                          :match none<cr>
 
 " Always use Very Magic search
 "nnoremap /                                                  /\v
