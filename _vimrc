@@ -324,7 +324,6 @@ let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 "nnoremap <leader>a                                          :A<cr>
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
-autocmd vimenter *                                          NERDTree
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
@@ -780,13 +779,20 @@ if g:is_windows && g:is_gui
     nnoremap <leader>aw                                    :call libcallnr("vimtweak.dll", "SetAlpha", 235)<CR>
     nnoremap <leader>aW                                    :call libcallnr("vimtweak.dll", "SetAlpha", 255)<CR>
 
-    augroup on_gui_enter 
+    augroup on_win_gui_enter
         autocmd!
         autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
         autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
         autocmd VimEnter * setlocal vb t_vb=
     augroup END
 endif
+
+augroup on_enter_vim
+    autocmd!
+    autocmd VimEnter * NERDTree
+    autocmd VimEnter * nested :TagbarOpen
+augroup END
+
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work. 
 " Open Syntax HighLight
