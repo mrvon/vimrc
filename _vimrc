@@ -154,13 +154,14 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-" colorscheme                                                 kolor
+colorscheme                                                 kolor
 " colorscheme                                                 Tomorrow
-colorscheme                                                 Tomorrow-Night-Eighties
+" colorscheme                                                 Tomorrow-Night-Eighties
 else
 " set background                                              =dark
 " colorscheme                                                 solarized
-colorscheme                                                 Tomorrow-Night-Eighties
+colorscheme                                                 kolor
+" colorscheme                                                 Tomorrow-Night-Eighties
 endif
 
 if g:is_windows
@@ -353,7 +354,7 @@ let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
 let g:lua_define_completion_mappings                        =0
 "-----------------------------------------Kolor--------------------------------
-let g:kolor_italic                                          =0                  " Enable italic. Default: 1
+let g:kolor_italic                                          =1                  " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
