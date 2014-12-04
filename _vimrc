@@ -519,7 +519,7 @@ function! QuicklyAutoIndent()
 endfunction
 augroup quickly_indent
     autocmd!
-    autocmd InsertLeave *                                   :call QuicklyAutoIndent()
+    autocmd InsertLeave *.py,*.lua,*.txt                    :call QuicklyAutoIndent()
 augroup END
 
 " upper this word
