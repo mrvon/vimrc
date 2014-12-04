@@ -95,6 +95,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " Tag Bar
 Plugin 'majutsushi/tagbar'
@@ -154,9 +155,9 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-colorscheme                                                 kolor
+" colorscheme                                                 kolor
 " colorscheme                                                 Tomorrow
-" colorscheme                                                 Tomorrow-Night-Eighties
+colorscheme                                                 Tomorrow-Night-Eighties
 else
 " set background                                              =dark
 " colorscheme                                                 solarized
@@ -367,6 +368,8 @@ let g:indent_guides_default_mapping                         =0
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
 let g:ctrlp_clear_cache_on_exit                             =1
+let g:ctrlp_extensions                                      =['funky']
+let g:ctrlp_funky_syntax_highlight                          =1
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------NeoComplete--------------------------
