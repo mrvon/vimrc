@@ -73,10 +73,8 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 + [nabble](http://vim.1045645.n5.nabble.com/)
 
 ### HOW I use Vim
-> I use Vim write python and lua program.<br>
-> When I write C and C++ program I rather
-> use Visual Studio + VAX plugin instead of Vim.
++ I use Vim write python and lua program.
 
-### Change GVim be you git default editor
++ Change GVim be you git default editor
 
     `$ git config --global core.editor gvim`
