@@ -12,9 +12,11 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
     `$ brew install vim --with-cscope --with-lua --with-python3`
 
 2. Install the_silver_searcher(ag)
+
 	`$ brew install the_silver_searcher`
 
 3. Checkout Mrvon's Vimrc
+
     `$ cd ~`
 
     `$ git clone https://github.com/mrvon/Vimrc`
@@ -27,6 +29,7 @@ This is Mrvon 's Vim setting (Please read _vimrc file comment directly)
 *(Already including all binary and library in Microsoft Windows 7 x64)*
 
 1. Download a gvim 7.4 executable installer from vim offical website and Install it
+
 	> http://www.vim.org/ 
 
 2. Checkout Mrvon's Vimrc
