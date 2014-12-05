@@ -498,6 +498,8 @@ let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
 "-----------------------------------------Mrvon Special Key--------------------
+" Thanks to http://learnvimscriptthehardway.stevelosh.com/
+" Use jk instead of esc, This excellent idea come from steve
 inoremap jk                                                 <esc>
 inoremap <esc>                                              <nop>
 "-----------------------------------------Resize windows-----------------------
@@ -506,11 +508,13 @@ nnoremap <Down>                                             <c-w>3-
 nnoremap <Left>                                             <c-w>3<
 nnoremap <Right>                                            <c-w>3>
 "-----------------------------------------Moving between windows---------------
+" origin switch window key-mappings is too hard for me
 nnoremap <c-k>                                              <c-w>k
 nnoremap <c-j>                                              <c-w>j
 nnoremap <c-h>                                              <c-w>h
 nnoremap <c-l>                                              <c-w>l
 
+" Does not indent when I input "else" in some filetype. That's a problem in Vim.
 " Quickly Auto Indent When leave insert mode
 function! QuicklyAutoIndent()
     let l:cursor_position = getpos(".")
@@ -523,7 +527,7 @@ augroup quickly_indent
 augroup END
 
 " upper this word
-" I like use gU or gu
+" I like use gU or gu instead of it
 "inoremap <leader>u                                          <esc>wbveU          
 "nnoremap <leader>u                                          wbveU
 
@@ -540,7 +544,7 @@ nnoremap <leader>ec                                         :vsplit $MYVIMFILE/b
 " replace all tab with space
 nnoremap <localleader>replacetab                            :%ret! 4
 
-" re-load my vimrc
+" reload my vimrc
 if g:is_windows && g:is_gui
     nnoremap <leader>sv                                     :source $MYVIMRC<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
 else
