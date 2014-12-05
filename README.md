@@ -70,15 +70,19 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 > [apply_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/apply_patchfile.py)
 
-### Some Useful Website ###
+### Excellent Tutorial ###
++ [Learn vim script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
++ [Practical Vim]()
+
+### Useful Website ###
 + [vimawesome](http://vimawesome.com/)
 + [vimgolf](http://vimgolf.com/)
 + [bestofvim](http://bestofvim.com/)
 + [reddit](http://www.reddit.com/r/vim/)
 + [nabble](http://vim.1045645.n5.nabble.com/)
 
-### HOW I use Vim
-+ I use Vim write python and lua program.
+### How I use Vim
++ I use Vim write python, lua, sql program.
 
 + Change GVim be you git default editor
 
