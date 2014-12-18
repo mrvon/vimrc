@@ -615,7 +615,7 @@ augroup END
 " nnoremap <leader>W                                          :match none<cr>
 
 " Always use Very Magic search
-"nnoremap /                                                  /\v
+nnoremap /                                                  /\v
 
 " Closing last search highlight 
 nnoremap <leader>h                                          :nohlsearch<cr>
