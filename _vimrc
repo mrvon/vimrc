@@ -78,7 +78,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-unimpaired'
 
 " Vim-Lua
-Plugin 'xolox/vim-lua-ftplugin'
+Plugin 'mrvon/vim-lua-ftplugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
 
@@ -755,7 +755,7 @@ function!                                                   __BufferDeleteOnly(b
     endif 
 
     "Open NerdTree again
-    :NERDTree
+    " :NERDTree
 endfunction
 
 function!                                                   __BufferReload(bang)
@@ -797,8 +797,8 @@ endif
 
 augroup on_enter_vim
     autocmd!
-    autocmd VimEnter * NERDTree
-    autocmd VimEnter * nested :TagbarOpen
+    " autocmd VimEnter * NERDTree
+    " autocmd VimEnter * nested :TagbarOpen
 augroup END
 
 
