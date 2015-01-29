@@ -69,7 +69,6 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/vimshell.vim'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
@@ -130,7 +129,6 @@ Plugin 'hdima/python-syntax'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Waitting Test
-"Plugin 'vim-scripts/a.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
