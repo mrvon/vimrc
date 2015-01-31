@@ -128,6 +128,9 @@ Plugin 'hdima/python-syntax'
 " Better cpp syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+" Smooth Srcool
+Plugin 'yonchu/accelerated-smooth-scroll'
+
 " Waitting Test
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
