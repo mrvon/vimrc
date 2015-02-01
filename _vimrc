@@ -109,7 +109,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " Clang Complete
-" Plugin 'Rip-Rip/clang_complete'
+Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
 " I love python-mode, I also love jedi
