@@ -666,11 +666,10 @@ augroup END
 "noremap <silent> ]b                                         :bnext<cr>
 "noremap <silent> [B                                         :bfirst<cr>
 "noremap <silent> ]B                                         :blast<cr>
-
 " Previous matched line
-noremap <silent> <F10>                                      :cprevious<cr>
+"noremap <silent> [q                                         :cprevious<cr>
 " Next matched line
-noremap <silent> <F11>                                      :cnext<cr>
+"noremap <silent> ]q                                         :cnext<cr>
 
 " Execute Script
 function! __ExecuteScript()
