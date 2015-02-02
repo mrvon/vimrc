@@ -372,6 +372,17 @@ let g:ctrlp_match_window                                    ='bottom,order:btt,m
 let g:ctrlp_clear_cache_on_exit                             =1
 let g:ctrlp_extensions                                      =['funky']
 let g:ctrlp_funky_syntax_highlight                          =1
+" Excluding version control directories
+if g:is_windows
+    set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|obj|dll|manifest)$',
+        \ }
+elseif g:is_mac
+    set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+endif
+
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------NeoComplete--------------------------
