@@ -156,8 +156,8 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-" colorscheme                                                 kolor
-colorscheme                                                 Tomorrow
+colorscheme                                                 kolor
+" colorscheme                                                 Tomorrow
 " colorscheme                                                 Tomorrow-Night-Eighties
 " colorscheme                                                 solarized
 else
