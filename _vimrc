@@ -156,8 +156,8 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-" colorscheme                                                 kolor
-colorscheme                                                 Tomorrow
+colorscheme                                                 kolor
+" colorscheme                                                 Tomorrow
 " colorscheme                                                 Tomorrow-Night-Eighties
 " colorscheme                                                 solarized
 else
@@ -372,6 +372,17 @@ let g:ctrlp_match_window                                    ='bottom,order:btt,m
 let g:ctrlp_clear_cache_on_exit                             =1
 let g:ctrlp_extensions                                      =['funky']
 let g:ctrlp_funky_syntax_highlight                          =1
+" Excluding version control directories
+if g:is_windows
+    set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|obj|dll|manifest)$',
+        \ }
+elseif g:is_mac
+    set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+endif
+
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------NeoComplete--------------------------
@@ -658,11 +669,10 @@ augroup END
 "noremap <silent> ]b                                         :bnext<cr>
 "noremap <silent> [B                                         :bfirst<cr>
 "noremap <silent> ]B                                         :blast<cr>
-
 " Previous matched line
-noremap <silent> <F10>                                      :cprevious<cr>
+"noremap <silent> [q                                         :cprevious<cr>
 " Next matched line
-noremap <silent> <F11>                                      :cnext<cr>
+"noremap <silent> ]q                                         :cnext<cr>
 
 " Execute Script
 function! __ExecuteScript()
