@@ -477,6 +477,9 @@ let g:clang_use_library                                     =1
 " Mit der Option "gcc" kriege ich Fehler.
 " Remove "gcc" option as it causes errors.
 let g:clang_auto_user_options                               ='path, .clang_complete'
+if g:is_mac
+    let g:clang_library_path                                ='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+endif
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
 let g:pymode_rope                                           =0
