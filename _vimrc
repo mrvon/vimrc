@@ -377,7 +377,7 @@ if g:is_windows
     set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
     let g:ctrlp_custom_ignore = {
         \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-        \ 'file': '\v\.(exe|obj|dll|manifest)$',
+        \ 'file': '\v\.(exe|obj|dll|manifest|log)$',
         \ }
 elseif g:is_mac
     set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
