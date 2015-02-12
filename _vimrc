@@ -377,10 +377,13 @@ if g:is_windows
     set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
     let g:ctrlp_custom_ignore = {
         \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-        \ 'file': '\v\.(exe|obj|dll|manifest|log)$',
+        \ 'file': '\v(\.c|\.cpp|\.h|\.hh|\.cxx|\.txt)@<!$'
         \ }
 elseif g:is_mac
     set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
+    let g:ctrlp_custom_ignore = {
+        \ 'file': '\v(\.c|\.cpp|\.h|\.hh|\.cxx|\.txt)@<!$'
+        \ }
 endif
 
 "-----------------------------------------TagBar-------------------------------
