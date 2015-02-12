@@ -131,6 +131,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " Smooth Srcool
 Plugin 'yonchu/accelerated-smooth-scroll'
 
+" LLDB
+Plugin 'gilligan/vim-lldb'
+
 " Waitting Test
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
