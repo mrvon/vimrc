@@ -131,8 +131,10 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " Smooth Srcool
 Plugin 'yonchu/accelerated-smooth-scroll'
 
-" LLDB
+" LLDB(MacOSX)
+if g:is_mac
 Plugin 'gilligan/vim-lldb'
+endif
 
 " Waitting Test
 "Plugin 'Valloric/YouCompleteMe'
