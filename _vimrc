@@ -335,6 +335,7 @@ let NERDTreeWinSize                                         =25
 let NERDCreateDefaultMappings                               =0
 let NERDSpaceDelims                                         =1
 map <leader>cc                                              <plug>NERDCommenterAlignLeft
+map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
