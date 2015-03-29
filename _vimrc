@@ -170,7 +170,7 @@ endif
 if g:is_windows
     set guifont                                             =Monaco:h10
 elseif g:is_mac
-    set guifont                                             =Monaco:h14
+    set guifont                                             =Monaco\ For\ Powerline:h14
 endif
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8 
@@ -305,10 +305,9 @@ set noswapfile
 
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
+let g:airline_powerline_fonts                               =1
 let g:airline_theme                                         ='kolor'
 let g:airline#extensions#tabline#enabled                    =1
-let g:airline#extensions#tabline#left_sep                   ='<'  
-let g:airline#extensions#tabline#right_sep                  ='>'
 let g:airline#extensions#tabline#show_buffers               =1
 let g:airline#extensions#tabline#tab_nr_type                =1 
 let g:airline#extensions#tabline#show_tab_nr                =1
