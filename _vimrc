@@ -764,22 +764,26 @@ vnoremap <leader>vf                                         :call __VisualSelect
 com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
 com! -bar -bang BdReload                                    call __BufferReload(<q-bang>) 
 function!                                                   __BufferDeleteOnly(bang) 
-    let bd_cmd = "bdelete". a:bang 
-    let buffer_number = bufnr("") 
-    
-    if buffer_number > 1 
-        call __ExecCheckBdErrs("1," . (buffer_number - 1). bd_cmd)
-    endif 
-    if buffer_number < bufnr("$") 
-        call __ExecCheckBdErrs((buffer_number + 1) . "," . bufnr("$") . bd_cmd)
-    endif 
+    let bd_cmd = "bdelete". a:bang
+    let cur_buffer_id = bufnr('%')
+    let last_buffer_id = bufnr('$')
+    let nerd_tree_buff_name = 'NERD_tree'
 
-    "Open NerdTree again
-    " :NERDTree
+    let id = 1
+    while id <= last_buffer_id
+        let id = id + 1
+        if id != cur_buffer_id
+            let name = bufname(id)
+            if stridx(name, nerd_tree_buff_name) == -1
+                call __ExecCheckBdErrs(id . bd_cmd)
+            endif
+        endif
+    endwhile
 endfunction
 
 function!                                                   __BufferReload(bang)
     let cur_filename = expand("%")
+
     let bd_cmd = "bd "
     call __ExecCheckBdErrs(bd_cmd)
 
