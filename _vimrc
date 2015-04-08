@@ -834,3 +834,6 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
+
+" my tips list
+" %s///gn              can calculate how many matching in this file
