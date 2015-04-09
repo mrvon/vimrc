@@ -771,13 +771,13 @@ function!                                                   __BufferDeleteOnly(b
 
     let id = 1
     while id <= last_buffer_id
-        let id = id + 1
         if id != cur_buffer_id
             let name = bufname(id)
             if stridx(name, nerd_tree_buff_name) == -1
                 call __ExecCheckBdErrs(id . bd_cmd)
             endif
         endif
+        let id = id + 1
     endwhile
 endfunction
 
