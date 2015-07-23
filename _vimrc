@@ -351,7 +351,7 @@ let g:UltiSnipsJumpForwardTrigger                           ="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 "-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
-let g:lua_compiler_name                                     =$MYVIMRUNTIME . "/luac.exe"
+" let g:lua_compiler_name                                     =$MYVIMRUNTIME . "/luac"
 let g:lua_check_syntax                                      =1
 let g:lua_complete_omni                                     =1
 let g:loaded_luainspect                                     =1
