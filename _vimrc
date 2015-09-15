@@ -1,6 +1,6 @@
 "-------------------------------About Author-----------------------------------
 "echo ">^.^<"
-"echo "Author Mrvon"
+"echo "Author: Mrvon"
 "echo "Email: mrvon@qq.com"
 "echo "If you don't know the option mean, try Shift-K"
 
