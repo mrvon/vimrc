@@ -48,6 +48,29 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     $ ln -s Vimrc/_vimrc .vimrc
     ```
 
+### Install On Ubuntu 64bit ###
+
+1. Install gvim (with python support and lua support)
+
+    + Install dependency
+        ```
+        $ apt-get install python-dev
+        $ apt-get install python3-dev
+        $ apt-get install lua5.2-dev
+        $ apt-get build-dep vim-gtk
+        ```
+
+    + Compile by yourself
+        ```
+        ./configure     --with-features=huge                             \
+                        --enable-luainterp                               \
+                        --enable-pythoninterp                            \
+                        --enable-python3interp                           \
+                        --enable-cscope                                  \
+                        --enable-multibyte                               \
+                        --enable-gui=gtk2				                 \
+        ```
+
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
 
