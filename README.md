@@ -15,6 +15,7 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         `$ brew install vim --with-cscope --with-lua --with-python3`
 
     + Compile by yourself
+        ```
         ./configure     --with-features=huge                             \
                         --enable-luainterp                               \
                         --enable-pythoninterp                            \
