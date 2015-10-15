@@ -9,9 +9,21 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 1. Install MacVim (with python support and lua support)
 
-    `$ brew install macvim --with-cscope --with-lua --with-python3`
+    + Using home brew
+        `$ brew install macvim --with-cscope --with-lua --with-python3`
 
-    `$ brew install vim --with-cscope --with-lua --with-python3`
+        `$ brew install vim --with-cscope --with-lua --with-python3`
+
+    + Compile by yourself
+        ./configure     --with-features=huge                             \
+                        --enable-luainterp                               \
+                        --enable-pythoninterp                            \
+                        --enable-python3interp                           \
+                        --enable-cscope                                  \
+                        --enable-multibyte                               \
+                        --enable-gui=macvim                              \
+                        --with-lua-prefix=/usr/local/Cellar/lua/5.2.3_2/ \
+                        --with-compiledby=MrVon                          \
 
 2. Install the_silver_searcher(ag)
 
