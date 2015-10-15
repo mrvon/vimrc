@@ -60,6 +60,13 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         $ apt-get build-dep vim-gtk
         ```
 
+    + Install tools
+        ```
+        $ apt-get install ctags
+        $ apt-get install silversearcher-ag
+        $ apt-get install libclang1
+        ```
+
     + Compile by yourself
         ```
         ./configure     --with-features=huge                             \
