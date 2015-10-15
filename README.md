@@ -10,9 +10,11 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 1. Install MacVim (with python support and lua support)
 
     + Using home brew
-        `$ brew install macvim --with-cscope --with-lua --with-python3`
-
-        `$ brew install vim --with-cscope --with-lua --with-python3`
+        ```
+        $ brew install macvim --with-cscope --with-lua --with-python3
+        $ brew install vim --with-cscope --with-lua --with-python3
+        ```
+ 
 
     + Compile by yourself
         ```
@@ -25,16 +27,20 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
                         --enable-gui=macvim                              \
                         --with-lua-prefix=/usr/local/Cellar/lua/5.2.3_2/ \
                         --with-compiledby=MrVon                          \
+        ```
 
 2. Install the_silver_searcher(ag)
 
-	`$ brew install the_silver_searcher`
+	```
+	$ brew install the_silver_searcher
+	```
 
 3. Checkout Mrvon's Vimrc
 
-    `$ cd ~`
-
-    `$ git clone https://github.com/mrvon/Vimrc`
+    ```
+    $ cd ~
+    $ git clone https://github.com/mrvon/Vimrc
+    ```
 
 4. Use Symbol link (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
 
