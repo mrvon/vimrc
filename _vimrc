@@ -30,6 +30,10 @@ elseif g:is_mac
     let $MYVIMPATH                                          ='~/'
     let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
     let $MYVIMFILE                                          =$MYVIMPATH.'.vim'
+elseif g:is_linux
+    let $MYVIMPATH                                          ='~/'
+    let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
+    let $MYVIMFILE                                          =$MYVIMPATH.'.vim'
 endif
 let $MYLUADICT                                              =$MYVIMPATH.'lua_export'
 "Must be have lua.exe and luac.exe in your PATH
