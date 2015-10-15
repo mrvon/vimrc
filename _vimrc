@@ -53,7 +53,7 @@ call vundle#begin(path)
 " call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " Vim-Airline
 Plugin 'bling/vim-airline'
