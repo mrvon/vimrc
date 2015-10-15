@@ -44,7 +44,9 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 4. Use Symbol link (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
 
-    `$ln -s Vimrc/_vimrc .vimrc`
+    ```
+    $ ln -s Vimrc/_vimrc .vimrc
+    ```
 
 ### Install On Windows 7 x64 ###
 *(Already including all binary and library in Microsoft Windows 7 x64)*
@@ -55,7 +57,9 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 2. Checkout Mrvon's Vimrc
 
-    `$ git clone https://github.com/mrvon/Vimrc`
+    ```
+    $ git clone https://github.com/mrvon/Vimrc
+    ```
 
 3. Using Vimrc folder to cover install folder
 	+ *Install Python 2 (must be 2.7 x64 version)*
@@ -70,11 +74,17 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 + Build
 
-    `$ mingw32-make.exe -f Make_ming.mak GUI=yes OLE=no USERNAME="MrVon" USERDOMAIN=""`
+    ```
+    $ mingw32-make.exe -f Make_ming.mak                    \
+                            GUI=yes OLE=no                 \
+                            USERNAME="MrVon" USERDOMAIN="" \
+    ```
 
 + Clean
 
-    `$ mingw32-make.exe -f Make_ming.mak clean`
+    ```
+    $ mingw32-make.exe -f Make_ming.mak clean
+    ```
 
 ### Download patch file ###
 * Read following document about how to patch
@@ -105,4 +115,6 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 + Change GVim be you git default editor
 
-    `$ git config --global core.editor gvim`
+    ```
+    $ git config --global core.editor gvim
+    ```
