@@ -175,6 +175,8 @@ if g:is_windows
     set guifont                                             =Monaco:h10
 elseif g:is_mac
     set guifont                                             =Monaco:h14
+elseif g:is_linux
+    set guifont                                             =Monaco\ 11
 endif
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8 
