@@ -172,7 +172,7 @@ colorscheme                                                 kolor
 endif
 
 if g:is_windows
-    set guifont                                             =Monaco:h10
+    set guifont                                             =Monaco:h11
 elseif g:is_mac
     set guifont                                             =Monaco:h14
 elseif g:is_linux
@@ -386,6 +386,7 @@ let g:indent_guides_default_mapping                         =0
 "-----------------------------------------CtrlP--------------------------------
 "Ctrl-P             Search file in project
 "Ctrl-P Ctrl-F      View all buffer
+let g:ctrlp_working_path_mode                               =0
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
 let g:ctrlp_clear_cache_on_exit                             =1
