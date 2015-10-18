@@ -95,6 +95,7 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 	+ *Install Python 2 (must be 2.7 x64 version)*
 	+ *Install Python 3 (must be 3.3 x64 version)*
 	+ *Install Lua 	 (must be 5.1 x64 version)*
+    + *Install LLVM Clang (download from http://llvm.org/releases/download.html)
 
 4. All done
  
