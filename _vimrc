@@ -524,6 +524,8 @@ let g:clang_use_library                                     =1
 let g:clang_auto_user_options                               ='path, .clang_complete'
 if g:is_mac
     let g:clang_library_path                                ='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+elseif g:is_windows
+    let g:clang_library_path                                ='C:/LLVM/bin'
 endif
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
