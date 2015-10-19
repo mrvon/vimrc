@@ -193,8 +193,6 @@ endif
 
 if g:is_mac || g:is_windows
     language messages                                       zh_cn.utf-8
-else
-    language messages                                       zh_CN.utf-8
 endif
 " A Small Tip - Open file with specific encoding :e ++enc=cp936
 
