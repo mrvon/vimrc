@@ -240,7 +240,7 @@ set maxmempattern                                           =10
 set maxmemtot                                               =100
 
 "-------------------------------Share Clipboard With Windows-------------------
-set clipboard                                               +=unnamed
+set clipboard                                               =unnamedplus
 
 "-------------------------------Line Space-------------------------------------
 set linespace                                               =0
