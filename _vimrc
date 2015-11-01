@@ -240,7 +240,11 @@ set maxmempattern                                           =10
 set maxmemtot                                               =100
 
 "-------------------------------Share Clipboard With Windows-------------------
-set clipboard                                               =unnamedplus
+if g:is_mac || g:is_windows
+    set clipboard                                           +=unnamed
+elseif g:is_linux
+    set clipboard                                           =unnamedplus
+endif
 
 "-------------------------------Line Space-------------------------------------
 set linespace                                               =0
