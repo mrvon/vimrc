@@ -161,13 +161,14 @@ filetype plugin indent on       " required
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
     set background                                          =dark
-    colorscheme                                             solarized
+    let $MYCOLOR                                            ='solarized'
 elseif g:is_mac
     set background                                          =dark
-    colorscheme                                             solarized
+    let $MYCOLOR                                            ='solarized'
 elseif g:is_linux
-    colorscheme                                             kolor
+    let $MYCOLOR                                            ='kolor'
 endif
+colorscheme                                                 $MYCOLOR
 
 if g:is_windows
     set guifont                                             =Monaco:h11
@@ -317,7 +318,7 @@ set noswapfile
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
 let g:airline_powerline_fonts                               =0
-let g:airline_theme                                         ='solarized'
+let g:airline_theme                                         =$MYCOLOR
 let g:airline#extensions#tabline#left_sep                   ='<'
 let g:airline#extensions#tabline#right_sep                  ='>'
 let g:airline#extensions#tabline#enabled                    =1
