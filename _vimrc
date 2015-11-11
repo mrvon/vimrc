@@ -160,8 +160,8 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-    colorscheme                                             solarized
     set background                                          =dark
+    colorscheme                                             solarized
 else
     colorscheme                                             kolor
 endif
@@ -377,6 +377,17 @@ let g:kolor_italic                                          =0                  
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
+"-----------------------------------------Solarized----------------------------
+let g:solarized_termcolors                                  =256
+let g:solarized_termtrans                                   =0
+let g:solarized_degrade                                     =0
+let g:solarized_bold                                        =1
+let g:solarized_underline                                   =1
+let g:solarized_italic                                      =1
+let g:solarized_contrast                                    ="normal"
+let g:solarized_visibility                                  ="normal"
+let g:solarized_hitrail                                     =0
+let g:solarized_menu                                        =1
 "-----------------------------------------Indent guides------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
 let g:indent_guides_default_mapping                         =0
