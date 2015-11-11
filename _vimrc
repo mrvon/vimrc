@@ -317,7 +317,7 @@ set noswapfile
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
 let g:airline_powerline_fonts                               =0
-let g:airline_theme                                         ='kolor'
+let g:airline_theme                                         ='solarized'
 let g:airline#extensions#tabline#left_sep                   ='<'
 let g:airline#extensions#tabline#right_sep                  ='>'
 let g:airline#extensions#tabline#enabled                    =1
