@@ -160,13 +160,16 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-    let $MYCOLOR                                            ='kolor'
+    let $MYCOLOR                                            ='solarized'
+    let $MYITALIC                                           =0
 elseif g:is_mac
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
+    let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
+    let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
 
@@ -377,7 +380,7 @@ let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
 let g:lua_define_completion_mappings                        =0
 "-----------------------------------------Kolor--------------------------------
-let g:kolor_italic                                          =0                  " Enable italic. Default: 1
+let g:kolor_italic                                          =$MYITALIC          " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
 let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
 let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
@@ -387,7 +390,7 @@ let g:solarized_termtrans                                   =0
 let g:solarized_degrade                                     =0
 let g:solarized_bold                                        =1
 let g:solarized_underline                                   =1
-let g:solarized_italic                                      =1
+let g:solarized_italic                                      =$MYITALIC
 let g:solarized_contrast                                    ="normal"
 let g:solarized_visibility                                  ="normal"
 let g:solarized_hitrail                                     =0
