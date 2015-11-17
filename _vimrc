@@ -162,7 +162,10 @@ filetype plugin indent on       " required
 if g:is_windows
     set background                                          =dark
     colorscheme                                             solarized
-else
+elseif g:is_mac
+    set background                                          =dark
+    colorscheme                                             solarized
+elseif g:is_linux
     colorscheme                                             kolor
 endif
 
