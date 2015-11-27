@@ -5,7 +5,7 @@
 import os
 
 min_patch_num = 1
-max_patch_num = 550
+max_patch_num = 1000
 
 for i in range(min_patch_num, max_patch_num):
     patch_file = "7.4.{0:003}".format(i)
