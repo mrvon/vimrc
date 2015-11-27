@@ -165,11 +165,11 @@ if g:is_windows
 elseif g:is_mac
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
-    let $MYITALIC                                           =1
+    let $MYITALIC                                           =0
 elseif g:is_linux
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
-    let $MYITALIC                                           =1
+    let $MYITALIC                                           =0
 endif
 colorscheme                                                 $MYCOLOR
 
