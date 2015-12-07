@@ -136,7 +136,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'yonchu/accelerated-smooth-scroll'
 
 " Trailing white space
-Plugin 'mrvon/vim-trailing-whitespace'
+" Plugin 'mrvon/vim-trailing-whitespace'
 
 " Waitting Test
 "Plugin 'Valloric/YouCompleteMe'
