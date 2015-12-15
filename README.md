@@ -99,7 +99,7 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 4. All done
  
-### Compile GVim By Yourself (Windows) ###
+### Compile gvim By Yourself (Windows) ###
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
 
@@ -142,9 +142,9 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 + [nabble](http://vim.1045645.n5.nabble.com/)
 
 ### How I use Vim
-+ I use Vim write python, lua, sql program.
++ I use Vim write c, lua, python program.
 
-+ Change GVim be you git default editor
++ Change gvim be you git default editor
 
     ```
     $ git config --global core.editor gvim
