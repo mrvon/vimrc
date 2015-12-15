@@ -317,6 +317,9 @@ set nofoldenable
 "-------------------------------Disable Swap file------------------------------
 set noswapfile
 
+"-------------------------------Disable preview window-------------------------
+set completeopt                                             -=preview
+
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
 let g:airline_powerline_fonts                               =0
@@ -541,6 +544,7 @@ if g:is_mac
 elseif g:is_windows
     let g:clang_library_path                                ='C:/LLVM/bin'
 endif
+let g:clang_close_preview                                   =1
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
 let g:pymode_rope                                           =0
