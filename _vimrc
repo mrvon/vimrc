@@ -132,10 +132,8 @@ Plugin 'hdima/python-syntax'
 " Better cpp syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-" Smooth Srcool
-Plugin 'yonchu/accelerated-smooth-scroll'
-
 " Waitting Test
+"Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'mrvon/vim-trailing-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
@@ -318,6 +316,9 @@ set nofoldenable
 
 "-------------------------------Disable Swap file------------------------------
 set noswapfile
+
+"-------------------------------Disable preview window-------------------------
+set completeopt                                             -=preview
 
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
@@ -543,6 +544,7 @@ if g:is_mac
 elseif g:is_windows
     let g:clang_library_path                                ='C:/LLVM/bin'
 endif
+let g:clang_close_preview                                   =1
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
 let g:pymode_rope                                           =0
