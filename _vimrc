@@ -610,7 +610,7 @@ nnoremap <leader>ev                                         :vsplit $MYVIMRC<cr>
 nnoremap <leader>ec                                         :vsplit $MYVIMFILE/bundle/vim-kolor/colors/kolor.vim<cr>
 
 " replace all tab with space
-nnoremap <localleader>replacetab                            :%ret! 4
+nnoremap <localleader>rt                                    :%ret! 4
 
 " reload my vimrc
 if g:is_windows && g:is_gui
