@@ -92,10 +92,10 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     ```
 
 3. Using Vimrc folder to cover install folder
-	+ *Install Python 2 (must be 2.7 x64 version)*
-	+ *Install Python 3 (must be 3.3 x64 version)*
-	+ *Install Lua 	 (must be 5.1 x64 version)*
-    + *Install LLVM Clang (download from http://llvm.org/releases/download.html)*
+	+ *Install Python 2     (must be x64 version)*
+	+ *Install Python 3     (must be x64 version)*
+	+ *Install Lua 	        (must be x64 version)*
+    + *Install LLVM Clang   (download from http://llvm.org/releases/download.html)*
 
 4. All done
  
@@ -106,9 +106,8 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 + Build
 
     ```
-    $ mingw32-make.exe -f Make_ming.mak                    \
-                            GUI=yes OLE=no                 \
-                            USERNAME="MrVon" USERDOMAIN="" \
+    $ mingw32-make.exe -f Make_ming.mak                     \
+                          USERNAME="MrVon" USERDOMAIN=""    \
     ```
 
 + Clean
