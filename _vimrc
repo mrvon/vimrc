@@ -132,6 +132,9 @@ Plugin 'hdima/python-syntax'
 " Better cpp syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+" Go
+Plugin 'fatih/vim-go'
+
 " Waitting Test
 "Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'mrvon/vim-trailing-whitespace'
@@ -412,10 +415,6 @@ let g:ctrlp_funky_syntax_highlight                          =1
 " Excluding version control directories
 if g:is_windows
     set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
-    " let g:ctrlp_custom_ignore = {
-    "     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    "     \ 'file': '\v(\.h|\.hh|\.hpp|\.c|\.cpp|\.cxx|\.txt|\.md|\.lua|\.sh)@<!$'
-    "     \ }
 
     let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
@@ -424,9 +423,6 @@ if g:is_windows
 
 elseif g:is_mac
     set wildignore                                          +=*/.git/*,*/.hg/*,*/.svn/*        " Linux/MacOSX
-    " let g:ctrlp_custom_ignore = {
-    "     \ 'file': '\v(\.h|\.hh|\.hpp|\.c|\.cpp|\.cxx|\.txt|\.md|\.lua|\.sh)@<!$'
-    "     \ }
 
     let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
