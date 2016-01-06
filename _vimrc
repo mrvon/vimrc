@@ -133,7 +133,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Go
-Plugin 'fatih/vim-go'
+Plugin 'mrvon/vim-go'
 
 " Waitting Test
 "Plugin 'yonchu/accelerated-smooth-scroll'
