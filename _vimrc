@@ -577,6 +577,7 @@ augroup go_shortcut
     autocmd FileType go nmap <leader>gv <Plug>(go-doc-vertical)
     autocmd FileType go nmap <leader>s  <Plug>(go-implements)
     autocmd FileType go nmap <leader>i  <Plug>(go-info)
+    autocmd FileType go nmap <Leader>e  <Plug>(go-rename)
 augroup END
 let g:go_highlight_functions                                =1
 let g:go_highlight_methods                                  =1
