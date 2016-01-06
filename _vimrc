@@ -563,6 +563,19 @@ let g:jedi#rename_command                                   =""
 let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
+"-----------------------------------------Go-----------------------------------
+augroup go_shortcut
+    autocmd!
+    autocmd FileType go nmap <leader>r <Plug>(go-run)
+    autocmd FileType go nmap <leader>b <Plug>(go-build)
+    autocmd FileType go nmap <leader>t <Plug>(go-test)
+    autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+augroup END
+let g:go_highlight_functions                                =1
+let g:go_highlight_methods                                  =1
+let g:go_highlight_structs                                  =1
+let g:go_highlight_operators                                =1
+let g:go_highlight_build_constraints                        =1
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
