@@ -566,10 +566,17 @@ let python_highlight_all                                    =1
 "-----------------------------------------Go-----------------------------------
 augroup go_shortcut
     autocmd!
-    autocmd FileType go nmap <leader>r <Plug>(go-run)
-    autocmd FileType go nmap <leader>b <Plug>(go-build)
-    autocmd FileType go nmap <leader>t <Plug>(go-test)
-    autocmd FileType go nmap <leader>c <Plug>(go-coverage)
+    autocmd FileType go nmap <leader>r  <Plug>(go-run)
+    autocmd FileType go nmap <leader>b  <Plug>(go-build)
+    autocmd FileType go nmap <leader>t  <Plug>(go-test)
+    autocmd FileType go nmap <leader>c  <Plug>(go-coverage)
+    autocmd FileType go nmap <leader>ds <Plug>(go-def-split)
+    autocmd FileType go nmap <leader>dv <Plug>(go-def-vertical)
+    autocmd FileType go nmap <leader>dt <Plug>(go-def-tab)
+    autocmd FileType go nmap <leader>gd <Plug>(go-doc)
+    autocmd FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+    autocmd FileType go nmap <leader>s  <Plug>(go-implements)
+    autocmd FileType go nmap <leader>i  <Plug>(go-info)
 augroup END
 let g:go_highlight_functions                                =1
 let g:go_highlight_methods                                  =1
