@@ -39,7 +39,7 @@ let $MYLUADICT                                              =$MYVIMPATH.'lua_exp
 "Must be have lua.exe and luac.exe in your PATH
 
 "-------------------------------Leader Key-------------------------------------
-let mapleader                                               ="\\"
+let mapleader                                               =" "
 let maplocalleader                                          =","
 
 "-------------------------------Version----------------------------------------
