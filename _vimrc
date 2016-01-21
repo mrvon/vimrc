@@ -133,7 +133,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Go
-Plugin 'fatih/vim-go'
+Plugin 'mrvon/vim-go'
 
 " Waitting Test
 "Plugin 'yonchu/accelerated-smooth-scroll'
@@ -563,6 +563,26 @@ let g:jedi#rename_command                                   =""
 let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
+"-----------------------------------------Go-----------------------------------
+augroup go_shortcut
+    autocmd!
+    autocmd FileType go nmap <leader>r  <Plug>(go-run)
+    autocmd FileType go nmap <leader>b  <Plug>(go-build)
+    autocmd FileType go nmap <leader>c  <Plug>(go-coverage)
+    autocmd FileType go nmap <leader>ds <Plug>(go-def-split)
+    autocmd FileType go nmap <leader>dv <Plug>(go-def-vertical)
+    autocmd FileType go nmap <leader>dt <Plug>(go-def-tab)
+    autocmd FileType go nmap <leader>gd <Plug>(go-doc)
+    autocmd FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+    autocmd FileType go nmap <leader>s  <Plug>(go-implements)
+    autocmd FileType go nmap <leader>i  <Plug>(go-info)
+    autocmd FileType go nmap <Leader>e  <Plug>(go-rename)
+augroup END
+let g:go_highlight_functions                                =1
+let g:go_highlight_methods                                  =1
+let g:go_highlight_structs                                  =1
+let g:go_highlight_operators                                =1
+let g:go_highlight_build_constraints                        =1
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
