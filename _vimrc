@@ -136,6 +136,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " Go
 Plugin 'mrvon/vim-go'
 
+" Power Color
+Plugin 'ap/vim-css-color'
+
 " Waitting Test
 "Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'mrvon/vim-trailing-whitespace'
