@@ -95,7 +95,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mrvon/vim-kolor'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'tomasr/molokai'
+Plugin 'mrvon/molokai'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
