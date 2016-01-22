@@ -95,6 +95,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mrvon/vim-kolor'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'tomasr/molokai'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
@@ -162,7 +163,7 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-    let $MYCOLOR                                            ='solarized'
+    let $MYCOLOR                                            ='molokai'
     let $MYITALIC                                           =0
 elseif g:is_mac
     set background                                          =dark
