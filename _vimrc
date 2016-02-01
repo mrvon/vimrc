@@ -907,4 +907,5 @@ endif
 syntax                                                      on
 
 " my tips list
+" %s//gc               search the pattern before you replace it.
 " %s///gn              can calculate how many matching in this file
