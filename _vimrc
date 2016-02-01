@@ -60,7 +60,8 @@ call vundle#begin(path)
 Plugin 'VundleVim/Vundle.vim'
 
 " Vim-Airline
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
