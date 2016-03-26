@@ -140,12 +140,6 @@ Plugin 'mrvon/vim-go'
 " Power Color
 Plugin 'ap/vim-css-color'
 
-" Org Mode
-Plugin 'jceb/vim-orgmode'
-
-" Fast fold
-Plugin 'Konfekt/FastFold'
-
 " Stronger repeat
 Plugin 'tpope/vim-repeat'
 
@@ -153,6 +147,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-speeddating'
 
 "------------------------------------------------------------------------------
+"Plugin 'jceb/vim-orgmode'
+"Plugin 'Konfekt/FastFold'
 "Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'mrvon/vim-trailing-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
