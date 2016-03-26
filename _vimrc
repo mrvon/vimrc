@@ -140,16 +140,28 @@ Plugin 'mrvon/vim-go'
 " Power Color
 Plugin 'ap/vim-css-color'
 
-" Waitting Test
+" Org Mode
+Plugin 'jceb/vim-orgmode'
+
+" Fast fold
+Plugin 'Konfekt/FastFold'
+
+" Stronger repeat
+Plugin 'tpope/vim-repeat'
+
+" Fast date input
+Plugin 'tpope/vim-speeddating'
+
+"------------------------------------------------------------------------------
 "Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'mrvon/vim-trailing-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'tpope/vim-fugitive'
-"Plugin 'vim-scripts/UltiSnips'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'Lokaltog/vim-easymotion'
+"------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -765,7 +777,7 @@ inoremap <localleader>fn                                    <C-R>=expand("%:t")<
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
 
-"-------------------------------------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
@@ -821,16 +833,7 @@ vnoremap <leader>vf                                         :call __VisualSelect
 "vnoremap <leader>sp                                        "+p
 "nnoremap <leader>sp                                        "+p
 
-
-"-------------------------------------------------------------------------------------------------------------
-" Lua Function List
-"autocmd FileType txt,lua call AddExportFunctionForLua()
-"function! AddExportFunctionForLua()
-    "set dictionary-=$MYLUA/cpp_export.txt dictionary+=$MYLUA/cpp_export.txt
-    "set complete-=k complete+=k
-"endfunction
-
-"-------------------------------------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 "Close All Buffers But This One
 com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
 com! -bar -bang BdReload                                    call __BufferReload(<q-bang>) 
