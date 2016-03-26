@@ -146,6 +146,10 @@ Plugin 'tpope/vim-repeat'
 " Fast date input
 Plugin 'tpope/vim-speeddating'
 
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
 "------------------------------------------------------------------------------
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
@@ -153,7 +157,6 @@ Plugin 'tpope/vim-speeddating'
 "Plugin 'mrvon/vim-trailing-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
-"Plugin 'tpope/vim-fugitive'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'Lokaltog/vim-easymotion'
