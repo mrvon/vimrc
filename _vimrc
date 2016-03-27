@@ -600,6 +600,13 @@ let g:go_highlight_methods                                  =1
 let g:go_highlight_structs                                  =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
+"-----------------------------------------Git----------------------------------
+let g:gitgutter_map_keys                                    =0
+nmap [c                                                     <Plug>GitGutterPrevHunk
+nmap ]c                                                     <Plug>GitGutterNextHunk
+" nmap <Leader>hs                                           <Plug>GitGutterStageHunk
+" nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
+" nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
