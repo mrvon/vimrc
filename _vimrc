@@ -353,6 +353,7 @@ let g:airline#extensions#tabline#show_tab_nr                =1
 let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
+let g:airline#extensions#whitespace#checks                  =['long']
 "-------------------------------YouCompleteMe----------------------------------
 "let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
 "let g:ycm_collect_identifiers_from_tags_files              =1
