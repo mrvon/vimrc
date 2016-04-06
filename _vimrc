@@ -612,6 +612,10 @@ nmap ]c                                                     <Plug>GitGutterNextH
 " nmap <Leader>hs                                           <Plug>GitGutterStageHunk
 " nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
 " nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
+"-----------------------------------------Dict---------------------------------
+let g:dict_hosts = [
+    \["dict.org", ["wn", "gcide"]],
+    \]
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
