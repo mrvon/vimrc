@@ -150,6 +150,10 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'reedes/vim-pencil'
+Plugin 'reedes/vim-wordy'
+Plugin 'szw/vim-dict'
+
 "------------------------------------------------------------------------------
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
