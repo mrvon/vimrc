@@ -150,8 +150,11 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
+" Writing
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-wordy'
+
+" Online Dictionary
 Plugin 'szw/vim-dict'
 
 "------------------------------------------------------------------------------
@@ -616,6 +619,11 @@ nmap ]c                                                     <Plug>GitGutterNextH
 let g:dict_hosts = [
     \["dict.org", ["wn", "gcide"]],
     \]
+"-----------------------------------------Pencil-------------------------------
+" augroup pencil
+"     autocmd!
+"     autocmd FileType markdown call pencil#init()
+" augroup END
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
