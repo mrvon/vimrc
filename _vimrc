@@ -620,10 +620,10 @@ let g:dict_hosts = [
     \["dict.org", ["wn", "gcide"]],
     \]
 "-----------------------------------------Pencil-------------------------------
-" augroup pencil
-"     autocmd!
-"     autocmd FileType markdown call pencil#init()
-" augroup END
+augroup pencil
+    autocmd!
+    autocmd FileType markdown call pencil#init()
+augroup END
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
