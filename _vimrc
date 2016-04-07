@@ -207,7 +207,7 @@ elseif g:is_linux
     set guifont                                             =Monaco\ 12
 endif
 "-------------------------------Encoding---------------------------------------
-" Always use utf-8 
+" Always use utf-8
 set encoding                                                =utf-8
 set termencoding                                            =utf-8
 set fileencoding                                            =utf-8
@@ -241,7 +241,7 @@ set columns                                                 =100
 set lines                                                   =30
 
 "-------------------------------Tab Key----------------------------------------
-set shiftwidth                                              =4 
+set shiftwidth                                              =4
 set tabstop                                                 =4
 set softtabstop                                             =0
 set shiftround
@@ -355,7 +355,7 @@ let g:airline#extensions#tabline#left_sep                   ='<'
 let g:airline#extensions#tabline#right_sep                  ='>'
 let g:airline#extensions#tabline#enabled                    =1
 let g:airline#extensions#tabline#show_buffers               =1
-let g:airline#extensions#tabline#tab_nr_type                =1 
+let g:airline#extensions#tabline#tab_nr_type                =1
 let g:airline#extensions#tabline#show_tab_nr                =1
 let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
@@ -539,7 +539,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "endif
 "-----------------------------------------EasyMotion---------------------------
 " Disable default mappings
-"let g:EasyMotion_do_mapping                                 =0 
+"let g:EasyMotion_do_mapping                                 =0
 " Bi-directional find motion
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.
@@ -620,6 +620,7 @@ let g:dict_hosts = [
     \["localhost", [""]],
     \]
     " \["dict.org", ["wn", "gcide"]],
+nnoremap <leader>w                                          :Dict<CR>
 "-----------------------------------------Pencil-------------------------------
 augroup pencil
     autocmd!
@@ -656,10 +657,10 @@ augroup END
 
 " upper this word
 " I like use gU or gu instead of it
-"inoremap <leader>u                                          <esc>wbveU          
+"inoremap <leader>u                                          <esc>wbveU
 "nnoremap <leader>u                                          wbveU
 
-" edit the alternate file. 
+" edit the alternate file.
 " mostly the alternate file is the previously edited file.
 nnoremap <leader><leader>                                   <c-^>
 
@@ -707,7 +708,7 @@ nnoremap L                                                  $
 nnoremap J                                                  <nop>
 vnoremap J                                                  <nop>
 " this map seem do not work
-" nnoremap K                                                <nop> 
+" nnoremap K                                                <nop>
 
 " comment a line
 "augroup  comment_group
@@ -717,7 +718,7 @@ vnoremap J                                                  <nop>
 "    autocmd                                                 FileType vim nnoremap <buffer> <localleader>c I"<esc>
 "augroup  END
 
-" movement mappings ----------------- 
+" movement mappings
 " find In       Next        ( or [
 " find In       Last        ( or [
 " find Around   Next        ( or [
@@ -745,7 +746,7 @@ augroup END
 " Always use Very Magic search
 nnoremap /                                                  /\v
 
-" Closing last search highlight 
+" Closing last search highlight
 nnoremap <leader>h                                          :nohlsearch<cr>
 
 " Using exists syntax file
@@ -755,7 +756,7 @@ augroup align_filetype_group
 augroup END
 
 " edit binary using xxd-format!
-augroup binary_edit_group 
+augroup binary_edit_group
     autocmd!
     autocmd                                                 BufReadPre      *.bin let   &bin=1
     autocmd                                                 BufReadPost     *.bin if    &bin    | %!xxd
@@ -793,7 +794,7 @@ function! __ExecuteScript()
     elseif neocomplete#get_context_filetype() == "lua"
         :read! lua %
     endif
-endfunction 
+endfunction
 " nnoremap <silent> <leader>r                                 :call __ExecuteScript()<CR>
 
 " Insert current file name
@@ -806,7 +807,7 @@ function! __ExecuteCommand(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction 
+endfunction
 
 function!                                                   __VisualSelection(direction) range
     let l:saved_reg = @"
@@ -819,11 +820,11 @@ function!                                                   __VisualSelection(di
         execute "normal ?" . l:pattern . "^M"
     elseif a:direction == 'forward'
         execute "normal /" . l:pattern . "^M"
-    elseif a:direction == 'ag-ignore-case' 
+    elseif a:direction == 'ag-ignore-case'
         execute __ExecuteCommand("Agi " . "\"" . l:pattern . "\"" . "<CR>")
-    elseif a:direction == 'ag-ignore-case-word' 
+    elseif a:direction == 'ag-ignore-case-word'
         execute __ExecuteCommand("Agw " . "\"" . l:pattern . "\"" . "<CR>")
-    elseif a:direction == 'ag-ignore-case-file' 
+    elseif a:direction == 'ag-ignore-case-file'
         execute __ExecuteCommand("Agf " . "\"" . l:pattern . "\"" . "<CR>")
     endif
 
@@ -835,8 +836,8 @@ endfunction
 
 " quick search using Ag
 " search current word ignore-case
-nnoremap <leader>vv                                         :Agi<CR>    
-nnoremap <leader>vw                                         :Agw<CR>    
+nnoremap <leader>vv                                         :Agi<CR>
+nnoremap <leader>vw                                         :Agw<CR>
 nnoremap <leader>vf                                         :Agf<CR>
 " Ag is search case-sentisive
 " Agi is search ignore-case
@@ -859,9 +860,9 @@ vnoremap <leader>vf                                         :call __VisualSelect
 
 "------------------------------------------------------------------------------
 "Close All Buffers But This One
-com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>) 
-com! -bar -bang BdReload                                    call __BufferReload(<q-bang>) 
-function!                                                   __BufferDeleteOnly(bang) 
+com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>)
+com! -bar -bang BdReload                                    call __BufferReload(<q-bang>)
+function!                                                   __BufferDeleteOnly(bang)
     let bd_cmd = "bdelete". a:bang
     let cur_buffer_id = bufnr('%')
     let last_buffer_id = bufnr('$')
@@ -889,16 +890,16 @@ function!                                                   __BufferReload(bang)
     call __ExecCheckBdErrs(edit_cmd . cur_filename)
 endfunction
 
-function!                                                   __ExecCheckBdErrs(bdrangecmd) 
-    try 
-        exec a:bdrangecmd 
-    catch /:E51[567]:/ 
-        " no buffers unloaded/deleted/wiped out: ignore 
-    catch 
-        echohl ErrorMsg 
-        echomsg matchstr(v:exception, ':\zsE.*') 
-        echohl none 
-    endtry 
+function!                                                   __ExecCheckBdErrs(bdrangecmd)
+    try
+        exec a:bdrangecmd
+    catch /:E51[567]:/
+        " no buffers unloaded/deleted/wiped out: ignore
+    catch
+        echohl ErrorMsg
+        echomsg matchstr(v:exception, ':\zsE.*')
+        echohl none
+    endtry
 endfunction
 
 if g:is_windows && g:is_gui
@@ -924,7 +925,7 @@ augroup on_enter_vim
 augroup END
 
 
-" Don't move it, let it on the bottom of this file, Otherwise it will don't work. 
+" Don't move it, let it on the bottom of this file, Otherwise it will don't work.
 " Open Syntax HighLight
 if exists("g:syntax_on")
     syntax                                                  off
