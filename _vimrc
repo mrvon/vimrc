@@ -617,8 +617,9 @@ nmap ]c                                                     <Plug>GitGutterNextH
 " nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
 "-----------------------------------------Dict---------------------------------
 let g:dict_hosts = [
-    \["dict.org", ["wn", "gcide"]],
+    \["localhost", [""]],
     \]
+    " \["dict.org", ["wn", "gcide"]],
 "-----------------------------------------Pencil-------------------------------
 augroup pencil
     autocmd!
