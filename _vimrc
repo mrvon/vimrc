@@ -157,6 +157,9 @@ Plugin 'reedes/vim-wordy'
 " Online Dictionary
 Plugin 'szw/vim-dict'
 
+" Vim as a man reader
+Plugin 'vim-utils/vim-man'
+
 "------------------------------------------------------------------------------
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
@@ -617,7 +620,7 @@ nmap ]c                                                     <Plug>GitGutterNextH
 " nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
 "-----------------------------------------Dict---------------------------------
 let g:dict_hosts = [
-    \["localhost", [""]],
+    \["192.168.1.224", [""]],
     \]
     " \["dict.org", ["wn", "gcide"]],
 nnoremap <leader>w                                          :Dict<CR>
