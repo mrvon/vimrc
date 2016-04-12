@@ -148,7 +148,7 @@ Plugin 'tpope/vim-speeddating'
 
 " Git
 Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 
 " Writing
 Plugin 'reedes/vim-pencil'
