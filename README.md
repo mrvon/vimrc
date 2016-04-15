@@ -146,5 +146,5 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 + Change gvim be you git default editor
 
     ```
-    $ git config --global core.editor gvim
+    $ git config --global core.editor "gvim -f"
     ```
