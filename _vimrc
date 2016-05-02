@@ -160,11 +160,13 @@ Plugin 'szw/vim-dict'
 " Vim as a man reader
 Plugin 'vim-utils/vim-man'
 
+" White space
+Plugin 'mrvon/vim-trailing-whitespace'
+
 "------------------------------------------------------------------------------
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
 "Plugin 'yonchu/accelerated-smooth-scroll'
-"Plugin 'mrvon/vim-trailing-whitespace'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'IndentAnything'
 "Plugin 'honza/vim-snippets'
