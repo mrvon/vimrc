@@ -1,5 +1,5 @@
 # Happy Hacking Vim #
-This is *mrvon* 's Vim setting
+This is *dennis* 's Vim setting
 
 Are you looking for a introduction about it, Please read *[vimrc](https://github.com/mrvon/Vimrc/blob/master/_vimrc)* file comment directly.
 
