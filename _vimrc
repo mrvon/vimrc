@@ -346,6 +346,9 @@ set nrformats                                               =hex
 " I don't like vim style fold
 set nofoldenable
 
+"-------------------------------Diff Mode--------------------------------------
+set diffopt                                                 =filler,vertical
+
 "-------------------------------Disable Swap file------------------------------
 set noswapfile
 
