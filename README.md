@@ -1,5 +1,5 @@
 # Happy Hacking Vim #
-This is *mrvon* 's Vim setting 
+This is *mrvon* 's Vim setting
 
 Are you looking for a introduction about it, Please read *[vimrc](https://github.com/mrvon/Vimrc/blob/master/_vimrc)* file comment directly.
 
@@ -10,14 +10,14 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 1. Install MacVim (with python support and lua support)
 
     + Using home brew
-        ```
+        ```sh
         $ brew install macvim --with-cscope --with-lua --with-python3
         $ brew install vim --with-cscope --with-lua --with-python3
         ```
- 
+
 
     + Compile by yourself
-        ```
+        ```sh
         ./configure     --with-features=huge                             \
                         --enable-luainterp                               \
                         --enable-pythoninterp                            \
@@ -28,23 +28,22 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
                         --with-lua-prefix=/usr/local/Cellar/lua/5.2.3_2/ \
                         --with-compiledby=MrVon                          \
         ```
-
 2. Install the_silver_searcher(ag)
 
-	```
-	$ brew install the_silver_searcher
-	```
+    ```sh
+    $ brew install the_silver_searcher
+    ```
 
 3. Checkout Mrvon's Vimrc
 
-    ```
+    ```sh
     $ cd ~
     $ git clone https://github.com/mrvon/Vimrc
     ```
 
 4. Use Symbol link (*In Mac OS X, vim config path is: ~/.vim and ~/.vimrc*)
 
-    ```
+    ```sh
     $ ln -s Vimrc/_vimrc .vimrc
     ```
 
@@ -53,7 +52,7 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 1. Install gvim (with python support and lua support)
 
     + Install dependency
-        ```
+        ```sh
         $ apt-get install python-dev
         $ apt-get install python3-dev
         $ apt-get install lua5.2-dev
@@ -61,14 +60,14 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         ```
 
     + Install tools
-        ```
+        ```sh
         $ apt-get install ctags
         $ apt-get install silversearcher-ag
         $ apt-get install libclang1
         ```
 
     + Compile by yourself
-        ```
+        ```sh
         ./configure     --with-features=huge                             \
                         --enable-luainterp                               \
                         --enable-pythoninterp                            \
@@ -83,11 +82,11 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 1. Download a gvim 7.4 executable installer from vim offical website and Install it
 
-	> http://www.vim.org/ 
+	> http://www.vim.org/
 
 2. Checkout Mrvon's Vimrc
 
-    ```
+    ```sh
     $ git clone https://github.com/mrvon/Vimrc
     ```
 
@@ -98,21 +97,21 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     + *Install LLVM Clang   (download from http://llvm.org/releases/download.html)*
 
 4. All done
- 
+
 ### Compile gvim By Yourself (Windows) ###
 *Following command must be run on the console open by mingw-w64.bat
  (sh/cmd/powershell may be cause error)*
 
 + Build
 
-    ```
+    ```sh
     $ mingw32-make.exe -f Make_ming.mak                     \
                           USERNAME="MrVon" USERDOMAIN=""    \
     ```
 
 + Clean
 
-    ```
+    ```sh
     $ mingw32-make.exe -f Make_ming.mak clean
     ```
 
