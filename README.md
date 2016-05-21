@@ -141,10 +141,15 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 + [nabble](http://vim.1045645.n5.nabble.com/)
 
 ### How I use Vim
-+ I use Vim write c, lua, python program.
++ I use Vim write c, lua, python, go, markdown, config, anything else.
 
-+ Change gvim be you git default editor
++ Gvim be you git default editor and gvimdiff as difftool
 
-    ```
+    ```sh
+    # should use command *git difftool*, *git mergetool* instead.
     $ git config --global core.editor "gvim -f"
+    $ git config --global diff.tool    gvimdiff
+    $ git config --global difftool.prompt false
+    $ git config --global merge.tool   gvimdiff
     ```
+
