@@ -148,7 +148,17 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     # should use command *git difftool*, *git mergetool* instead.
     $ git config --global core.editor "gvim -f"
     $ git config --global diff.tool    gvimdiff
-    $ git config --global difftool.prompt false
     $ git config --global merge.tool   gvimdiff
+    $ git config --global difftool.prompt false
     ```
 
++ Mvim be you git default editor, difftool and mergetool
+
+    ```sh
+    $ git config --global core.editor "mvim -f"
+    $ git config --global merge.tool mvimdiff
+    $ git config --global mergetool.mvimdiff.cmd 'mvim -df $BASE $LOCAL $REMOTE $MERGED'
+    $ git config --global diff.tool mvimdiff
+    $ git config --global difftool.mvimdiff.cmd 'mvim -df $LOCAL $REMOTE'
+    $ git config --global difftool.prompt false
+    ```
