@@ -394,8 +394,8 @@ map <leader>cu                                              <plug>NERDCommenterU
 "-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
     "autocmd!
-    "autocmd FileType lua,txt let b:delimitMate_matchpairs   ="(:),[:],{:}"
-    "autocmd FileType lua,txt let b:delimitMate_quotes       = "\" '"
+    "autocmd FileType lua let b:delimitMate_matchpairs   ="(:),[:],{:}"
+    "autocmd FileType lua let b:delimitMate_quotes       = "\" '"
 "augroup END
 "-----------------------------------------Emmet(Zencoding) --------------------
 "-----------------------------------------UltiSnips----------------------------
@@ -660,7 +660,7 @@ function! QuicklyAutoIndent()
 endfunction
 augroup quickly_indent
     autocmd!
-    autocmd InsertLeave *.py,*.lua,*.txt                    :call QuicklyAutoIndent()
+    autocmd InsertLeave *.py,*.lua                          :call QuicklyAutoIndent()
 augroup END
 
 " upper this word
@@ -758,10 +758,10 @@ nnoremap /                                                  /\v
 nnoremap <leader>h                                          :nohlsearch<cr>
 
 " Using exists syntax file
-augroup align_filetype_group
-    autocmd!
-    autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
-augroup END
+" augroup align_filetype_group
+"     autocmd!
+"     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
+" augroup END
 
 " edit binary using xxd-format!
 augroup binary_edit_group
@@ -778,7 +778,7 @@ augroup END
 " save file with nobomb
 augroup save_with_nobomb
     autocmd!
-    autocmd                                                 BufWritePre *.lua,*.txt setlocal nobomb
+    autocmd                                                 BufWritePre *.lua setlocal nobomb
 augroup END
 
 " Quickly Traverse Tab (I prefer buffer to tab)
