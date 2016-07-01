@@ -154,9 +154,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-wordy'
 
-" Online Dictionary
-Plugin 'szw/vim-dict'
-
 " Vim as a man reader
 Plugin 'vim-utils/vim-man'
 
@@ -164,6 +161,7 @@ Plugin 'vim-utils/vim-man'
 Plugin 'mrvon/vim-trailing-whitespace'
 
 "------------------------------------------------------------------------------
+"Plugin 'szw/vim-dict'
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
 "Plugin 'yonchu/accelerated-smooth-scroll'
@@ -394,8 +392,8 @@ map <leader>cu                                              <plug>NERDCommenterU
 "-----------------------------------------DelimitMate--------------------------
 "augroup DelimitMate
     "autocmd!
-    "autocmd FileType lua,txt let b:delimitMate_matchpairs   ="(:),[:],{:}"
-    "autocmd FileType lua,txt let b:delimitMate_quotes       = "\" '"
+    "autocmd FileType lua let b:delimitMate_matchpairs   ="(:),[:],{:}"
+    "autocmd FileType lua let b:delimitMate_quotes       = "\" '"
 "augroup END
 "-----------------------------------------Emmet(Zencoding) --------------------
 "-----------------------------------------UltiSnips----------------------------
@@ -623,12 +621,8 @@ let g:gitgutter_map_keys                                    =0
 " nmap <Leader>hs                                           <Plug>GitGutterStageHunk
 " nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
 " nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
-"-----------------------------------------Dict---------------------------------
-let g:dict_hosts = [
-    \["192.168.1.224", [""]],
-    \]
-    " \["dict.org", ["wn", "gcide"]],
-nnoremap <leader>w                                          :Dict<CR>
+"-----------------------------------------VimGo--------------------------------
+let g:go_bin_path                                           =$GOPATH . "/bin/"
 "-----------------------------------------Pencil-------------------------------
 augroup pencil
     autocmd!
@@ -660,7 +654,7 @@ function! QuicklyAutoIndent()
 endfunction
 augroup quickly_indent
     autocmd!
-    autocmd InsertLeave *.py,*.lua,*.txt                    :call QuicklyAutoIndent()
+    autocmd InsertLeave *.py,*.lua                          :call QuicklyAutoIndent()
 augroup END
 
 " upper this word
@@ -758,10 +752,10 @@ nnoremap /                                                  /\v
 nnoremap <leader>h                                          :nohlsearch<cr>
 
 " Using exists syntax file
-augroup align_filetype_group
-    autocmd!
-    autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
-augroup END
+" augroup align_filetype_group
+"     autocmd!
+"     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
+" augroup END
 
 " edit binary using xxd-format!
 augroup binary_edit_group
@@ -778,7 +772,7 @@ augroup END
 " save file with nobomb
 augroup save_with_nobomb
     autocmd!
-    autocmd                                                 BufWritePre *.lua,*.txt setlocal nobomb
+    autocmd                                                 BufWritePre *.lua setlocal nobomb
 augroup END
 
 " Quickly Traverse Tab (I prefer buffer to tab)
