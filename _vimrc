@@ -217,6 +217,7 @@ set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =en_US.utf-8
 set helplang                                                =cn
+set fileformats                                             =unix,dos,mac
 if g:is_windows
     source                                                  $MYVIMRUNTIME/delmenu.vim
     source                                                  $MYVIMRUNTIME/menu.vim
