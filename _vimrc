@@ -595,7 +595,16 @@ let g:jedi#rename_command                                   =""
 let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
-"-----------------------------------------Go-----------------------------------
+"-----------------------------------------Git----------------------------------
+let g:gitgutter_map_keys                                    =0
+" nmap [c                                                   <Plug>GitGutterPrevHunk
+" nmap ]c                                                   <Plug>GitGutterNextHunk
+" nmap <Leader>hs                                           <Plug>GitGutterStageHunk
+" nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
+" nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
+"-----------------------------------------VimGo--------------------------------
+let g:go_bin_path                                           =$GOPATH . "/bin/"
+let g:go_fmt_command                                        ="goimports"
 augroup go_shortcut
     autocmd!
     autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -610,20 +619,12 @@ augroup go_shortcut
     autocmd FileType go nmap <leader>i  <Plug>(go-info)
     autocmd FileType go nmap <Leader>e  <Plug>(go-rename)
 augroup END
-let g:go_highlight_functions                                =1
-let g:go_highlight_methods                                  =1
-let g:go_highlight_structs                                  =1
-let g:go_highlight_operators                                =1
-let g:go_highlight_build_constraints                        =1
-"-----------------------------------------Git----------------------------------
-let g:gitgutter_map_keys                                    =0
-" nmap [c                                                   <Plug>GitGutterPrevHunk
-" nmap ]c                                                   <Plug>GitGutterNextHunk
-" nmap <Leader>hs                                           <Plug>GitGutterStageHunk
-" nmap <Leader>hr                                           <Plug>GitGutterRevertHunk
-" nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
-"-----------------------------------------VimGo--------------------------------
-let g:go_bin_path                                           =$GOPATH . "/bin/"
+let g:go_highlight_functions                                = 1
+let g:go_highlight_methods                                  = 1
+let g:go_highlight_fields                                   = 1
+let g:go_highlight_types                                    = 1
+let g:go_highlight_operators                                = 1
+let g:go_highlight_build_constraints                        = 1
 "-----------------------------------------Pencil-------------------------------
 augroup pencil
     autocmd!
