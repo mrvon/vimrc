@@ -604,7 +604,7 @@ let g:gitgutter_map_keys                                    =0
 " nmap <Leader>hp                                           <Plug>GitGutterPreviewHunk
 "-----------------------------------------VimGo--------------------------------
 let g:go_bin_path                                           =$GOPATH . "/bin/"
-let g:go_fmt_command                                        ="goimports"
+let g:go_fmt_command                                        ="gofmt"
 augroup go_shortcut
     autocmd!
     autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -616,8 +616,9 @@ augroup go_shortcut
     autocmd FileType go nmap <leader>gd <Plug>(go-doc)
     autocmd FileType go nmap <leader>gv <Plug>(go-doc-vertical)
     autocmd FileType go nmap <leader>s  <Plug>(go-implements)
-    autocmd FileType go nmap <leader>i  <Plug>(go-info)
-    autocmd FileType go nmap <Leader>e  <Plug>(go-rename)
+    autocmd FileType go nmap <leader>i  <Plug>(go-imports)
+    autocmd FileType go nmap <leader>f  <Plug>(go-info)
+    autocmd FileType go nmap <leader>e  <Plug>(go-rename)
 augroup END
 let g:go_highlight_functions                                = 1
 let g:go_highlight_methods                                  = 1
