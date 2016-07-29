@@ -143,12 +143,9 @@ Plugin 'ap/vim-css-color'
 " Stronger repeat
 Plugin 'tpope/vim-repeat'
 
-" Fast date input
-Plugin 'tpope/vim-speeddating'
-
 " Git
 Plugin 'tpope/vim-fugitive'
-" Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 
 " Writing
 Plugin 'reedes/vim-pencil'
@@ -156,9 +153,6 @@ Plugin 'reedes/vim-wordy'
 
 " Vim as a man reader
 Plugin 'vim-utils/vim-man'
-
-" White space
-Plugin 'mrvon/vim-trailing-whitespace'
 
 "------------------------------------------------------------------------------
 "Plugin 'szw/vim-dict'
