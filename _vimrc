@@ -118,18 +118,16 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Rip-Rip/clang_complete'
 
 " Python mode
-" I love python-mode, I also love jedi
 Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+
+" Better python syntax
+Plugin 'hdima/python-syntax'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
 
 " Quickly surround
 Plugin 'tpope/vim-surround'
-
-" Better python syntax
-Plugin 'hdima/python-syntax'
 
 " Better cpp syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -155,6 +153,7 @@ Plugin 'reedes/vim-wordy'
 Plugin 'vim-utils/vim-man'
 
 "------------------------------------------------------------------------------
+"Plugin 'davidhalter/jedi-vim'
 "Plugin 'szw/vim-dict'
 "Plugin 'jceb/vim-orgmode'
 "Plugin 'Konfekt/FastFold'
@@ -492,7 +491,6 @@ let g:neocomplete#keyword_patterns['default']               ='\h\w*'
 autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
 autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
-autocmd FileType python         setlocal omnifunc           =jedi#completions
 autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -518,10 +516,9 @@ let g:neocomplete#force_omni_input_patterns.objc            =
 let g:neocomplete#force_omni_input_patterns.objcpp          =
             \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
 " Disable complete for python and ruby
-" let g:neocomplete#sources#omni#input_patterns.python        =''
-let g:neocomplete#force_omni_input_patterns.python =
-            \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-let g:neocomplete#sources#omni#input_patterns.ruby          =''
+" let g:neocomplete#force_omni_input_patterns.python =
+"             \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+" let g:neocomplete#sources#omni#input_patterns.ruby          =''
 "-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
 imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
@@ -569,24 +566,24 @@ endif
 let g:clang_close_preview                                   =1
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
-let g:pymode_rope                                           =0
+let g:pymode_rope                                           =1
 let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
 "-----------------------------------------Python Jedi -------------------------
-let g:jedi#completions_enabled                              =0
-let g:jedi#auto_vim_configuration                           =0
-let g:jedi#force_py_version                                 =3
-let g:jedi#use_tabs_not_buffers                             =0
-let g:jedi#popup_select_first                               =0
-let g:jedi#goto_assignments_command                         ="<leader>g"
-let g:jedi#goto_definitions_command                         ="<leader>d"
-let g:jedi#documentation_command                            ="K"
-let g:jedi#usages_command                                   =""
-let g:jedi#completions_command                              =""
-let g:jedi#rename_command                                   =""
+" let g:jedi#completions_enabled                              =0
+" let g:jedi#auto_vim_configuration                           =0
+" let g:jedi#force_py_version                                 =3
+" let g:jedi#use_tabs_not_buffers                             =0
+" let g:jedi#popup_select_first                               =0
+" let g:jedi#goto_assignments_command                         ="<leader>g"
+" let g:jedi#goto_definitions_command                         ="<leader>d"
+" let g:jedi#documentation_command                            ="K"
+" let g:jedi#usages_command                                   =""
+" let g:jedi#completions_command                              =""
+" let g:jedi#rename_command                                   =""
 " It's too slow! so I close this function
-let g:jedi#show_call_signatures                             ="0"
+" let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
 "-----------------------------------------Git----------------------------------
