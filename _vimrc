@@ -115,7 +115,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " Clang Complete
-Plugin 'Rip-Rip/clang_complete'
+Plugin 'justmao945/vim-clang'
 
 " Python mode
 Plugin 'klen/python-mode'
@@ -153,6 +153,7 @@ Plugin 'reedes/vim-wordy'
 Plugin 'vim-utils/vim-man'
 
 "------------------------------------------------------------------------------
+"Plugin 'Rip-Rip/clang_complete'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'szw/vim-dict'
 "Plugin 'jceb/vim-orgmode'
@@ -548,22 +549,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " Empty
 "-----------------------------------------Vim-Markdown-------------------------
 let g:vim_markdown_folding_disabled                         =1
-"-----------------------------------------Clang Complete-----------------------
-let g:clang_complete_auto                                   =0
-let g:clang_complete_copen                                  =1
-let g:clang_auto_select                                     =0
-" :h clang_complete-auto_user_options
-" Using libclang requires a Vim built with +python
-let g:clang_use_library                                     =1
-" Mit der Option "gcc" kriege ich Fehler.
-" Remove "gcc" option as it causes errors.
-let g:clang_auto_user_options                               ='path, .clang_complete'
-if g:is_mac
-    let g:clang_library_path                                ='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-elseif g:is_windows
-    let g:clang_library_path                                ='C:/LLVM/bin'
-endif
-let g:clang_close_preview                                   =1
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
 let g:pymode_rope                                           =1
