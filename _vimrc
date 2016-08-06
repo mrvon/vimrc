@@ -439,10 +439,6 @@ endif
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
 "-----------------------------------------NeoComplete--------------------------
-" Disable compeltefunc conflicts warnning
-let neocomplete#force_overwrite_completefunc                =1
-" Disable AutoComplPop.
-let g:acp_enableAtStartup                                   =0
 " Use neocomplete.
 let g:neocomplete#enable_at_startup                         =1
 " Use smartcase.
@@ -471,34 +467,21 @@ let g:neocomplete#keyword_patterns['default']               ='\h\w*'
 autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
 autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
+autocmd FileType python         setlocal omnifunc           =pythoncomplete#Complete
 autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns             ={}
 endif
 let g:neocomplete#sources#omni#input_patterns.lua           ='\w\+[.:]\|require\s*(\?["'']\w*'
+let g:neocomplete#sources#omni#input_patterns.php           ='[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c             ='[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp           ='[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 if !exists('g:neocomplete#sources#omni#functions')
     let g:neocomplete#sources#omni#functions                ={}
 endif
 let g:neocomplete#sources#omni#functions.lua                ='xolox#lua#omnifunc'
-
-if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns             ={}
-endif
-let g:neocomplete#force_omni_input_patterns.lua             ='\w\+[.:]\|require\s*(\?["'']\w*'
-let g:neocomplete#force_omni_input_patterns.c               =
-            \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp             =
-            \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.objc            =
-            \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)'
-let g:neocomplete#force_omni_input_patterns.objcpp          =
-            \ '\[\h\w*\s\h\?\|\h\w*\%(\.\|->\)\|\h\w*::\w*'
-" Disable complete for python and ruby
-" let g:neocomplete#force_omni_input_patterns.python =
-"             \ '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-" let g:neocomplete#sources#omni#input_patterns.ruby          =''
 "-----------------------------------------Neosnippet---------------------------
 " Plugin key-mappings.
 imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)

@@ -20,7 +20,6 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         ```sh
         ./configure     --with-features=huge                             \
                         --enable-luainterp                               \
-                        --enable-pythoninterp                            \
                         --enable-python3interp                           \
                         --enable-cscope                                  \
                         --enable-multibyte                               \
@@ -70,11 +69,11 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         ```sh
         ./configure     --with-features=huge                             \
                         --enable-luainterp                               \
-                        --enable-pythoninterp                            \
                         --enable-python3interp                           \
                         --enable-cscope                                  \
                         --enable-multibyte                               \
                         --enable-gui=gtk2				                 \
+                        --with-lua-prefix=/usr/local                     \
         ```
 
 ### Install On Windows 7 x64 ###
@@ -91,7 +90,6 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     ```
 
 3. Using Vimrc folder to cover install folder
-	+ *Install Python 2     (must be x64 version)*
 	+ *Install Python 3     (must be x64 version)*
 	+ *Install Lua 	        (must be x64 version)*
     + *Install LLVM Clang   (download from http://llvm.org/releases/download.html)*
