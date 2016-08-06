@@ -482,7 +482,7 @@ let g:neocomplete#force_omni_input_patterns.c   = '[^.[:digit:] *\t]\%(\.\|->\)\
 let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
-let g:pymode_rope                                           =1
+let g:pymode_rope                                           =0
 let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
