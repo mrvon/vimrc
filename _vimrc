@@ -1,8 +1,7 @@
 "-------------------------------About Author-----------------------------------
 "echo ">^.^<"
-"echo "Author: Mrvon"
+"echo "Author: Dennis"
 "echo "Email: mrvon@qq.com"
-"echo "If you don't know the option mean, try Shift-K"
 
 "-------------------------------Operating System-------------------------------
 let g:is_windows                                            =0
@@ -35,8 +34,6 @@ elseif g:is_linux
     let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
     let $MYVIMFILE                                          =$MYVIMPATH.'.vim'
 endif
-let $MYLUADICT                                              =$MYVIMPATH.'lua_export'
-"Must be have lua.exe and luac.exe in your PATH
 
 "-------------------------------Leader Key-------------------------------------
 let mapleader                                               =" "
@@ -160,7 +157,6 @@ Plugin 'vim-utils/vim-man'
 "Plugin 'Konfekt/FastFold'
 "Plugin 'yonchu/accelerated-smooth-scroll'
 "Plugin 'Valloric/YouCompleteMe'
-"Plugin 'IndentAnything'
 "Plugin 'honza/vim-snippets'
 "Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'Lokaltog/vim-easymotion'
@@ -363,16 +359,6 @@ let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
 "-------------------------------YouCompleteMe----------------------------------
-"let g:ycm_global_ycm_extra_conf                            ='~/.ycm_extra_conf.py'
-"let g:ycm_collect_identifiers_from_tags_files              =1
-"let g:ycm_seed_identifiers_with_syntax                     =1
-"let g:ycm_confirm_extra_conf                               =0
-"let g:ycm_key_list_select_completion                       =['DOWN']
-"let g:ycm_key_list_previous_completion                     =['UP']
-"let g:ycm_autoclose_preview_window_after_insertion         =1
-"nnoremap <leader>jd                                        :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"-------------------------------Alterative Header or Source--------------------
-"nnoremap <leader>a                                          :A<cr>
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 let NERDTreeAutoCenter                                      =1
@@ -384,12 +370,6 @@ let NERDSpaceDelims                                         =1
 map <leader>cc                                              <plug>NERDCommenterAlignLeft
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
-"-----------------------------------------DelimitMate--------------------------
-"augroup DelimitMate
-    "autocmd!
-    "autocmd FileType lua let b:delimitMate_matchpairs   ="(:),[:],{:}"
-    "autocmd FileType lua let b:delimitMate_quotes       = "\" '"
-"augroup END
 "-----------------------------------------Emmet(Zencoding) --------------------
 "-----------------------------------------UltiSnips----------------------------
 let g:UltiSnipsExpandTrigger                                ="<tab>"
@@ -479,7 +459,6 @@ let g:neocomplete#enable_refresh_always                     =0
 let g:neocomplete#sources#dictionary#dictionaries           ={
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'lua' : $MYLUADICT.'/cpp_export.txt',
     \ }
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -537,16 +516,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     "set conceallevel=2 concealcursor=i
 "endif
 "-----------------------------------------EasyMotion---------------------------
-" Disable default mappings
-"let g:EasyMotion_do_mapping                                 =0
-" Bi-directional find motion
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-"nmap t                                                      <Plug>(easymotion-s2)
-" Turn on case sensitive feature
-"let g:EasyMotion_smartcase                                  =1
 "-----------------------------------------Matchit------------------------------
-" Empty
 "-----------------------------------------Vim-Markdown-------------------------
 let g:vim_markdown_folding_disabled                         =1
 "-----------------------------------------Python Mode--------------------------
@@ -556,19 +526,6 @@ let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
 "-----------------------------------------Python Jedi -------------------------
-" let g:jedi#completions_enabled                              =0
-" let g:jedi#auto_vim_configuration                           =0
-" let g:jedi#force_py_version                                 =3
-" let g:jedi#use_tabs_not_buffers                             =0
-" let g:jedi#popup_select_first                               =0
-" let g:jedi#goto_assignments_command                         ="<leader>g"
-" let g:jedi#goto_definitions_command                         ="<leader>d"
-" let g:jedi#documentation_command                            ="K"
-" let g:jedi#usages_command                                   =""
-" let g:jedi#completions_command                              =""
-" let g:jedi#rename_command                                   =""
-" It's too slow! so I close this function
-" let g:jedi#show_call_signatures                             ="0"
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
 "-----------------------------------------Git----------------------------------
@@ -636,11 +593,6 @@ augroup quickly_indent
     autocmd InsertLeave *.py,*.lua                          :call QuicklyAutoIndent()
 augroup END
 
-" upper this word
-" I like use gU or gu instead of it
-"inoremap <leader>u                                          <esc>wbveU
-"nnoremap <leader>u                                          wbveU
-
 " edit the alternate file.
 " mostly the alternate file is the previously edited file.
 nnoremap <leader><leader>                                   <c-^>
@@ -682,7 +634,7 @@ cabbrev  Wq                                                 wq
 " nnoremap <leader>{                                          O{<esc>jo}<esc>
 
 
-" Y is a strong y, D is a strong d on Vim default setting
+" Y is a strong y, D is a strong d in Vim default setting
 " as you can see, a stronger h and a stronger l
 nnoremap H                                                  0
 nnoremap L                                                  $
@@ -704,14 +656,14 @@ nnoremap L                                                  $
 " find In       Last        ( or [
 " find Around   Next        ( or [
 " find Around   Last        ( or [
-"onoremap i(                                                 :<c-u>normal! f(vi(<cr>
-"onoremap a(                                                 :<c-u>normal! f(va(<cr>
-"onoremap i[                                                 :<c-u>normal! f[vi[<cr>
-"onoremap a[                                                 :<c-u>normal! f[va[<cr>
-"onoremap il(                                                :<c-u>normal! F(vi(<cr>
-"onoremap al(                                                :<c-u>normal! F(va(<cr>
-"onoremap il[                                                :<c-u>normal! F[vi[<cr>
-"onoremap al[                                                :<c-u>normal! F[va[<cr>
+" onoremap i(                                                :<c-u>normal! f(vi(<cr>
+" onoremap a(                                                :<c-u>normal! f(va(<cr>
+" onoremap i[                                                :<c-u>normal! f[vi[<cr>
+" onoremap a[                                                :<c-u>normal! f[va[<cr>
+" onoremap il(                                               :<c-u>normal! F(vi(<cr>
+" onoremap al(                                               :<c-u>normal! F(va(<cr>
+" onoremap il[                                               :<c-u>normal! F[vi[<cr>
+" onoremap al[                                               :<c-u>normal! F[va[<cr>
 
 
 " Vimscript file settings
@@ -767,16 +719,6 @@ augroup END
 "noremap <silent> [q                                         :cprevious<cr>
 " Next matched line
 "noremap <silent> ]q                                         :cnext<cr>
-
-" Execute Script
-function! __ExecuteScript()
-    if neocomplete#get_context_filetype() == "python"
-        :read! python %
-    elseif neocomplete#get_context_filetype() == "lua"
-        :read! lua %
-    endif
-endfunction
-" nnoremap <silent> <leader>r                                 :call __ExecuteScript()<CR>
 
 " Insert current file name
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
