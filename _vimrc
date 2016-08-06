@@ -66,10 +66,8 @@ Plugin 'scrooloose/nerdtree'
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
 
-" Neocomplete/Neosnippet
+" Neocomplete
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
 Plugin 'Shougo/vimproc.vim'
 
 " DelimitMate
@@ -111,7 +109,7 @@ Plugin 'godlygeek/tabular'
 " Vim Markdown
 Plugin 'plasticboy/vim-markdown'
 
-" Clang Complete
+" Vim Clang
 Plugin 'justmao945/vim-clang'
 
 " Python mode
@@ -149,17 +147,6 @@ Plugin 'reedes/vim-wordy'
 " Vim as a man reader
 Plugin 'vim-utils/vim-man'
 
-"------------------------------------------------------------------------------
-"Plugin 'Rip-Rip/clang_complete'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'szw/vim-dict'
-"Plugin 'jceb/vim-orgmode'
-"Plugin 'Konfekt/FastFold'
-"Plugin 'yonchu/accelerated-smooth-scroll'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'honza/vim-snippets'
-"Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'Lokaltog/vim-easymotion'
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
@@ -344,7 +331,7 @@ set noswapfile
 "-------------------------------Disable preview window-------------------------
 set completeopt                                             -=preview
 
-"-------------------------------Mrvon 's favorite plugin-----------------------
+"-------------------------------My favorite plugin-----------------------------
 "-------------------------------Airline----------------------------------------
 let g:airline_powerline_fonts                               =0
 let g:airline_theme                                         =$MYCOLOR
@@ -358,7 +345,6 @@ let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
-"-------------------------------YouCompleteMe----------------------------------
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 let NERDTreeAutoCenter                                      =1
@@ -371,10 +357,6 @@ map <leader>cc                                              <plug>NERDCommenterA
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-----------------------------------------Emmet(Zencoding) --------------------
-"-----------------------------------------UltiSnips----------------------------
-let g:UltiSnipsExpandTrigger                                ="<tab>"
-let g:UltiSnipsJumpForwardTrigger                           ="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger                          ="<c-z>"
 "-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
 " Specific Lua Complier {
@@ -482,26 +464,22 @@ if !exists('g:neocomplete#sources#omni#functions')
     let g:neocomplete#sources#omni#functions                ={}
 endif
 let g:neocomplete#sources#omni#functions.lua                ='xolox#lua#omnifunc'
-"-----------------------------------------Neosnippet---------------------------
-" Plugin key-mappings.
-imap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
-smap <C-k>                                                  <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>                                                  <Plug>(neosnippet_expand_target)
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-" For snippet_complete marker.
-"if has('conceal')
-    "set conceallevel=2 concealcursor=i
-"endif
 "-----------------------------------------EasyMotion---------------------------
-"-----------------------------------------Matchit------------------------------
 "-----------------------------------------Vim-Markdown-------------------------
 let g:vim_markdown_folding_disabled                         =1
+"-----------------------------------------Vim-Clang----------------------------
+let g:clang_auto                                            =0
+" default 'longest' can not work with neocomplete
+let g:clang_c_completeopt                                   ='menuone'
+let g:clang_cpp_completeopt                                 ='menuone'
+let g:clang_c_options                                       ='-std=gnu11'
+let g:clang_cpp_options                                     ='-std=c++11 -stdlib=libc++'
+if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+endif
+" for c and c++
+let g:neocomplete#force_omni_input_patterns.c   = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 "-----------------------------------------Python Mode--------------------------
 "Disable error message on windows, it's a bug
 let g:pymode_rope                                           =1
