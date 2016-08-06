@@ -343,7 +343,6 @@ set noswapfile
 
 "-------------------------------Disable preview window-------------------------
 set completeopt                                             -=preview
-set completeopt                                             +=noinsert
 
 "-------------------------------Mrvon 's favorite plugin-----------------------
 "-------------------------------Airline----------------------------------------
