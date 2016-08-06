@@ -508,7 +508,7 @@ let g:pymode_rope                                           =1
 let g:pymode_python                                         ='python3'
 let g:pymode_run                                            =1
 let g:pymode_run_bind                                       ='<leader>r'
-"-----------------------------------------Python Jedi -------------------------
+let g:pymode_folding                                        =0
 "-----------------------------------------Python Syntax------------------------
 let python_highlight_all                                    =1
 "-----------------------------------------Git----------------------------------
