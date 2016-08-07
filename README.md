@@ -52,9 +52,8 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
     + Install dependency
         ```sh
-        $ apt-get install python-dev
         $ apt-get install python3-dev
-        $ apt-get install lua5.2-dev
+        $ apt-get install lua5.3-dev
         $ apt-get build-dep vim-gtk
         ```
 
@@ -127,8 +126,8 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 > [apply_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/apply_patchfile.py)
 
 ### Excellent Tutorial ###
++ [Practical Vim](https://www.amazon.com/dp/1680501275/ref=olp_product_details?_encoding=UTF8&me=)
 + [Learn vim script the hard way](http://learnvimscriptthehardway.stevelosh.com/)
-+ [Practical Vim]()
 
 ### Useful Website ###
 + [vimawesome](http://vimawesome.com/)
