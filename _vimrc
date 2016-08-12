@@ -147,6 +147,9 @@ Plugin 'reedes/vim-wordy'
 " Vim as a man reader
 Plugin 'vim-utils/vim-man'
 
+" Javascript
+Plugin 'pangloss/vim-javascript'
+
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
