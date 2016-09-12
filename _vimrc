@@ -517,13 +517,17 @@ augroup go_shortcut
     autocmd FileType go nmap <leader>f  <Plug>(go-info)
     autocmd FileType go nmap <leader>e  <Plug>(go-rename)
 augroup END
-let g:go_highlight_functions                                = 1
-let g:go_highlight_methods                                  = 1
-let g:go_highlight_fields                                   = 1
-let g:go_highlight_types                                    = 1
-let g:go_highlight_operators                                = 1
-let g:go_highlight_build_constraints                        = 1
+let g:go_highlight_functions                                =1
+let g:go_highlight_methods                                  =1
+let g:go_highlight_fields                                   =1
+let g:go_highlight_types                                    =1
+let g:go_highlight_operators                                =1
+let g:go_highlight_build_constraints                        =1
 "-----------------------------------------Pencil-------------------------------
+nnoremap <silent> Q                                         gqip
+xnoremap <silent> Q                                         gq
+nnoremap <silent> <leader>Q                                 vapJgwip
+let g:pencil#autoformat                                     =0      " 0=disable, 1=enable (def)
 augroup pencil
     autocmd!
     autocmd FileType markdown call pencil#init()
