@@ -178,7 +178,7 @@ elseif g:is_mac
 elseif g:is_linux
     set background                                          =dark
     let $MYCOLOR                                            ='kolor'
-    let $MYITALIC                                           =0
+    let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
 
