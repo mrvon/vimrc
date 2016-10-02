@@ -170,11 +170,11 @@ filetype plugin indent on       " required
 if g:is_windows
     set background                                          =dark
     let $MYCOLOR                                            ='kolor'
-    let $MYITALIC                                           =0
+    let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
     let $MYCOLOR                                            ='kolor'
-    let $MYITALIC                                           =0
+    let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
     let $MYCOLOR                                            ='kolor'
@@ -185,7 +185,7 @@ colorscheme                                                 $MYCOLOR
 if g:is_windows
     set guifont                                             =Monaco:h11
 elseif g:is_mac
-    set guifont                                             =Monaco:h14
+    set guifont                                             =MonacoB:h14
 elseif g:is_linux
     set guifont                                             =Monaco\ 12
 endif
