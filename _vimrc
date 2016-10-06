@@ -66,9 +66,8 @@ Plugin 'scrooloose/nerdtree'
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
 
-" Neocomplete
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Shougo/vimproc.vim'
+" YCM
+Plugin 'Valloric/YouCompleteMe'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
@@ -77,7 +76,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-unimpaired'
 
 " Vim-Lua
-Plugin 'mrvon/vim-lua-ftplugin'
+Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-inspect'
 
@@ -108,15 +107,6 @@ Plugin 'godlygeek/tabular'
 
 " Vim Markdown
 Plugin 'plasticboy/vim-markdown'
-
-" Vim Clang
-Plugin 'justmao945/vim-clang'
-
-" Python mode
-Plugin 'klen/python-mode'
-
-" Better python syntax
-Plugin 'hdima/python-syntax'
 
 " Stronger Signature
 Plugin 'kshenoy/vim-signature'
@@ -359,7 +349,8 @@ let NERDSpaceDelims                                         =1
 map <leader>cc                                              <plug>NERDCommenterAlignLeft
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
-"-----------------------------------------Emmet(Zencoding) --------------------
+"-------------------------------YCM--------------------------------------------
+let g:ycm_confirm_extra_conf                                =0
 "-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
 " Specific Lua Complier {
@@ -370,7 +361,7 @@ endif
 " }
 let g:lua_internal                                          =1
 let g:lua_check_syntax                                      =1
-let g:lua_complete_omni                                     =1
+let g:lua_complete_omni                                     =0
 let g:loaded_luainspect                                     =1
 let g:lua_inspect_warnings                                  =0
 let g:lua_inspect_events                                    =''
@@ -423,75 +414,8 @@ endif
 
 "-----------------------------------------TagBar-------------------------------
 nnoremap <leader>t                                          :TagbarToggle<cr>
-"-----------------------------------------NeoComplete--------------------------
-" Use neocomplete.
-let g:neocomplete#enable_at_startup                         =1
-" Use smartcase.
-let g:neocomplete#enable_ignore_case                        =1
-let g:neocomplete#enable_smart_case                         =1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length         =3
-
-let g:neocomplete#enable_auto_select                        =0
-let g:neocomplete#enable_auto_delimiter                     =1
-let g:neocomplete#enable_refresh_always                     =0
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries           ={
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ }
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns                      ={}
-endif
-let g:neocomplete#keyword_patterns['default']               ='\h\w*'
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup()."\<Space>" : "\<Space>"
-" Enable omni completion.
-autocmd FileType css            setlocal omnifunc           =csscomplete#CompleteCSS
-autocmd FileType html,markdown  setlocal omnifunc           =htmlcomplete#CompleteTags
-autocmd FileType javascript     setlocal omnifunc           =javascriptcomplete#CompleteJS
-autocmd FileType python         setlocal omnifunc           =pythoncomplete#Complete
-autocmd FileType xml            setlocal omnifunc           =xmlcomplete#CompleteTags
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns             ={}
-endif
-let g:neocomplete#sources#omni#input_patterns.lua           ='\w\+[.:]\|require\s*(\?["'']\w*'
-let g:neocomplete#sources#omni#input_patterns.php           ='[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.c             ='[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplete#sources#omni#input_patterns.cpp           ='[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-if !exists('g:neocomplete#sources#omni#functions')
-    let g:neocomplete#sources#omni#functions                ={}
-endif
-let g:neocomplete#sources#omni#functions.lua                ='xolox#lua#omnifunc'
-"-----------------------------------------EasyMotion---------------------------
 "-----------------------------------------Vim-Markdown-------------------------
 let g:vim_markdown_folding_disabled                         =1
-"-----------------------------------------Vim-Clang----------------------------
-let g:clang_auto                                            =0
-" default 'longest' can not work with neocomplete
-let g:clang_c_completeopt                                   ='menuone'
-let g:clang_cpp_completeopt                                 ='menuone'
-let g:clang_c_options                                       ='-std=gnu11'
-let g:clang_cpp_options                                     ='-std=c++11 -stdlib=libc++'
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
-" for c and c++
-let g:neocomplete#force_omni_input_patterns.c   = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-"-----------------------------------------Python Mode--------------------------
-"Disable error message on windows, it's a bug
-let g:pymode_rope                                           =1
-let g:pymode_python                                         ='python3'
-let g:pymode_run                                            =1
-let g:pymode_run_bind                                       ='<leader>r'
-let g:pymode_folding                                        =0
-"-----------------------------------------Python Syntax------------------------
-let python_highlight_all                                    =1
 "-----------------------------------------Git----------------------------------
 let g:gitgutter_map_keys                                    =0
 " nmap [c                                                   <Plug>GitGutterPrevHunk
