@@ -39,9 +39,6 @@ endif
 let mapleader                                               =" "
 let maplocalleader                                          =","
 
-"-------------------------------Version----------------------------------------
-version 7.4
-
 "-------------------------------Vundle - Plugin Package Manager----------------
 set nocompatible                " required
 filetype off                    " required
