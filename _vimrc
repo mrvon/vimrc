@@ -351,8 +351,9 @@ map <leader>cs                                              <plug>NERDCommenterS
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------YCM--------------------------------------------
 let g:ycm_confirm_extra_conf                                =0
-nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
+let g:ycm_filetype_blacklist                                ={}
+nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
 "-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
 " Specific Lua Complier {
