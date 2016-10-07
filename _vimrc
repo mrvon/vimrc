@@ -67,6 +67,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'jeaye/color_coded'
+Plugin 'octol/vim-cpp-enhanced-highlight'		
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
