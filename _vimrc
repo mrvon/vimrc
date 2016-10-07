@@ -65,6 +65,8 @@ Plugin 'scrooloose/nerdcommenter'
 
 " YCM
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'jeaye/color_coded'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
