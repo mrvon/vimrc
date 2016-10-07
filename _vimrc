@@ -113,9 +113,6 @@ Plugin 'kshenoy/vim-signature'
 " Quickly surround
 Plugin 'tpope/vim-surround'
 
-" Better cpp syntax
-Plugin 'octol/vim-cpp-enhanced-highlight'
-
 " Go
 Plugin 'mrvon/vim-go'
 
