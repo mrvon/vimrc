@@ -156,15 +156,15 @@ filetype plugin indent on       " required
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
     set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
+    let $MYCOLOR                                            ='solarized'
     let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
+    let $MYCOLOR                                            ='solarized'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
+    let $MYCOLOR                                            ='solarized'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
