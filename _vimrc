@@ -350,6 +350,9 @@ map <leader>cu                                              <plug>NERDCommenterU
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
 let g:ycm_filetype_blacklist                                ={}
+let g:ycm_complete_in_comments                              =1
+let g:ycm_complete_in_strings                               =1
+let g:ycm_collect_identifiers_from_comments_and_strings     =1
 nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
 "-----------------------------------------VIM Lua------------------------------
 " This sets the default value for all buffers.
