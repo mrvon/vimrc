@@ -63,6 +63,9 @@ Plugin 'scrooloose/nerdtree'
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
 
+" Syntastic
+Plugin 'scrooloose/syntastic'
+
 " YCM
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
@@ -74,11 +77,6 @@ Plugin 'Raimondi/delimitMate'
 
 " Vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
-
-" Vim-Lua
-Plugin 'xolox/vim-lua-ftplugin'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-lua-inspect'
 
 " Mrvon AG search (rking/ag.vim)
 Plugin 'mrvon/ag.vim'
@@ -354,21 +352,6 @@ let g:ycm_complete_in_comments                              =1
 let g:ycm_complete_in_strings                               =1
 let g:ycm_collect_identifiers_from_comments_and_strings     =1
 nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
-"-----------------------------------------VIM Lua------------------------------
-" This sets the default value for all buffers.
-" Specific Lua Complier {
-if g:is_windows
-    let g:lua_compiler_name                                 =$MYVIMRUNTIME . "/luac"
-    let g:lua_error_format                                  =g:lua_compiler_name . ': %f:%l: %m'
-endif
-" }
-let g:lua_internal                                          =1
-let g:lua_check_syntax                                      =1
-let g:lua_complete_omni                                     =0
-let g:loaded_luainspect                                     =1
-let g:lua_inspect_warnings                                  =0
-let g:lua_inspect_events                                    =''
-let g:lua_define_completion_mappings                        =0
 "-----------------------------------------Kolor--------------------------------
 let g:kolor_italic                                          =$MYITALIC          " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
