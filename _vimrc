@@ -155,14 +155,17 @@ filetype plugin indent on       " required
 if g:is_windows
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
+    let $MYAIR                                              ='solarized'
     let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
     let $MYCOLOR                                            ='solarized'
+    let $MYAIR                                              ='solarized'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
-    let $MYCOLOR                                            ='solarized'
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
@@ -322,7 +325,7 @@ set completeopt                                             -=preview
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Airline----------------------------------------
 let g:airline_powerline_fonts                               =0
-let g:airline_theme                                         =$MYCOLOR
+let g:airline_theme                                         =$MYAIR
 let g:airline#extensions#tabline#left_sep                   ='<'
 let g:airline#extensions#tabline#right_sep                  ='>'
 let g:airline#extensions#tabline#enabled                    =1
