@@ -355,6 +355,15 @@ let g:ycm_complete_in_comments                              =1
 let g:ycm_complete_in_strings                               =1
 let g:ycm_collect_identifiers_from_comments_and_strings     =1
 nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
+"-------------------------------ColorCode--------------------------------------
+hi link Member                                              Identifier
+hi link Variable                                            Identifier
+hi link Namespace                                           Operator
+hi link EnumConstant                                        Constant
+hi link StructDecl                                          Structure
+hi link UnionDecl                                           Structure
+hi link ClassDecl                                           Structure
+hi link EnumDecl                                            Structure
 "-----------------------------------------Kolor--------------------------------
 let g:kolor_italic                                          =$MYITALIC          " Enable italic. Default: 1
 let g:kolor_bold                                            =0                  " Enable bold. Default: 1
