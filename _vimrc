@@ -85,9 +85,9 @@ Plugin 'mrvon/ag.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 " My color
+Plugin 'mrvon/vim-tomorrow-theme'
 Plugin 'mrvon/vim-kolor'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'mrvon/molokai'
 
 " Ctrlp
