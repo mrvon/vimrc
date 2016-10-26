@@ -753,3 +753,4 @@ syntax                                                      on
 " %s//gc               search the pattern before you replace it.
 " %s///gn              can calculate how many matching in this file
 " history | vim -      read from stdin
+" z<CR>			       scroll
