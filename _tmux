@@ -3,7 +3,7 @@ set -g prefix C-b
 set -sg escape-time 1
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
 bind C-b send-prefix
-bind h split-window -v
+bind s split-window -v
 bind v split-window -h
 bind h select-pane -L
 bind j select-pane -D
