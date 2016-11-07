@@ -1,4 +1,22 @@
 set -g prefix C-b
-unbind C-a
 set -sg escape-time 1
 
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+bind C-b send-prefix
+bind h split-window -v
+bind v split-window -h
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+setw -g mode-mouse off
+set -g default-terminal "scree-256color"
+set -g status-fg white
+set -g status-bg black
