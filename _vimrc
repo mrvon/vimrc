@@ -207,7 +207,7 @@ set guioptions                                              -=m
 set guioptions                                              -=T
 endif
 
-" Vim in tmux, disable Background Color Erase
+" Vim in tmux, clearing uses the current background color
 set t_ut=
 
 "-------------------------------Set Column-------------------------------------
