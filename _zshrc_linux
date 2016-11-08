@@ -64,7 +64,7 @@ export PATH=$GOPATH/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-export TERM=xterm-256color
+export TERM="xterm-256color"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

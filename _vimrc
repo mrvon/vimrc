@@ -207,6 +207,9 @@ set guioptions                                              -=m
 set guioptions                                              -=T
 endif
 
+" Vim in tmux, disable Background Color Erase
+set t_ut=
+
 "-------------------------------Set Column-------------------------------------
 set columns                                                 =100
 "-------------------------------Set Row----------------------------------------
