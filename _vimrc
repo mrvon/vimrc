@@ -159,13 +159,13 @@ if g:is_windows
     let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    let $MYCOLOR                                            ='kolor'
+    let $MYAIR                                              ='kolor'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    let $MYCOLOR                                            ='kolor'
+    let $MYAIR                                              ='kolor'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
@@ -757,3 +757,4 @@ syntax                                                      on
 " %s///gn              can calculate how many matching in this file
 " history | vim -      read from stdin
 " z<CR>			       scroll
+" set ff=unix          change line break to unix style
