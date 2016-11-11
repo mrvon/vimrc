@@ -159,13 +159,13 @@ if g:is_windows
     let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
-    let $MYAIR                                              ='kolor'
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
-    let $MYAIR                                              ='kolor'
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
