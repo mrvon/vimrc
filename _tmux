@@ -1,0 +1,4 @@
+set -g prefix C-b
+unbind C-a
+set -sg escape-time 1
+
