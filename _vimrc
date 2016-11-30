@@ -78,8 +78,8 @@ Plugin 'Raimondi/delimitMate'
 " Vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
 
-" Mrvon AG search (rking/ag.vim)
-Plugin 'mrvon/ag.vim'
+" Ack/Ag
+Plugin 'mileszs/ack.vim'
 
 " Indent guides
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -648,19 +648,16 @@ function!                                                   __VisualSelection(di
 
     let @/ = l:pattern
     let @" = l:saved_reg
-
 endfunction
 
-
 " quick search using Ag
-" search current word ignore-case
-nnoremap <leader>vv                                         :Agi<CR>
+nnoremap <leader>vv                                         :Ack<CR>
 nnoremap <leader>vw                                         :Agw<CR>
 nnoremap <leader>vf                                         :Agf<CR>
-" Ag is search case-sentisive
-" Agi is search ignore-case
-" Agf is search filename ignore-case
-" AgFile is search filename case-sentisive
+if executable('ag')
+  let g:ackprg = 'ag'
+endif
+let g:ackhighlight = 1
 
 " search in visual mode
 vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>:set hlsearch<CR>
