@@ -622,9 +622,9 @@ cnoremap <localleader>fn                                    <C-R>=expand("%:t")<
 
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
+    exe "menu __magic_menu.__sub_magic_menu :" . a:str
+    emenu __magic_menu.__sub_magic_menu
+    unmenu __magic_menu
 endfunction
 
 function!                                                   __VisualSelection(direction) range
@@ -638,12 +638,10 @@ function!                                                   __VisualSelection(di
         execute "normal ?" . l:pattern . "^M"
     elseif a:direction == 'forward'
         execute "normal /" . l:pattern . "^M"
-    elseif a:direction == 'ag-ignore-case'
-        execute __ExecuteCommand("Agi " . "\"" . l:pattern . "\"" . "<CR>")
-    elseif a:direction == 'ag-ignore-case-word'
-        execute __ExecuteCommand("Agw " . "\"" . l:pattern . "\"" . "<CR>")
-    elseif a:direction == 'ag-ignore-case-file'
-        execute __ExecuteCommand("Agf " . "\"" . l:pattern . "\"" . "<CR>")
+    elseif a:direction == 'ack_smartcase'
+        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<CR>")
+    elseif a:direction == 'ack_wholeword'
+        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<CR>")
     endif
 
     let @/ = l:pattern
@@ -652,8 +650,6 @@ endfunction
 
 " quick search using Ag
 nnoremap <leader>vv                                         :Ack<CR>
-nnoremap <leader>vw                                         :Agw<CR>
-nnoremap <leader>vf                                         :Agf<CR>
 if executable('ag')
   let g:ackprg = 'ag'
 endif
@@ -662,9 +658,8 @@ let g:ackhighlight = 1
 " search in visual mode
 vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>:set hlsearch<CR>
 vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>:set hlsearch<CR>
-vnoremap <leader>vv                                         :call __VisualSelection('ag-ignore-case')<CR>
-vnoremap <leader>vw                                         :call __VisualSelection('ag-ignore-case-word')<CR>
-vnoremap <leader>vf                                         :call __VisualSelection('ag-ignore-case-file')<CR>
+vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<CR>
+vnoremap <leader>vc                                         :call __VisualSelection('ack_wholeword')<CR>
 
 " easy copy to system-clipboard
 "vnoremap <leader>sy                                        "+y
