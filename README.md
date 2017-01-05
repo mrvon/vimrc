@@ -76,54 +76,8 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
         ```
 
 ### Install On Windows 7 x64 ###
-*(Already including all binary and library in Microsoft Windows 7 x64)*
 
-1. Download a gvim 7.4 executable installer from vim offical website and Install it
-
-	> http://www.vim.org/
-
-2. Checkout Mrvon's Vimrc
-
-    ```sh
-    $ git clone https://github.com/mrvon/Vimrc
-    ```
-
-3. Using Vimrc folder to cover install folder
-	+ *Install Python 3     (must be x64 version)*
-	+ *Install Lua 	        (must be x64 version)*
-    + *Install LLVM Clang   (download from http://llvm.org/releases/download.html)*
-
-4. All done
-
-### Compile gvim By Yourself (Windows) ###
-*Following command must be run on the console open by mingw-w64.bat
- (sh/cmd/powershell may be cause error)*
-
-+ Build
-
-    ```sh
-    $ mingw32-make.exe -f Make_ming.mak                     \
-                          USERNAME="MrVon" USERDOMAIN=""    \
-    ```
-
-+ Clean
-
-    ```sh
-    $ mingw32-make.exe -f Make_ming.mak clean
-    ```
-
-### Download patch file ###
-* Read following document about how to patch
-
-> ftp://ftp.vim.org/pub/vim/patches/7.4/README
-
-* Use following python script to download patch file
-
-> [download_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/download_patchfile.py)
-
-* Use following python script to apply patch file
-
-> [apply_patchfile.py](https://github.com/mrvon/Vimrc/blob/master/vim74/code/apply_patchfile.py)
++ [See](https://github.com/mrvon/vim_for_win)
 
 ### Excellent Tutorial ###
 + [Practical Vim](https://www.amazon.com/dp/1680501275/ref=olp_product_details?_encoding=UTF8&me=)
