@@ -659,7 +659,7 @@ let g:ackhighlight = 1
 vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>:set hlsearch<CR>
 vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>:set hlsearch<CR>
 vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<CR>
-vnoremap <leader>vc                                         :call __VisualSelection('ack_wholeword')<CR>
+vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<CR>
 
 " easy copy to system-clipboard
 "vnoremap <leader>sy                                        "+y
