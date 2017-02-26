@@ -184,7 +184,6 @@ set termencoding                                            =utf-8
 set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =en_US.utf-8
-set helplang                                                =cn
 set fileformats                                             =unix,dos,mac
 if g:is_windows
     source                                                  $MYVIMRUNTIME/delmenu.vim
@@ -194,7 +193,6 @@ endif
 if g:is_mac || g:is_windows
     language messages                                       en_US.utf-8
 endif
-" A Small Tip - Open file with specific encoding :e ++enc=cp936
 
 "-------------------------------GUI Options------------------------------------
 " Keep your menu more simple
@@ -327,10 +325,12 @@ set completeopt                                             -=preview
 
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Airline----------------------------------------
-let g:airline_powerline_fonts                               =0
 let g:airline_theme                                         =$MYAIR
-let g:airline#extensions#tabline#left_sep                   ='<'
-let g:airline#extensions#tabline#right_sep                  ='>'
+let g:airline_detect_modified                               =1
+let g:airline_detect_paste                                  =1
+let g:airline_detect_crypt                                  =1
+let g:airline_detect_spell                                  =1
+let g:airline_powerline_fonts                               =0
 let g:airline#extensions#tabline#enabled                    =1
 let g:airline#extensions#tabline#show_buffers               =1
 let g:airline#extensions#tabline#tab_nr_type                =1
@@ -339,6 +339,25 @@ let g:airline#extensions#tabline#formatter                  ='default'
 let g:airline#extensions#tabline#buffer_nr_show             =1
 let g:airline#extensions#tabline#buffer_nr_format           ='%s: '
 let g:airline#extensions#whitespace#checks                  =[]
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_right_sep = '«'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = '∄'
+let g:airline_symbols.whitespace = 'Ξ'
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 let NERDTreeAutoCenter                                      =1
@@ -750,3 +769,4 @@ syntax                                                      on
 " history | vim -      read from stdin
 " z<CR>			       scroll
 " set ff=unix          change line break to unix style
+" e ++enc=cp936        Open file with specific encoding (for instance, cp936)
