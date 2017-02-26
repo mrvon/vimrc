@@ -55,8 +55,8 @@ plugins=(git golang osx brew autojump)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-export GOROOT_BOOTSTRAP=/usr/local/go/
-export GOROOT=/usr/local/go/
+export GOROOT_BOOTSTRAP=/usr/local/go
+export GOROOT=$HOME/go_build
 export GOPATH=~/scratch/go
 
 export PATH=$GOROOT/bin:$PATH
@@ -93,14 +93,5 @@ source $ZSH/oh-my-zsh.sh
 alias gvim=mvim
 alias gvimdiff=mvim -d
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Applications/Cocos/Cocos2d-x
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+export http_proxy="192.168.2.104:1080"
+export https_proxy="192.168.2.104:1080"
