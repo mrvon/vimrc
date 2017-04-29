@@ -153,9 +153,9 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-    set background                                          =dark
-    let $MYCOLOR                                            ='kolor'
-    let $MYAIR                                              ='kolor'
+    set background                                          =light
+    let $MYCOLOR                                            ='solarized'
+    let $MYAIR                                              ='solarized'
     let $MYITALIC                                           =1
 elseif g:is_mac
     set background                                          =dark
@@ -163,9 +163,9 @@ elseif g:is_mac
     let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 elseif g:is_linux
-    set background                                          =dark
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =light
+    let $MYCOLOR                                            ='solarized'
+    let $MYAIR                                              ='solarized'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
