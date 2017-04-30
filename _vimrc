@@ -236,8 +236,8 @@ set scrolloff                                               =5
 set magic
 
 "-------------------------------Memory Limit Problem---------------------------
-set maxmem                                                  =10
-set maxmempattern                                           =10
+set maxmem                                                  =100
+set maxmempattern                                           =100
 set maxmemtot                                               =100
 
 "-------------------------------Share Clipboard With Windows-------------------
