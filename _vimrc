@@ -135,6 +135,9 @@ Plugin 'vim-utils/vim-man'
 " Javascript
 Plugin 'pangloss/vim-javascript'
 
+" Exilir
+Plugin 'elixir-lang/vim-elixir'
+
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
