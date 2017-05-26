@@ -555,8 +555,8 @@ nnoremap H                                                  0
 vnoremap H                                                  0
 nnoremap L                                                  $
 vnoremap L                                                  $
-nnoremap J                                                  <nop>
-vnoremap J                                                  <nop>
+" nnoremap J                                                <nop>
+" vnoremap J                                                <nop>
 " this map seem do not work
 " nnoremap K                                                <nop>
 
