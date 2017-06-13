@@ -85,14 +85,12 @@ Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 " My color
-Plugin 'mrvon/vim-tomorrow-theme'
-Plugin 'mrvon/vim-kolor'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'mrvon/molokai'
+Plugin 'chriskempson/base16-vim'
+Plugin 'mrvon/vim-tomorrow-theme'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
 
 " Tag Bar
 Plugin 'majutsushi/tagbar'
@@ -157,18 +155,18 @@ filetype plugin indent on       " required
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
     set background                                          =light
-    let $MYCOLOR                                            ='solarized'
-    let $MYAIR                                              ='solarized'
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 elseif g:is_mac
-    set background                                          =dark
+    set background                                          =light
     let $MYCOLOR                                            ='Tomorrow'
     let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =light
-    let $MYCOLOR                                            ='solarized'
-    let $MYAIR                                              ='solarized'
+    let $MYCOLOR                                            ='Tomorrow'
+    let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
@@ -415,8 +413,7 @@ let g:ctrlp_working_path_mode                               =0
 let g:ctrlp_by_filename                                     =1
 let g:ctrlp_match_window                                    ='bottom,order:btt,min:1,max:10,results:15'
 let g:ctrlp_clear_cache_on_exit                             =1
-let g:ctrlp_extensions                                      =['funky']
-let g:ctrlp_funky_syntax_highlight                          =1
+let g:ctrlp_extensions                                      =[]
 " Excluding version control directories
 if g:is_windows
     set wildignore                                          +=*\\.git\\*,*\\.hg\\*,*\\.svn\\*  " Windows ('noshellslash')
