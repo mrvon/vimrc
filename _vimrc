@@ -361,12 +361,12 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
-let NERDTreeAutoCenter                                      =1
-let NERDChristmasTree                                       =1
-let NERDTreeWinSize                                         =25
+let g:NERDTreeAutoCenter                                    =1
+let g:NERDChristmasTree                                     =1
+let g:NERDTreeWinSize                                       =25
 "-------------------------------NERDCommenter----------------------------------
-let NERDCreateDefaultMappings                               =0
-let NERDSpaceDelims                                         =1
+let g:NERDCreateDefaultMappings                             =0
+let g:NERDSpaceDelims                                       =1
 let g:NERDAltDelims_asm                                     =1
 map <leader>cc                                              <plug>NERDCommenterAlignLeft
 map <leader>cs                                              <plug>NERDCommenterSexy
