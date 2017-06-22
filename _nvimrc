@@ -13,7 +13,6 @@ endif
 if(has("gui"))
     let g:is_gui                                            =1
 endif
-
 "-------------------------------Path-------------------------------------------
 if g:is_windows
 elseif g:is_mac
@@ -78,14 +77,7 @@ endif
 filetype plugin indent on
 syntax enable
 
-" YCM
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'rdnetto/YCM-Generator'
-" Plugin 'jeaye/color_coded'
-" Plugin 'octol/vim-cpp-enhanced-highlight'		
 "-------------------------------My Color My Taste------------------------------
-" Adjust My color scheme by system time
-" if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
     set background                                          =light
     let $MYCOLOR                                            ='Tomorrow'
@@ -119,25 +111,7 @@ set fileencoding                                            =utf-8
 set fileencodings                                           =ucs-bom,utf-8,cp936,gb18030,gb2312,big5,default,latin1
 set langmenu                                                =en_US.utf-8
 set fileformats                                             =unix,dos,mac
-if g:is_windows
-    source                                                  $MYVIMRUNTIME/delmenu.vim
-    source                                                  $MYVIMRUNTIME/menu.vim
-endif
-
-if g:is_mac || g:is_windows
-    language messages                                       en_US.utf-8
-endif
-
-"-------------------------------GUI Options------------------------------------
-" Keep your menu more simple
-if g:is_gui
-set guioptions                                              -=l
-set guioptions                                              -=L
-set guioptions                                              -=r
-set guioptions                                              -=R
-set guioptions                                              -=m
-set guioptions                                              -=T
-endif
+language messages                                           en_US.utf-8
 
 " Vim in tmux, clearing uses the current background color
 set t_ut=
