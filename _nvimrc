@@ -20,13 +20,15 @@ endif
 "-------------------------------Path-------------------------------------------
 if g:is_windows
 elseif g:is_mac
-    let $MYPATH                                          ='~/'
-    let $MYINIT                                          =$MYPATH.'.config/nvim/init.vim'
-    let $MYFILE                                          =$MYPATH.'.vim'
+    let $MYPATH                                             ='~/'
+    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
+    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
+    let $MYFILE                                             =$MYPATH.'.vim'
 elseif g:is_linux
-    let $MYPATH                                          ='~/'
-    let $MYINIT                                          =$MYPATH.'.config/nvim/init.vim'
-    let $MYFILE                                          =$MYPATH.'.vim'
+    let $MYPATH                                             ='~/'
+    let $MYINIT                                             =$MYPATH.'.config/nvim/init.vim'
+    let $MYGINIT                                            =$MYPATH.'.config/nvim/ginit.vim'
+    let $MYFILE                                             =$MYPATH.'.vim'
 endif
 
 "-------------------------------Leader Key-------------------------------------
@@ -35,47 +37,46 @@ let maplocalleader                                          =","
 
 "-------------------------------Plugin Package Manager-------------------------
 if &compatible
-  set nocompatible
+    set nocompatible
 endif
 set runtimepath+=$MYFILE/repos/github.com/Shougo/dein.vim/
 
 if dein#load_state($MYFILE)
-  call dein#begin($MYFILE)
+    call dein#begin($MYFILE)
 
-  call dein#add($MYFILE.'/repos/github.com/Shougo/dein.vim/')
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/nerdcommenter')
-  call dein#add('scrooloose/syntastic')
-  call dein#add('Raimondi/delimitMate')
-  call dein#add('tpope/vim-unimpaired')
-  call dein#add('mileszs/ack.vim')
-  call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('altercation/vim-colors-solarized')
-  call dein#add('chriskempson/base16-vim')
-  call dein#add('mrvon/vim-tomorrow-theme')
-  call dein#add('kien/ctrlp.vim')
-  call dein#add('majutsushi/tagbar')
-  call dein#add('vim-scripts/matchit.zip')
-  call dein#add('godlygeek/tabular')
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('kshenoy/vim-signature')
-  call dein#add('tpope/vim-surround')
-  call dein#add('mrvon/vim-go')
-  call dein#add('ap/vim-css-color')
-  call dein#add('tpope/vim-repeat')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('reedes/vim-pencil')
-  call dein#add('reedes/vim-wordy')
-  call dein#add('vim-utils/vim-man')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('elixir-lang/vim-elixir')
+    call dein#add($MYFILE.'/repos/github.com/Shougo/dein.vim/')
+    call dein#add('Shougo/deoplete.nvim')
+    call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('scrooloose/nerdcommenter')
+    call dein#add('scrooloose/syntastic')
+    call dein#add('Raimondi/delimitMate')
+    call dein#add('tpope/vim-unimpaired')
+    call dein#add('mileszs/ack.vim')
+    call dein#add('nathanaelkane/vim-indent-guides')
+    call dein#add('altercation/vim-colors-solarized')
+    call dein#add('chriskempson/base16-vim')
+    call dein#add('mrvon/vim-tomorrow-theme')
+    call dein#add('kien/ctrlp.vim')
+    call dein#add('majutsushi/tagbar')
+    call dein#add('vim-scripts/matchit.zip')
+    call dein#add('godlygeek/tabular')
+    call dein#add('plasticboy/vim-markdown')
+    call dein#add('kshenoy/vim-signature')
+    call dein#add('tpope/vim-surround')
+    call dein#add('mrvon/vim-go')
+    call dein#add('ap/vim-css-color')
+    call dein#add('tpope/vim-repeat')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('reedes/vim-pencil')
+    call dein#add('reedes/vim-wordy')
+    call dein#add('pangloss/vim-javascript')
+    call dein#add('elixir-lang/vim-elixir')
 
-  call dein#end()
-  call dein#save_state()
+    call dein#end()
+    call dein#save_state()
 endif
 
 filetype plugin indent on
@@ -98,7 +99,7 @@ elseif g:is_linux
     let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 endif
-colorscheme                                                 $MYCOLOR
+colorscheme $MYCOLOR
 
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8
@@ -130,7 +131,7 @@ set smartindent
 set printoptions                                            =paper:a4
 
 "-------------------------------Max History Item-------------------------------
-set history                                                 =200
+set history                                                 =10000
 
 "-------------------------------Ruler And Statusline---------------------------
 set noruler
@@ -230,7 +231,8 @@ set completeopt                                             -=preview
 
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
-call deoplete#enable()
+" call dein#add('Shougo/deoplete.nvim')
+" call deoplete#enable()
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
@@ -278,6 +280,7 @@ map <leader>cc                                              <plug>NERDCommenterA
 map <leader>cs                                              <plug>NERDCommenterSexy
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------YCM--------------------------------------------
+" call dein#add('Valloric/YouCompleteMe')
 let g:ycm_confirm_extra_conf                                =0
 let g:ycm_key_detailed_diagnostics                          ='<leader>d'
 let g:ycm_filetype_blacklist                                ={}
@@ -294,11 +297,6 @@ hi link StructDecl                                          Structure
 hi link UnionDecl                                           Structure
 hi link ClassDecl                                           Structure
 hi link EnumDecl                                            Structure
-"-----------------------------------------Kolor--------------------------------
-let g:kolor_italic                                          =$MYITALIC          " Enable italic. Default: 1
-let g:kolor_bold                                            =0                  " Enable bold. Default: 1
-let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
-let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
 let g:solarized_termtrans                                   =0
@@ -374,6 +372,7 @@ let g:go_highlight_fields                                   =1
 let g:go_highlight_types                                    =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
+let g:go_template_autocreate                                =0
 "-----------------------------------------Pencil-------------------------------
 nnoremap <silent> Q                                         gqip
 xnoremap <silent> Q                                         gq
@@ -418,9 +417,7 @@ nnoremap <leader><leader>                                   <c-^>
 
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYINIT<cr>
-
-" edit my color file
-nnoremap <leader>ec                                         :vsplit $MYFILE/bundle/vim-kolor/colors/kolor.vim<cr>
+nnoremap <leader>eg                                         :vsplit $MYGINIT<cr>
 
 " replace all tab with space
 nnoremap <localleader>rt                                    :%ret! 4<cr>
@@ -596,9 +593,8 @@ vnoremap <leader>vw                                         :call __VisualSelect
 
 "------------------------------------------------------------------------------
 "Close All Buffers But This One
-com! -bar -bang BdOnly                                      call __BufferDeleteOnly(<q-bang>)
-com! -bar -bang BdReload                                    call __BufferReload(<q-bang>)
-function!                                                   __BufferDeleteOnly(bang)
+com! -bar -bang BdOnly                                      call BufferOnly(<q-bang>)
+function!                                                   BufferOnly(bang)
     let bd_cmd = "bdelete". a:bang
     let cur_buffer_id = bufnr('%')
     let last_buffer_id = bufnr('$')
@@ -609,24 +605,14 @@ function!                                                   __BufferDeleteOnly(b
         if id != cur_buffer_id
             let name = bufname(id)
             if stridx(name, nerd_tree_buff_name) == -1
-                call __ExecCheckBdErrs(id . bd_cmd)
+                call ExecBufferOnly(id . bd_cmd)
             endif
         endif
         let id = id + 1
     endwhile
 endfunction
 
-function!                                                   __BufferReload(bang)
-    let cur_filename = expand("%")
-
-    let bd_cmd = "bd "
-    call __ExecCheckBdErrs(bd_cmd)
-
-    let edit_cmd = "edit "
-    call __ExecCheckBdErrs(edit_cmd . cur_filename)
-endfunction
-
-function!                                                   __ExecCheckBdErrs(bdrangecmd)
+function!                                                   ExecBufferOnly(bdrangecmd)
     try
         exec a:bdrangecmd
     catch /:E51[567]:/
@@ -638,38 +624,7 @@ function!                                                   __ExecCheckBdErrs(bd
     endtry
 endfunction
 
-if g:is_windows && g:is_gui
-    nnoremap <leader>mw                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
-    nnoremap <leader>mW                                    :call libcallnr("vimtweak.dll", "EnableMaximize", 0)<CR>
-    nnoremap <leader>yt                                    :call libcallnr("vimtweak.dll", "EnableTopMost", 1)<CR>
-    nnoremap <leader>yT                                    :call libcallnr("vimtweak.dll", "EnableTopMost", 0)<CR>
-    nnoremap <leader>aw                                    :call libcallnr("vimtweak.dll", "SetAlpha", 235)<CR>
-    nnoremap <leader>aW                                    :call libcallnr("vimtweak.dll", "SetAlpha", 255)<CR>
-
-    augroup on_win_gui_enter
-        autocmd!
-        autocmd VimEnter * call libcallnr("vimtweak.dll", "SetAlpha", 255)
-        autocmd VimEnter * call libcallnr("vimtweak.dll", "EnableMaximize", 1)
-        autocmd VimEnter * setlocal vb t_vb=
-    augroup END
-endif
-
-augroup on_enter_vim
-    autocmd!
-    " autocmd VimEnter * NERDTree
-    " autocmd VimEnter * nested :TagbarOpen
-augroup END
-
-" Don't move it, let it on the bottom of this file, Otherwise it will don't work.
-" Open Syntax HighLight
-" if exists("g:syntax_on")
-"     syntax                                                  off
-" else
-"     syntax                                                  enable
-" endif
-" syntax                                                      on
-
-" my tips list
+"-------------------------------My Tips List------------------------------------
 " %s//gc               search the pattern before you replace it.
 " %s///gn              can calculate how many matching in this file
 " history | vim -      read from stdin
