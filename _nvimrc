@@ -1,3 +1,7 @@
+"-------------------------------Install----------------------------------------
+" ln -s ~/vimrc/_nvimrc ~/.config/nvim/init.vim
+" ln -s ~/vimrc/_ngvimrc ~/.config/nvim/ginit.vim
+
 "-------------------------------Operating System-------------------------------
 let g:is_windows                                            =0
 let g:is_mac                                                =0
@@ -96,13 +100,6 @@ elseif g:is_linux
 endif
 colorscheme                                                 $MYCOLOR
 
-if g:is_windows
-    set guifont                                             =Monaco:h11
-elseif g:is_mac
-    set guifont                                             =MonacoB:h14
-elseif g:is_linux
-    set guifont                                             =Monaco\ 12
-endif
 "-------------------------------Encoding---------------------------------------
 " Always use utf-8
 set encoding                                                =utf-8
