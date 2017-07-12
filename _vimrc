@@ -70,7 +70,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'jeaye/color_coded'
-Plugin 'octol/vim-cpp-enhanced-highlight'		
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
@@ -135,6 +135,9 @@ Plugin 'pangloss/vim-javascript'
 
 " Exilir
 Plugin 'elixir-lang/vim-elixir'
+
+" Whitespace
+Plugin 'ntpeters/vim-better-whitespace'
 
 "------------------------------------------------------------------------------
 
@@ -754,6 +757,10 @@ augroup on_enter_vim
     " autocmd VimEnter * nested :TagbarOpen
 augroup END
 
+augroup on_enter_buffer
+    autocmd!
+    autocmd BufEnter * EnableStripWhitespaceOnSave
+augroup END
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work.
 " Open Syntax HighLight
