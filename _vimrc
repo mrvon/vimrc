@@ -471,6 +471,7 @@ let g:go_highlight_fields                                   =1
 let g:go_highlight_types                                    =1
 let g:go_highlight_operators                                =1
 let g:go_highlight_build_constraints                        =1
+let g:go_template_autocreate                                =0
 "-----------------------------------------Pencil-------------------------------
 nnoremap <silent> Q                                         gqip
 xnoremap <silent> Q                                         gq
