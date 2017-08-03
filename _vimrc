@@ -180,7 +180,7 @@ colorscheme                                                 $MYCOLOR
 if g:is_windows
     set guifont                                             =Monaco:h11
 elseif g:is_mac
-    set guifont                                             =MonacoB:h14
+    set guifont                                             =MonacoB:h15
 elseif g:is_linux
     set guifont                                             =Monaco\ 12
 endif
@@ -611,10 +611,10 @@ nnoremap /                                                  /\v
 nnoremap <leader>h                                          :nohlsearch<cr>
 
 " Using exists syntax file
-augroup alias_syntax
-    autocmd!
-    autocmd                                                 BufRead,BufNewFile *.vs,*.fs setlocal filetype=glsl
-augroup END
+" augroup alias_syntax
+"     autocmd!
+"     autocmd                                                 BufRead,BufNewFile *.vs,*.fs setlocal filetype=glsl
+" augroup END
 
 " edit binary using xxd-format!
 augroup binary_edit_group
