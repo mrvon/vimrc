@@ -139,6 +139,9 @@ Plugin 'elixir-lang/vim-elixir'
 " Whitespace
 Plugin 'ntpeters/vim-better-whitespace'
 
+" GLSL
+Plugin 'tikhomirov/vim-glsl'
+
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
@@ -608,10 +611,10 @@ nnoremap /                                                  /\v
 nnoremap <leader>h                                          :nohlsearch<cr>
 
 " Using exists syntax file
-" augroup align_filetype_group
-"     autocmd!
-"     autocmd                                                 BufRead,BufNewFile *.txt setlocal filetype=lua
-" augroup END
+augroup alias_syntax
+    autocmd!
+    autocmd                                                 BufRead,BufNewFile *.vs,*.fs setlocal filetype=glsl
+augroup END
 
 " edit binary using xxd-format!
 augroup binary_edit_group
