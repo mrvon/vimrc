@@ -21,10 +21,11 @@ endif
 
 "-------------------------------Path-------------------------------------------
 if g:is_windows
-    let $MYVIMPATH                                          ='E:/vim/'
-    let $MYVIMRUNTIME                                       =$MYVIMPATH.'vim74'
+    let $MYVIMPATH                                          ='E:/vimrc/'
+    let $MYVIMBINPATH                                       ='E:/vim/'
+    let $MYVIMRUNTIME                                       =$MYVIMBINPATH.'vim80'
     let $MYVIMRC                                            =$MYVIMPATH.'_vimrc'
-    let $MYVIMFILE                                          =$MYVIMPATH.'vimfiles'
+    let $MYVIMFILE                                          =$MYVIMBINPATH.'vimfiles'
 elseif g:is_mac
     let $MYVIMPATH                                          ='~/'
     let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
@@ -69,7 +70,6 @@ Plugin 'scrooloose/syntastic'
 " YCM
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'jeaye/color_coded'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " DelimitMate
