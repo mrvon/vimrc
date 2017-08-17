@@ -440,7 +440,11 @@ elseif g:is_mac
 endif
 if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    if g:is_windows
+        let s:ctrlp_fallback = 'ag -i --nocolor --nogroup --hidden -g "" %s --ignore .git --ignore .svn --ignore .hg'
+    else
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    endif
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
 endif
