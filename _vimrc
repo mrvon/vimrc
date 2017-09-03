@@ -788,3 +788,5 @@ syntax                                                      on
 " z<CR>			       scroll
 " set ff=unix          change line break to unix style
 " e ++enc=cp936        Open file with specific encoding (for instance, cp936)
+" sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+" sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
