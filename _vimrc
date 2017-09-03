@@ -21,10 +21,11 @@ endif
 
 "-------------------------------Path-------------------------------------------
 if g:is_windows
-    let $MYVIMPATH                                          ='E:/vim/'
-    let $MYVIMRUNTIME                                       =$MYVIMPATH.'vim74'
+    let $MYVIMPATH                                          ='E:/vimrc/'
+    let $MYVIMBINPATH                                       ='E:/vim/'
+    let $MYVIMRUNTIME                                       =$MYVIMBINPATH.'vim80'
     let $MYVIMRC                                            =$MYVIMPATH.'_vimrc'
-    let $MYVIMFILE                                          =$MYVIMPATH.'vimfiles'
+    let $MYVIMFILE                                          =$MYVIMBINPATH.'vimfiles'
 elseif g:is_mac
     let $MYVIMPATH                                          ='~/'
     let $MYVIMRC                                            =$MYVIMPATH.'.vimrc'
@@ -69,8 +70,8 @@ Plugin 'scrooloose/syntastic'
 " YCM
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-Plugin 'jeaye/color_coded'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'rhysd/vim-clang-format'
 
 " DelimitMate
 Plugin 'Raimondi/delimitMate'
@@ -440,7 +441,11 @@ elseif g:is_mac
 endif
 if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    if g:is_windows
+        let s:ctrlp_fallback = 'ag -i --nocolor --nogroup --hidden -g "" %s --ignore .git --ignore .svn --ignore .hg'
+    else
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    endif
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
 endif
@@ -490,6 +495,17 @@ augroup pencil
     autocmd!
     autocmd FileType markdown call pencil#init()
 augroup END
+"-----------------------------------------Clang Format-------------------------
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortBlocksOnASingleLine" : "false",
+            \ "AllowShortFunctionsOnASingleLine" : "false",
+            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "AllowShortLoopsOnASingleLine" : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "AlignTrailingComments" : "true" }
+nnoremap <leader>C                                          :ClangFormatAutoToggle<cr>
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
