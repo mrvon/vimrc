@@ -497,14 +497,41 @@ augroup pencil
 augroup END
 "-----------------------------------------Clang Format-------------------------
 let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortBlocksOnASingleLine" : "false",
-            \ "AllowShortFunctionsOnASingleLine" : "false",
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
-            \ "AllowShortLoopsOnASingleLine" : "false",
-            \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "Standard" : "C++11",
-            \ "AlignTrailingComments" : "true" }
+            \        "BasedOnStyle" : "WebKit",
+            \        "AccessModifierOffset" : -4,
+            \        "AlignAfterOpenBracket" : "AlwaysBreak",
+            \        "AlignConsecutiveAssignments" : "false",
+            \        "AlignConsecutiveDeclarations" : "false",
+            \        "AlignOperands" : "false",
+            \        "AlignTrailingComments" : "true",
+            \        "AllowAllParametersOfDeclarationOnNextLine" : "false",
+            \        "AllowShortBlocksOnASingleLine" : "false",
+            \        "AllowShortCaseLabelsOnASingleLine" : "false",
+            \        "AllowShortFunctionsOnASingleLine" : "None",
+            \        "AllowShortIfStatementsOnASingleLine" : "false",
+            \        "AllowShortLoopsOnASingleLine" : "false",
+            \        "AlwaysBreakAfterDefinitionReturnType" : "false",
+            \        "AlwaysBreakAfterReturnType" : "None",
+            \        "AlwaysBreakBeforeMultilineStrings" : "true",
+            \        "AlwaysBreakTemplateDeclarations" : "true",
+            \        "BinPackArguments" : "false",
+            \        "BinPackParameters" : "false",
+            \        'BreakBeforeBraces' : "Custom",
+            \        "BraceWrapping" : {
+            \            "AfterClass" : "false",
+            \            "AfterControlStatement" : "false",
+            \            "AfterEnum" : "false",
+            \            "AfterNamespace" : "false",
+            \            "AfterObjCDeclaration" : "false",
+            \            "AfterStruct" : "false",
+            \            "AfterUnion" : "false",
+            \            'BeforeCatch' : "false",
+            \            "BeforeElse" : "false",
+            \            'IndentBraces' : "false",
+            \            "AfterFunction" : "false",
+            \        },
+            \        "IndentWidth" : 4,
+            \        "ColumnLimit" : 80 }
 nnoremap <leader>C                                          :ClangFormatAutoToggle<cr>
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
