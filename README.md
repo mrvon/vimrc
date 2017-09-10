@@ -7,24 +7,22 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 ### Install On Mac OS X ###
 
-1. Install MacVim (with python support and lua support)
+1. Install MacVim (with python support)
 
     + Using home brew
         ```sh
-        $ brew install macvim --with-cscope --with-lua --with-python3
-        $ brew install vim --with-cscope --with-lua --with-python3
+        $ brew install macvim --with-cscope --with-python3
+        $ brew install vim --with-cscope --with-python3
         ```
 
 
     + Compile by yourself
         ```sh
         ./configure     --with-features=huge                             \
-                        --enable-luainterp                               \
                         --enable-python3interp                           \
                         --enable-cscope                                  \
                         --enable-multibyte                               \
                         --enable-gui=macvim                              \
-                        --with-lua-prefix=/usr/local/Cellar/lua/5.2.3_2/ \
                         --with-compiledby=MrVon                          \
         ```
 2. Install the_silver_searcher(ag)
@@ -48,12 +46,11 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
 
 ### Install On Ubuntu 64bit ###
 
-1. Install gvim (with python support and lua support)
+1. Install gvim (with python support)
 
     + Install dependency
         ```sh
         $ apt-get install python3-dev
-        $ apt-get install lua5.3-dev
         $ apt-get build-dep vim-gtk
         ```
 
@@ -67,12 +64,10 @@ Are you looking for a introduction about it, Please read *[vimrc](https://github
     + Compile by yourself
         ```sh
         ./configure     --with-features=huge                             \
-                        --enable-luainterp                               \
                         --enable-python3interp                           \
                         --enable-cscope                                  \
                         --enable-multibyte                               \
-                        --enable-gui=gtk2				                 \
-                        --with-lua-prefix=/usr/local                     \
+                        --enable-gui=gtk2                                \
         ```
 
 ### Install On Windows 7 x64 ###
