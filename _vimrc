@@ -516,7 +516,7 @@ let g:clang_format#style_options = {
             \        "AlwaysBreakTemplateDeclarations" : "true",
             \        "BinPackArguments" : "false",
             \        "BinPackParameters" : "false",
-            \        'BreakBeforeBraces' : "Custom",
+            \        "BreakBeforeBraces" : "Custom",
             \        "BraceWrapping" : {
             \            "AfterClass" : "false",
             \            "AfterControlStatement" : "false",
@@ -525,13 +525,13 @@ let g:clang_format#style_options = {
             \            "AfterObjCDeclaration" : "false",
             \            "AfterStruct" : "false",
             \            "AfterUnion" : "false",
-            \            'BeforeCatch' : "false",
+            \            "BeforeCatch" : "false",
             \            "BeforeElse" : "false",
-            \            'IndentBraces' : "false",
+            \            "IndentBraces" : "false",
             \            "AfterFunction" : "false",
             \        },
             \        "IndentWidth" : 4,
-            \        "ColumnLimit" : 80 }
+            \        "ColumnLimit" : 200 }
 nnoremap <leader>C                                          :ClangFormatAutoToggle<cr>
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
