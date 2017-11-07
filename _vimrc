@@ -143,6 +143,12 @@ Plugin 'ntpeters/vim-better-whitespace'
 " GLSL
 Plugin 'tikhomirov/vim-glsl'
 
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+
+" Emmet / ZenCoding
+Plugin 'mattn/emmet-vim'
+
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
