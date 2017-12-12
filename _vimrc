@@ -841,3 +841,4 @@ syntax                                                      on
 " e ++enc=cp936        Open file with specific encoding (for instance, cp936)
 " sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 " sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+" %s/\r//g             Delete all ^M
