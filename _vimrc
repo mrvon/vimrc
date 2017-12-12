@@ -701,6 +701,8 @@ augroup END
 inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
 
+" see Help v_p
+vnoremap p                                                  "0p
 
 "------------------------------------------------------------------------------
 function! __ExecuteCommand(str)
