@@ -816,6 +816,7 @@ augroup END
 augroup on_enter_buffer
     autocmd!
     autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter * ToggleWhitespace
 augroup END
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work.
