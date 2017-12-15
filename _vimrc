@@ -173,14 +173,14 @@ if g:is_windows
     let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =0
 elseif g:is_mac
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 elseif g:is_linux
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
