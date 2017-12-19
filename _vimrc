@@ -89,6 +89,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mrvon/vim-tomorrow-theme'
+Plugin 'morhetz/gruvbox'
 
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
@@ -167,19 +168,19 @@ filetype plugin indent on       " required
 " Adjust My color scheme by system time
 " if strftime("%H") >= 9 && strftime("%H") <= 12
 if g:is_windows
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
-    let $MYITALIC                                           =1
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
+    let $MYITALIC                                           =0
 elseif g:is_mac
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 elseif g:is_linux
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 endif
 colorscheme                                                 $MYCOLOR
@@ -401,11 +402,6 @@ hi link StructDecl                                          Structure
 hi link UnionDecl                                           Structure
 hi link ClassDecl                                           Structure
 hi link EnumDecl                                            Structure
-"-----------------------------------------Kolor--------------------------------
-let g:kolor_italic                                          =$MYITALIC          " Enable italic. Default: 1
-let g:kolor_bold                                            =0                  " Enable bold. Default: 1
-let g:kolor_underlined                                      =0                  " Enable underline. Default: 0
-let g:kolor_alternative_matchparen                          =0                  " Gray 'MatchParen' color. Default: 0
 "-----------------------------------------Solarized----------------------------
 let g:solarized_termcolors                                  =256
 let g:solarized_termtrans                                   =0
@@ -417,6 +413,8 @@ let g:solarized_contrast                                    ="normal"
 let g:solarized_visibility                                  ="normal"
 let g:solarized_hitrail                                     =0
 let g:solarized_menu                                        =1
+"-----------------------------------------Gruvbox------------------------------
+let g:gruvbox_italic                                        =$MYITALIC
 "-----------------------------------------Indent guides------------------------
 let g:indent_guides_enable_on_vim_startup                   =1
 let g:indent_guides_default_mapping                         =0
@@ -574,9 +572,6 @@ nnoremap <leader><leader>                                   <c-^>
 
 " edit my vimrc
 nnoremap <leader>ev                                         :vsplit $MYVIMRC<cr>
-
-" edit my color file
-nnoremap <leader>ec                                         :vsplit $MYVIMFILE/bundle/vim-kolor/colors/kolor.vim<cr>
 
 " replace all tab with space
 nnoremap <localleader>rt                                    :%ret! 4<cr>
@@ -821,6 +816,7 @@ augroup END
 augroup on_enter_buffer
     autocmd!
     autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter * DisableWhitespace
 augroup END
 
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work.
@@ -841,3 +837,4 @@ syntax                                                      on
 " e ++enc=cp936        Open file with specific encoding (for instance, cp936)
 " sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 " sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+" %s/\r//g             Delete all ^M
