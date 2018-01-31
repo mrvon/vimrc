@@ -1,11 +1,11 @@
 [user]
-	email = mrvon@qq.com
-	name = dennis
+    email = mrvon@qq.com
+    name = dennis
 [core]
-	editor = gvim -f
+    editor = gvim -f
 [diff]
-	tool = gvimdiff
+    tool = gvimdiff
 [merge]
-	tool = gvimdiff
+    tool = gvimdiff
 [difftool]
-	prompt = false
+    prompt = false

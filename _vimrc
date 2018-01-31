@@ -819,6 +819,11 @@ augroup on_enter_buffer
     autocmd BufEnter * DisableWhitespace
 augroup END
 
+augroup save_retab
+    autocmd!
+    autocmd                                                 BufWritePre * :retab
+augroup END
+
 " Don't move it, let it on the bottom of this file, Otherwise it will don't work.
 " Open Syntax HighLight
 if exists("g:syntax_on")
@@ -832,7 +837,7 @@ syntax                                                      on
 " %s//gc               search the pattern before you replace it.
 " %s///gn              can calculate how many matching in this file
 " history | vim -      read from stdin
-" z<CR>			       scroll
+" z<CR>                scroll
 " set ff=unix          change line break to unix style
 " e ++enc=cp936        Open file with specific encoding (for instance, cp936)
 " sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/

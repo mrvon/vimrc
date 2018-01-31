@@ -1,17 +1,17 @@
 [user]
-	name = dennis
-	email = mrvon@qq.com
+    name = dennis
+    email = mrvon@qq.com
 [push]
-	default = simple
+    default = simple
 [core]
-	editor = mvim -f
+    editor = mvim -f
 [merge]
-	tool = mvimdiff
+    tool = mvimdiff
 [mergetool "mvimdiff"]
-	cmd = mvim -df $BASE $LOCAL $REMOTE $MERGED
+    cmd = mvim -df $BASE $LOCAL $REMOTE $MERGED
 [diff]
-	tool = mvimdiff
+    tool = mvimdiff
 [difftool "mvimdiff"]
-	cmd = mvim -df $LOCAL $REMOTE
+    cmd = mvim -df $LOCAL $REMOTE
 [difftool]
-	prompt = false
+    prompt = false
