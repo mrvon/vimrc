@@ -150,6 +150,9 @@ Plugin 'leafgarland/typescript-vim'
 " Emmet / ZenCoding
 Plugin 'mattn/emmet-vim'
 
+" Beautiful Startup Screen
+Plugin 'mhinz/vim-startify'
+
 "------------------------------------------------------------------------------
 
 " All of your Plugins must be added before the following line
