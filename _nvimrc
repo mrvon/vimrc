@@ -58,6 +58,7 @@ if dein#load_state($MYFILE)
     call dein#add('altercation/vim-colors-solarized')
     call dein#add('chriskempson/base16-vim')
     call dein#add('mrvon/vim-tomorrow-theme')
+    call dein#add('morhetz/gruvbox')
     call dein#add('kien/ctrlp.vim')
     call dein#add('majutsushi/tagbar')
     call dein#add('vim-scripts/matchit.zip')
@@ -74,6 +75,8 @@ if dein#load_state($MYFILE)
     call dein#add('reedes/vim-wordy')
     call dein#add('pangloss/vim-javascript')
     call dein#add('elixir-lang/vim-elixir')
+    call dein#add('mattn/emmet-vim')
+    call dein#add('mhinz/vim-startify')
 
     call dein#end()
     call dein#save_state()
@@ -94,9 +97,9 @@ elseif g:is_mac
     let $MYAIR                                              ='tomorrow'
     let $MYITALIC                                           =1
 elseif g:is_linux
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 endif
 colorscheme $MYCOLOR
@@ -150,8 +153,8 @@ set maxmemtot                                               =100
 if g:is_mac || g:is_windows
     set clipboard                                           +=unnamed
 elseif g:is_linux
-    set clipboard                                           =unnamedplus
 endif
+set clipboard+=unnamedplus
 
 "-------------------------------Line Space-------------------------------------
 set linespace                                               =0
@@ -231,8 +234,8 @@ set completeopt                                             -=preview
 
 "-------------------------------My favorite plugin-----------------------------
 "-------------------------------Deoplete---------------------------------------
-" call dein#add('Shougo/deoplete.nvim')
-" call deoplete#enable()
+call dein#add('Shougo/deoplete.nvim')
+call deoplete#enable()
 "-------------------------------Airline----------------------------------------
 let g:airline_theme                                         =$MYAIR
 let g:airline_detect_modified                               =1
@@ -595,8 +598,8 @@ vnoremap <leader>vw                                         :call __VisualSelect
 "Close All Buffers But This One
 com! -bar -bang BdOnly                                      call BufferOnly(<q-bang>)
 function!                                                   BufferOnly(bang)
-    let bd_cmd = "bdelete". a:bang
-    let cur_buffer_id = bufnr('%')
+    let bd_cmd = "bdelete "
+    let cur_buffer_id = bufnr('.')
     let last_buffer_id = bufnr('$')
     let nerd_tree_buff_name = 'NERD_tree'
 
@@ -605,7 +608,7 @@ function!                                                   BufferOnly(bang)
         if id != cur_buffer_id
             let name = bufname(id)
             if stridx(name, nerd_tree_buff_name) == -1
-                call ExecBufferOnly(id . bd_cmd)
+                call ExecBufferOnly(bd_cmd . id)
             endif
         endif
         let id = id + 1
@@ -624,10 +627,13 @@ function!                                                   ExecBufferOnly(bdran
     endtry
 endfunction
 
-"-------------------------------My Tips List------------------------------------
+" my tips list
 " %s//gc               search the pattern before you replace it.
 " %s///gn              can calculate how many matching in this file
 " history | vim -      read from stdin
 " z<CR>                scroll
 " set ff=unix          change line break to unix style
 " e ++enc=cp936        Open file with specific encoding (for instance, cp936)
+" sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+" sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+" %s/\r//g             Delete all ^M
