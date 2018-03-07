@@ -75,6 +75,7 @@ if dein#load_state($MYFILE)
     call dein#add('reedes/vim-wordy')
     call dein#add('pangloss/vim-javascript')
     call dein#add('elixir-lang/vim-elixir')
+    call dein#add('ntpeters/vim-better-whitespace')
     call dein#add('mattn/emmet-vim')
     call dein#add('mhinz/vim-startify')
 
@@ -525,6 +526,23 @@ augroup END
 augroup save_with_nobomb
     autocmd!
     autocmd                                                 BufWritePre *.lua setlocal nobomb
+augroup END
+
+augroup on_enter_vim
+    autocmd!
+    " autocmd VimEnter * NERDTree
+    " autocmd VimEnter * nested :TagbarOpen
+augroup END
+
+augroup on_enter_buffer
+    autocmd!
+    autocmd BufEnter * EnableStripWhitespaceOnSave
+    autocmd BufEnter * DisableWhitespace
+augroup END
+
+augroup save_retab
+    autocmd!
+    autocmd                                                 BufWritePre * :retab
 augroup END
 
 " Quickly Traverse Tab (I prefer buffer to tab)
