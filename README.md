@@ -31,6 +31,19 @@ $ fc-cache -vf
 
 ### tips ###
 
+%s//gc               # search the pattern before you replace it.
+%s///gn              # can calculate how many matching in this file
+%s/\r//g             # delete all ^M
+z<CR>                # scroll
+set ff=unix          # change line break to unix style
+e ++enc=cp936        # open file with specific encoding (for instance, cp936)
+
+history | vim -      # read from stdin
+
+# disable keyboard in mac
+sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+
 + Gvim be you git default editor and gvimdiff as difftool
 
 ```
