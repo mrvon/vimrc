@@ -1,16 +1,15 @@
 # Happy Hacking #
 
-    ```sh
-    
-    $ ln -s ~/Vimrc/_vimrc ~/.vimrc
-    $ ln -s ~/Vimrc/_tmux ~/.tmux.conf
-    # Linux
-    $ ln -s ~/Vimrc/_gitconfig_linux ~/.gitconfig
-    $ ln -s ~/Vimrc/_zshrc_linux ~/.zshrc
-    # Mac
-    $ ln -s ~/Vimrc/_gitconfig_mac ~/.gitconfig
-    $ ln -s ~/Vimrc/_zshrc_mac ~/.zshrc
-    ```
+```sh
+$ ln -s ~/Vimrc/_vimrc ~/.vimrc
+$ ln -s ~/Vimrc/_tmux ~/.tmux.conf
+# Linux
+$ ln -s ~/Vimrc/_gitconfig_linux ~/.gitconfig
+$ ln -s ~/Vimrc/_zshrc_linux ~/.zshrc
+# Mac
+$ ln -s ~/Vimrc/_gitconfig_mac ~/.gitconfig
+$ ln -s ~/Vimrc/_zshrc_mac ~/.zshrc
+```
 
 ### dependencies ###
 
