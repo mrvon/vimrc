@@ -1,8 +1,3 @@
-"-------------------------------About Author-----------------------------------
-"echo ">^.^<"
-"echo "Author: Dennis"
-"echo "Email: mrvon@qq.com"
-
 "-------------------------------Operating System-------------------------------
 let g:is_windows                                            =0
 let g:is_mac                                                =0
@@ -835,14 +830,3 @@ else
     syntax                                                  enable
 endif
 syntax                                                      on
-
-" my tips list
-" %s//gc               search the pattern before you replace it.
-" %s///gn              can calculate how many matching in this file
-" history | vim -      read from stdin
-" z<CR>                scroll
-" set ff=unix          change line break to unix style
-" e ++enc=cp936        Open file with specific encoding (for instance, cp936)
-" sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
-" sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
-" %s/\r//g             Delete all ^M
