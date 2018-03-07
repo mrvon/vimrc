@@ -92,3 +92,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# export HTTP_PROXY="192.168.9.160:1080"
+# export HTTPS_PROXY="192.168.9.160:1080"

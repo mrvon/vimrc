@@ -81,14 +81,14 @@ syntax enable
 
 "-------------------------------My Color My Taste------------------------------
 if g:is_windows
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 elseif g:is_mac
-    set background                                          =light
-    let $MYCOLOR                                            ='Tomorrow'
-    let $MYAIR                                              ='tomorrow'
+    set background                                          =dark
+    let $MYCOLOR                                            ='gruvbox'
+    let $MYAIR                                              ='gruvbox'
     let $MYITALIC                                           =1
 elseif g:is_linux
     set background                                          =dark
