@@ -31,6 +31,7 @@ $ fc-cache -vf
 
 ### tips ###
 
+```sh
 %s//gc               # search the pattern before you replace it.
 %s///gn              # can calculate how many matching in this file
 %s/\r//g             # delete all ^M
@@ -43,6 +44,7 @@ history | vim -      # read from stdin
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
+```
 
 + Gvim be you git default editor and gvimdiff as difftool
 
