@@ -24,7 +24,12 @@ $ fc-cache -vf
 
 ### dependencies ###
 
++ https://github.com/neovim/neovim
 + https://github.com/ggreer/the_silver_searcher
++ https://github.com/robbyrussell/oh-my-zsh
++ https://github.com/bhilburn/powerlevel9k
++ https://github.com/tmux/tmux
++ https://github.com/git/git
 
 ### excellent tutorial ###
 
@@ -46,25 +51,4 @@ history | vim -      # read from stdin
 # disable keyboard in mac
 sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
 sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/
-```
-
-+ Gvim be you git default editor and gvimdiff as difftool
-
-```
-# should use command *git difftool*, *git mergetool* instead.
-$ git config --global core.editor "gvim -f"
-$ git config --global diff.tool    gvimdiff
-$ git config --global merge.tool   gvimdiff
-$ git config --global difftool.prompt false
-```
-
-+ Mvim be you git default editor, difftool and mergetool
-
-```sh
-$ git config --global core.editor "mvim -f"
-$ git config --global merge.tool mvimdiff
-$ git config --global mergetool.mvimdiff.cmd 'mvim -df $BASE $LOCAL $REMOTE $MERGED'
-$ git config --global diff.tool mvimdiff
-$ git config --global difftool.mvimdiff.cmd 'mvim -df $LOCAL $REMOTE'
-$ git config --global difftool.prompt false
 ```
