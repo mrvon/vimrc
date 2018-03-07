@@ -6,11 +6,10 @@
 $ ln -s ~/dotfiles/_vimrc ~/.vimrc
 $ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
 $ ln -s ~/dotfiles/_tmux ~/.tmux.conf
+$ ln -s ~/dotfiles/_gitconfig ~/.gitconfig
 # Linux
-$ ln -s ~/dotfiles/_gitconfig_linux ~/.gitconfig
 $ ln -s ~/dotfiles/_zshrc_linux ~/.zshrc
 # Mac
-$ ln -s ~/dotfiles/_gitconfig_mac ~/.gitconfig
 $ ln -s ~/dotfiles/_zshrc_mac ~/.zshrc
 ```
 
