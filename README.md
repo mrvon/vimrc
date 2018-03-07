@@ -1,5 +1,7 @@
 # Happy Hacking #
 
+### link to ###
+
 ```sh
 $ ln -s ~/dotfiles/_vimrc ~/.vimrc
 $ ln -s ~/dotfiles/_nvimrc ~/.config/nvim/init.vim
@@ -11,6 +13,12 @@ $ ln -s ~/dotfiles/_zshrc_linux ~/.zshrc
 $ ln -s ~/dotfiles/_gitconfig_mac ~/.gitconfig
 $ ln -s ~/dotfiles/_zshrc_mac ~/.zshrc
 ```
+
+### install fonts ###
+
+$ cp ~/vimrc/font/Monaco.ttf ~/.local/share/fonts
+$ cp ~/vimrc/font/MonacoForPowerline.ttf ~/.local/share/fonts
+$ fc-cache -vf
 
 ### dependencies ###
 
