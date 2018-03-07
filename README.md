@@ -17,8 +17,8 @@ $ ln -s ~/dotfiles/_zshrc_mac ~/.zshrc
 ### install fonts ###
 
 ```sh
-$ cp ~/vimrc/font/Monaco.ttf ~/.local/share/fonts
-$ cp ~/vimrc/font/MonacoForPowerline.ttf ~/.local/share/fonts
+$ cp ~/dotfiles/font/Monaco.ttf ~/.local/share/fonts
+$ cp ~/dotfiles/font/MonacoForPowerline.ttf ~/.local/share/fonts
 $ fc-cache -vf
 ```
 
