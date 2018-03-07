@@ -1,6 +1,8 @@
 "-------------------------------Install----------------------------------------
 " ln -s ~/vimrc/_nvimrc ~/.config/nvim/init.vim
 " ln -s ~/vimrc/_ngvimrc ~/.config/nvim/ginit.vim
+" cp ~/vimrc/font/MonacoForPowerline.ttf ~/.local/share/fonts
+" fc-cache -vf
 
 "-------------------------------Operating System-------------------------------
 let g:is_windows                                            =0
@@ -255,22 +257,6 @@ let g:airline#extensions#whitespace#checks                  =[]
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-" unicode symbols
-" let g:airline_left_sep = '»'
-" let g:airline_right_sep = '«'
-" let g:airline_symbols.crypt = '🔒'
-" let g:airline_symbols.linenr = '␊'
-" let g:airline_symbols.linenr = '␤'
-" let g:airline_symbols.linenr = '¶'
-" let g:airline_symbols.maxlinenr = '☰'
-" let g:airline_symbols.maxlinenr = ''
-" let g:airline_symbols.branch = '⎇'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.paste = 'Þ'
-" let g:airline_symbols.paste = '∥'
-" let g:airline_symbols.spell = 'Ꞩ'
-" let g:airline_symbols.notexists = '∄'
-" let g:airline_symbols.whitespace = 'Ξ'
 "-------------------------------NERDTree---------------------------------------
 nnoremap <leader>n                                          :NERDTreeToggle<CR>
 let NERDTreeAutoCenter                                      =1
