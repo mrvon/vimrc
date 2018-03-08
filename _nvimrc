@@ -588,36 +588,3 @@ vnoremap <leader>vw                                         :call __VisualSelect
 " easy paste from system-clipboard
 "vnoremap <leader>sp                                        "+p
 "nnoremap <leader>sp                                        "+p
-
-"------------------------------------------------------------------------------
-"Close All Buffers But This One
-com! -bar -bang BdOnly                                      call BufferOnly(<q-bang>)
-function!                                                   BufferOnly(bang)
-    let bd_cmd = "bdelete "
-    let cur_buffer_id = bufnr('.')
-    let last_buffer_id = bufnr('$')
-    let nerd_tree_buff_name = 'NERD_tree'
-
-    let id = 1
-    while id <= last_buffer_id
-        if id != cur_buffer_id
-            let name = bufname(id)
-            if stridx(name, nerd_tree_buff_name) == -1
-                call ExecBufferOnly(bd_cmd . id)
-            endif
-        endif
-        let id = id + 1
-    endwhile
-endfunction
-
-function!                                                   ExecBufferOnly(bdrangecmd)
-    try
-        exec a:bdrangecmd
-    catch /:E51[567]:/
-        " no buffers unloaded/deleted/wiped out: ignore
-    catch
-        echohl ErrorMsg
-        echomsg matchstr(v:exception, ':\zsE.*')
-        echohl none
-    endtry
-endfunction
