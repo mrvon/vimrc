@@ -209,6 +209,7 @@ set hidden
 "-------------------------------Auto Read -------------------------------------
 " Auto read when other program have modified the same file
 set autoread
+autocmd FocusGained *                                       :checktime
 
 "-------------------------------Number Format----------------------------------
 set nrformats                                               =hex
@@ -249,7 +250,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 "-------------------------------NERDTree---------------------------------------
-nnoremap <leader>n                                          :NERDTreeToggle<CR>
+nnoremap <leader>n                                          :NERDTreeToggle<cr>
 let NERDTreeAutoCenter                                      =1
 let NERDChristmasTree                                       =1
 let NERDTreeWinSize                                         =25
@@ -268,7 +269,7 @@ let g:ycm_filetype_blacklist                                ={}
 let g:ycm_complete_in_comments                              =1
 let g:ycm_complete_in_strings                               =1
 let g:ycm_collect_identifiers_from_comments_and_strings     =1
-nnoremap <leader>gd                                         :YcmComplete GoTo<CR>
+nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-------------------------------ColorCode--------------------------------------
 hi link Member                                              Identifier
 hi link Variable                                            Identifier
@@ -405,7 +406,7 @@ nnoremap <localleader>rt                                    :%ret! 4<cr>
 
 " reload my vimrc
 if g:is_windows && g:is_gui
-    nnoremap <leader>sv                                     :source $MYINIT<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<CR>
+    nnoremap <leader>sv                                     :source $MYINIT<cr>:call libcallnr("vimtweak.dll", "EnableMaximize", 1)<cr>
 else
     nnoremap <leader>sv                                     :source $MYINIT<cr>
 endif
@@ -537,8 +538,8 @@ augroup END
 "noremap <silent> ]q                                         :cnext<cr>
 
 " Insert current file name
-inoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
-cnoremap <localleader>fn                                    <C-R>=expand("%:t")<CR>
+inoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
+cnoremap <localleader>fn                                    <C-R>=expand("%:t")<cr>
 
 
 "------------------------------------------------------------------------------
@@ -560,9 +561,9 @@ function!                                                   __VisualSelection(di
     elseif a:direction == 'forward'
         execute "normal /" . l:pattern . "^M"
     elseif a:direction == 'ack_smartcase'
-        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<CR>")
+        execute __ExecuteCommand("Ack --smart-case " . "\"" . l:pattern . "\"" . "<cr>")
     elseif a:direction == 'ack_wholeword'
-        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<CR>")
+        execute __ExecuteCommand("Ack --smart-case -w " . "\"" . l:pattern . "\"" . "<cr>")
     endif
 
     let @/ = l:pattern
@@ -570,17 +571,17 @@ function!                                                   __VisualSelection(di
 endfunction
 
 " quick search using Ag
-nnoremap <leader>vv                                         :Ack<CR>
+nnoremap <leader>vv                                         :Ack<cr>
 if executable('ag')
   let g:ackprg = 'ag'
 endif
 let g:ackhighlight = 1
 
 " search in visual mode
-vnoremap <silent> *                                         :call __VisualSelection('forward')<CR>:set hlsearch<CR>
-vnoremap <silent> #                                         :call __VisualSelection('backward')<CR>:set hlsearch<CR>
-vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<CR>
-vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<CR>
+vnoremap <silent> *                                         :call __VisualSelection('forward')<cr>:set hlsearch<cr>
+vnoremap <silent> #                                         :call __VisualSelection('backward')<cr>:set hlsearch<cr>
+vnoremap <leader>vv                                         :call __VisualSelection('ack_smartcase')<cr>
+vnoremap <leader>vw                                         :call __VisualSelection('ack_wholeword')<cr>
 
 " easy copy to system-clipboard
 "vnoremap <leader>sy                                        "+y
