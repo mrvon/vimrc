@@ -30,6 +30,14 @@ $ fc-cache -vf
 + https://github.com/tmux/tmux
 + https://github.com/git/git
 
+### ubuntu ###
+
+```sh
+$ apt-get install xsel
+$ pip3 install --upgrade pip
+$ pip3 install neovim
+```
+
 ### excellent tutorial ###
 
 + [Practical Vim](https://www.amazon.com/dp/1680501275/ref=olp_product_details?_encoding=UTF8&me=)
