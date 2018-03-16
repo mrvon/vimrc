@@ -367,6 +367,14 @@ augroup pencil
 augroup END
 "-----------------------------------------Startify-----------------------------
 let g:startify_change_to_dir                                =0
+"-----------------------------------------ACK----------------------------------
+nnoremap <leader>vv                                         :Ack<cr>
+if executable('ag')
+  let g:ackprg = 'ag'
+endif
+let g:ackhighlight                                          =1
+" solved mix relative and absolute path results problem
+autocmd BufAdd * exe "cd" fnameescape(getcwd())
 "-----------------------------------------Mrvon Special Key--------------------
 " Thanks to http://learnvimscriptthehardway.stevelosh.com/
 " Use jk instead of esc, This excellent idea come from steve
@@ -572,13 +580,6 @@ function!                                                   __VisualSelection(di
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-
-" quick search using Ag
-nnoremap <leader>vv                                         :Ack<cr>
-if executable('ag')
-  let g:ackprg = 'ag'
-endif
-let g:ackhighlight = 1
 
 " search in visual mode
 vnoremap <silent> *                                         :call __VisualSelection('forward')<cr>:set hlsearch<cr>
