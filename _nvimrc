@@ -264,13 +264,13 @@ map <leader>cs                                              <plug>NERDCommenterS
 map <leader>cu                                              <plug>NERDCommenterUncomment
 "-------------------------------YCM--------------------------------------------
 " call dein#add('Valloric/YouCompleteMe')
-let g:ycm_confirm_extra_conf                                =0
-let g:ycm_key_detailed_diagnostics                          ='<leader>d'
-let g:ycm_filetype_blacklist                                ={}
-let g:ycm_complete_in_comments                              =1
-let g:ycm_complete_in_strings                               =1
-let g:ycm_collect_identifiers_from_comments_and_strings     =1
-nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
+" let g:ycm_confirm_extra_conf                                =0
+" let g:ycm_key_detailed_diagnostics                          ='<leader>d'
+" let g:ycm_filetype_blacklist                                ={}
+" let g:ycm_complete_in_comments                              =1
+" let g:ycm_complete_in_strings                               =1
+" let g:ycm_collect_identifiers_from_comments_and_strings     =1
+" nnoremap <leader>gd                                         :YcmComplete GoTo<cr>
 "-------------------------------ColorCode--------------------------------------
 hi link Member                                              Identifier
 hi link Variable                                            Identifier
@@ -519,10 +519,10 @@ augroup on_enter_buffer
     autocmd BufEnter * DisableWhitespace
 augroup END
 
-augroup save_retab
-    autocmd!
-    autocmd                                                 BufWritePre * :retab
-augroup END
+" augroup save_retab
+"     autocmd!
+"     autocmd                                                 BufWritePre * :retab
+" augroup END
 
 " Quickly Traverse Tab (I prefer buffer to tab)
 "noremap <silent> <F7>                                       :tabp<cr>
